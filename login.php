@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>Ahhha Registration Page</title>
-    <link href="css/loginstyle.css" rel="stylesheet" type="text/css" media="screen" />      
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />      
 </head>
 <?php
 include ('resources/config.php');

@@ -1,4 +1,9 @@
-<?php  echo "<a href='?page=".$first_page."'><<</a> ";
+<?php
+echo "<div id='paginate'>
+                    <div id='pagination'>
+                <h1>";
+                
+echo "<a href='?page=".$first_page."'><<</a> ";
                     if($page == $first_page)
                         {
                             echo "< ";
@@ -33,4 +38,9 @@
                             }
                         }
                     echo "<a href='?page=".$last_page."'>>></a>";
+                             echo "</h1>
+            </div>
+           </div>";
                         ?>
+                        
+                        

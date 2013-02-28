@@ -29,10 +29,11 @@ a:active  {
   color: white;
   }
   
+/* Main container for the page*/
 .main{
     width: 800px;
     margin: 0 auto;
-overflow:hidden;
+    overflow:hidden;
 }
 
 .mains{
@@ -54,68 +55,186 @@ overflow:hidden;
     
 }
 
-#intro h1{
-    font-size: 18px;
-    color:white;
-    padding-top: 50px;
+
+
+input{   
+  border: none;
+  background-color: #2d0000;
+  color: white;
+  font-family: Arial;
+  font-size: 14px;
 }
-ul#header{
+
+#menu{
+    background: url("images/menu.png");
+    height: 124px;
+    text-align: center;
+    font-family: comic sans ms;
+}
+#menuright{
+    height: 100px;
+    float:right;
     
+}
+#menuright h1{
+    color:#220800;
+    font-size: 16pt;
+    padding-top: 12px;
+    padding-right:35px;
+}
+
+#menuright h2{
+    color:#220800;
+    font-size: 16pt;
+     padding-top: 14px;
+    padding-right:35px;
+}
+#menuleft{
+    height: 100px;
+    float: left;
+    
+}
+
+#menuleft h1{
+ color:#220800;
+    font-size: 16pt;
+    padding-top: 28px;
+    padding-left:40px;
+}
+/*Navigation Bar and other - UNIVERSAL */
+ul#header{
     height: 30px;
     background-color: #551e1d;
     list-style: none;
-   
-   
 }
 ul#header li{
     padding-top: 4px;
     padding-left:120px;
     float:left;
-  
 }
 ul#header li a{
-    
     color: white;
     font-size: 10pt;
     text-decoration: none;
 }
-
-#header h1{
-    color: #260000;
-    font-size: 10pt;
-}
-
-#header{
-   margin-top: 4px;
+#header{/*Also spacing for Very top*/
+    margin-top: 4px;
     height: 30px;
     background-color:#712928;
     list-style: none;
-   
-   
 }
 
-
-
-#quote {
+/* Famous quote - UNIVERSAL*/
+#quote{
+    margin: 0px auto;
+    margin-top: 4px;
+    background-color: #712928;
+    height:125px;
+}
+#genquote {
     padding-top: 20px;
      margin: 0px auto;
     width:400px;
-    
     text-align: center;
 }
-#quote h1{
-    
+#genquote h1{
+    font-weight: lighter;
     color:white;
     font-size: 14pt;
   
 }
 
-#quote h2{
+#genquote h2{
+  font-weight: lighter;
     margin-top: 5px;
     color:white;
     font-size: 12pt;
     float:right;
 }
+
+/* Start of the Minibar - UNIVERSAL*/
+#minibar{
+  margin-top:20px;
+  float:left;
+  background-color: #284D71;
+  height:20px;
+  width: 650px;
+}
+#minibar h3{
+  font-size: 12pt;
+  color: white;
+  float: right;
+  margin-right: 10px;
+}
+
+#quote{
+    margin: 0px auto;
+    margin-top: 4px;
+    background-color: #712928;
+    height:125px;
+}
+
+#info{
+    margin: 0px auto;
+    margin-top: 4px;
+    background-color: #712928;
+    height:200px;
+}
+
+
+#info h1{
+  font-size: 16pt;
+  color: white;
+  margin-left:50px;
+  margin-right: 50px;
+}
+#info h2{/*click here to register*/
+  font-size:10pt;
+  color:white;
+}
+
+#info h4{/*already logged in*/
+  padding-top:100px;
+  text-align:center;
+  font-size: 16pt;
+  color: white;
+  margin-left:50px;
+  margin-right: 50px;
+}
+
+
+
+#intro{
+    padding-top:10px;
+    width:700px;
+    margin: 0px auto;
+    
+}
+#intro h1{
+    font-size: 24px;
+    color:white;
+    padding-top: 50px;
+}
+
+/* Second Content Box - NONUNI */
+#intro2{
+    margin: 0px auto;
+
+    background-color: #712928;
+    height:80px; 
+}
+#info2{
+    padding-top:4px;
+    width:800px;
+    margin: 0px auto;
+}
+
+#info2 h2{
+    font-size: 14px;
+    color:white;
+    padding-top: 20px;
+}
+
 #listings{
     margin: 0px auto;
     margin-top: 4px;
@@ -159,25 +278,8 @@ padding-left:70px;
   width: 396px;
   background-color:#57201f; 
 }
-#content{
-    margin: 0px auto;
-    margin-top: 4px;
-    background-color: #712928;
-    height:125px;
-}
 
-#info{
-    margin: 0px auto;
-    margin-top: 4px;
-    background-color: #712928;
-    height:130px;
-}
-#introduction{
-    margin: 0px auto;
-    margin-top: 4px;
-    background-color: #712928;
-    height:200px;
-}
+
 
 #profile{
     padding-top:70px;
@@ -199,22 +301,30 @@ padding-left:70px;
    margin-right: 80px;
 }
 
-#intro{
-    padding-top:40px;
-    width:400px;
-    margin: 0px auto;
-    
-}
-
-
-
-#footer{
+/* Pagination - NONUNI */
+#paginate{
     margin-top: 4px;
     height: 30px;
     background-color:#712928;
     
 }
 
+#pagination h1{
+    padding-top: 5px;
+     margin-right: 5px;
+    font-weight:normal;
+    font-size: 12pt;
+    color: #9f4b00;
+    float:right;
+    
+}
+/* Footer - UNIVERSAL */
+#footer{
+    margin-top: 4px;
+    height: 30px;
+    background-color:#712928;
+    
+}
 #contact h1{
      padding-top: 5px;
     font-weight:normal;
@@ -232,20 +342,29 @@ padding-left:70px;
     float:right;
     
 }
-#minibar{
-  margin-top:20px;
-  float:left;
-  background-color: #284D71;
-  height:20px;
-  width: 650px;
+
+/* Login Success - NONUNI */
+#success{
+    padding-top:50px;
+    width:700px;
+    margin: 0px auto;
+    
 }
-#minibar h3{
-  font-size: 12pt;
-  color: white;
-  float: right;
-  margin-right: 10px;
-}
-.h2{
+form { position:relative; }
+
+label {
+  display:block;
+  margin-top: 5px;
+  color:white;
+  }
+
+label input {
+  position:absolute;
+  left:17em;
+  margin-top: 5px;
+  }
+  
+  .h2{
   font-size:14px;
   color: white;
   padding-left:70px;
