@@ -19,7 +19,7 @@ session_start();
                 </div>
             </a> 
             <?php require_once ('resources/templates/navbar.php'); ?>
-            <?php require_once ("resources/templates/quote.php"); ?>  
+            <?php require_once ("resources/templates/quote.php"); ?>
             <?php require_once ('resources/templates/listings.php'); ?>
             <?php require_once ('resources/templates/pagination.php'); ?>
             <?php require_once ('resources/templates/footer.php'); ?>

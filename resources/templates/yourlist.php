@@ -21,7 +21,7 @@
                     {
                             //echo $row['subject'];
                             echo "
-                            <div id='info'>
+                            <div id='list'>
                                 <!--<div id='minibar'><h3>Listings</h3></div>-->
                                 <div id='listings'>
                                     <div id='listleft'>

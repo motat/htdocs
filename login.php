@@ -10,78 +10,49 @@ include ('resources/config.php');
 session_start();
 ?>
 <body>
- 
-    <div id="top">
-        <div class="main">
-            <div id="header">
-                
+<div id="top">
+    <div class="main">
+        <div id="header">    
+        </div>
+        <a href="#">
+            <div style=background:url('images/menu.png'); height=124px; id="menu">
             </div>
-            <div style="clear:both"></div>  
-           <a href="#"><div style=background:url('images/menu.png'); height=124px; id="menu">
-                     
-                          
-            </div></a> 
-             <ul id="header">
-                <li><a href="http://localhost/professor.php">Professor</a></li>
-                <li><a href="http://localhost/student.php">Student</a></li>
-                <li><a href="http://localhost/listings.php">Listings</a></li>
-                <?php if(!isset($_SESSION['id'])) {?>  <li><a href="http://localhost/login.php">Login</a></li><?php }else{?> <li><a href="http://localhost/logout.php">Logout</a></li><?php }?>
-            </ul>
-            <div id="content">
-                <div id="quote">
-                     <h1>&quot;Information is not knowledge.&quot;</h1>
-                <h2>-Albert Einstein</h2>
-                </div>
+        </a> 
+        <?php require_once ('resources/templates/navbar.php'); ?>
+        <?php require_once ("resources/templates/quote.php"); ?>  
+        <?php if(!isset($_SESSION['id'])) { ?>
+        <div id="info">
+            <div id="minibar">
+                <h3>Login</h3>
             </div>
-             <?php
-               if(!isset($_SESSION['id']))
-               {
-                ?>
-            <div id="info">
-                <div id="minibar"><h3>Login</h3></div>
-                <div id="intro">
-               
-                    <form action="resources/library/login.php" method="POST">                    
+            <div id="intro">
+                <form action="resources/library/login.php" method="POST">                    
                     <label for=”email”>Email<input type="text" name="email"/></label>
                     <label for=”password”>Password<input type="password" name="password"/></label>
                     <br/>
                         <input type="submit" value="Login"/>
-                    </form>
+                </form>
                     <br/>
-                    <h2>If you do not have an account, please sign up <a href="http://localhost/register">here!</a></h2>
-               
-                     
-                    
+                    <h2>If you do not have an account, please sign up <a href="http://localhost/register">here!</a></h2>  
+            </div>
+        </div>
+        <?php
+        }
+        else
+        {
+        ?>
+        <div id="info">
+            <div id="minibar"><h3>Logged In</h3></div>
+                <div id="profile">
+                <h4>You are already logged in</h4>  
                 </div>
             </div>
-            <?php
-               }
-               else
-               {
-                ?>
-                <div id="info">
-                <div id="minibar"><h3>Logged In</h3></div>
-                   <div id="profile">
-                   <h4>You are already logged in</h4>
-                   
-                </div>
-                <!--What a logged out professor sees-->
-             
-
-            </div>
-                <?php
-               }
-               ?>
-           <div id="footer">
-            <div id="contact">
-                <!--<h1>Contact Vadim <a style="color:#160000;" href="#">Here</a>!</h1>-->
-            </div>
-            <div id="copyright">
-                <h1>&#169; Vadim Pishchenko</h1>
-            </div>
-           </div>
+        <?php
+        }
+        ?>
+        <?php require_once ('resources/templates/footer.php'); ?>
         </div>
     </div>
-   
+</div>
 </body>
 </html>

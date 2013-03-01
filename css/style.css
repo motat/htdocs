@@ -29,34 +29,13 @@ a:active  {
   color: white;
   }
   
-/* Main container for the page*/
+/* Main container for the page - UNIVERSAL*/
 .main{
     width: 800px;
     margin: 0 auto;
     overflow:hidden;
 }
-
-.mains{
-    width: 800px;
-    margin: 0 auto;
-    overflow:hidden;
-}
-.quotemain {
-    
-    font-size: 14px;
-    font-weight: bold;
-    color:white;
-}
-.quotemain2 {
-    font-weight: bold;
-    color:white;
-    font-size:14px;
-    
-    
-}
-
-
-
+/*Input Box Config*/
 input{   
   border: none;
   background-color: #2d0000;
@@ -64,42 +43,12 @@ input{
   font-family: Arial;
   font-size: 14px;
 }
-
+/*AhhhA Header Picture*/
 #menu{
-    background: url("images/menu.png");
+    background:url('images/menu.png');
     height: 124px;
     text-align: center;
     font-family: comic sans ms;
-}
-#menuright{
-    height: 100px;
-    float:right;
-    
-}
-#menuright h1{
-    color:#220800;
-    font-size: 16pt;
-    padding-top: 12px;
-    padding-right:35px;
-}
-
-#menuright h2{
-    color:#220800;
-    font-size: 16pt;
-     padding-top: 14px;
-    padding-right:35px;
-}
-#menuleft{
-    height: 100px;
-    float: left;
-    
-}
-
-#menuleft h1{
- color:#220800;
-    font-size: 16pt;
-    padding-top: 28px;
-    padding-left:40px;
 }
 /*Navigation Bar and other - UNIVERSAL */
 ul#header{
@@ -123,7 +72,6 @@ ul#header li a{
     background-color:#712928;
     list-style: none;
 }
-
 /* Famous quote - UNIVERSAL*/
 #quote{
     margin: 0px auto;
@@ -133,7 +81,7 @@ ul#header li a{
 }
 #genquote {
     padding-top: 20px;
-     margin: 0px auto;
+    margin: 0px auto;
     width:400px;
     text-align: center;
 }
@@ -141,9 +89,7 @@ ul#header li a{
     font-weight: lighter;
     color:white;
     font-size: 14pt;
-  
 }
-
 #genquote h2{
   font-weight: lighter;
     margin-top: 5px;
@@ -151,7 +97,6 @@ ul#header li a{
     font-size: 12pt;
     float:right;
 }
-
 /* Start of the Minibar - UNIVERSAL*/
 #minibar{
   margin-top:20px;
@@ -166,60 +111,44 @@ ul#header li a{
   float: right;
   margin-right: 10px;
 }
-
-#quote{
-    margin: 0px auto;
-    margin-top: 4px;
-    background-color: #712928;
-    height:125px;
-}
-
+/*Main Content Div - UNIVERSAL*/
 #info{
     margin: 0px auto;
     margin-top: 4px;
     background-color: #712928;
     height:200px;
 }
-
-
 #info h1{
-  font-size: 16pt;
-  color: white;
-  margin-left:50px;
-  margin-right: 50px;
+    font-size: 16pt;
+    color: white;
+    margin-left:50px;
+    margin-right: 50px;
 }
 #info h2{/*click here to register*/
-  font-size:10pt;
-  color:white;
+    font-size:10pt;
+    color:white;
 }
-
 #info h4{/*already logged in*/
-  padding-top:100px;
-  text-align:center;
-  font-size: 16pt;
-  color: white;
-  margin-left:50px;
-  margin-right: 50px;
+    padding-top:100px;
+    text-align:center;
+    font-size: 16pt;
+    color: white;
+    margin-left:50px;
+    margin-right: 50px;
 }
-
-
-
 #intro{
     padding-top:10px;
     width:700px;
     margin: 0px auto;
-    
 }
 #intro h1{
     font-size: 24px;
     color:white;
     padding-top: 50px;
 }
-
 /* Second Content Box - NONUNI */
 #intro2{
     margin: 0px auto;
-
     background-color: #712928;
     height:80px; 
 }
@@ -234,7 +163,13 @@ ul#header li a{
     color:white;
     padding-top: 20px;
 }
-
+/*Listings - NONUNI */
+#list{
+    height:130px;
+    margin: 0px auto;
+    margin-top: 4px;
+    background-color: #712928;
+}
 #listings{
     margin: 0px auto;
     margin-top: 4px;
@@ -242,73 +177,48 @@ ul#header li a{
     height:110px;
 }
 #listings h1{
-  font-size:26px;
-  color: white;
-  margin-left: 30px;
-  padding-top: 14px;
-  padding-bottom: 2px;
+    font-size:26px;
+    color: white;
+    margin-left: 30px;
+    padding-top: 14px;
+    padding-bottom: 2px;
 }
 #listings h2{
-  font-size:16px;
-  color: white;
-  padding-left:70px;
+    font-size:16px;
+    color: white;
+    padding-left:70px;
 }
 #listings h3{
-  font-size:16px;
-  color: white;
-padding-left:70px;
+    font-size:16px;
+    color: white;
+    padding-left:70px;
 }
 #listings h4{
-  text-align:center;
-  font-size:16px;
-  color: white;
-  margin-left: 30px;
-  padding-top: 14px;
+    text-align:center;
+    font-size:16px;
+    color: white;
+    margin-left: 30px;
+    padding-top: 14px;
 }
 #listleft{
-  float:left;
-  height: 100px;
-  width: 400px;
+    float:left;
+    height: 100px;
+    width: 400px;
 }
 #listright{
-  margin-right: 4px;
-  margin-top: 15px;
-  float:right;
-  height: 100px;
-  width: 396px;
-  background-color:#57201f; 
+    margin-right: 4px;
+    margin-top: 15px;
+    float:right;
+    height: 100px;
+    width: 396px;
+    background-color:#57201f; 
 }
-
-
-
-#profile{
-    padding-top:70px;
-    width:700px;
-    margin: 0px auto;
-    
-}
-
-#profile h1{
-  font-size:26px;
-  color: white;
-
-}
-
-#profile h2{
-  font-size:16px;
-  color: white;
-  margin-left: 80px;
-   margin-right: 80px;
-}
-
 /* Pagination - NONUNI */
 #paginate{
     margin-top: 4px;
     height: 30px;
     background-color:#712928;
-    
 }
-
 #pagination h1{
     padding-top: 5px;
      margin-right: 5px;
@@ -316,7 +226,6 @@ padding-left:70px;
     font-size: 12pt;
     color: #9f4b00;
     float:right;
-    
 }
 /* Footer - UNIVERSAL */
 #footer{
@@ -342,29 +251,24 @@ padding-left:70px;
     float:right;
     
 }
-
 /* Login Success - NONUNI */
 #success{
     padding-top:50px;
     width:700px;
     margin: 0px auto;
-    
 }
 form { position:relative; }
-
 label {
   display:block;
   margin-top: 5px;
   color:white;
   }
-
 label input {
   position:absolute;
   left:17em;
   margin-top: 5px;
   }
-  
-  .h2{
+.h2{
   font-size:14px;
   color: white;
   padding-left:70px;

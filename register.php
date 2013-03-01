@@ -4,62 +4,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>Ahhha Registration Page</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-    <style>
-       
-        
-    </style>
-             
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />            
 </head>
 <body>
- 
-    <div id="top">
-        <div class="main">
-            <div id="header">
-                
+<div id="top">
+    <div class="main">
+        <div id="header">      
+        </div>  
+        <a href="#">
+            <div style=background:url('images/menu.png'); height=124px; id="menu">            
             </div>
-            <div style="clear:both"></div>  
-           <a href="#"><div id="menu">
-                     
-                          
-            </div></a> 
-             <ul id="header">
-                <li><a href="http://localhost/professor">Professor</a></li>
-                <li><a href="http://localhost/student">Student</a></li>
-                <li><a href="http://localhost/listings">Listings</a></li>
-                  <li><a href="http://localhost/login">Login</a></li>
-            </ul>
-            <div id="content">
-                <div id="quote">
-                     <h1>&quot;Information is not knowledge.&quot;</h1>
-                <h2>-Albert Einstein</h2>
-                </div>
-            </div>
-            <div id="info">
-                <div id="minibar"><h3>Registration</h3></div>
-                <div id="intro">
-               
-                   
-                    <form action="register.php" method="POST">
-                       
+        </a> 
+        <?php require_once ('resources/templates/navbar.php'); ?>
+        <?php require_once ("resources/templates/quote.php"); ?>  
+        <div id="info">
+            <div id="minibar"><h3>Registration</h3></div>
+            <div id="intro">
+                <form action="register.php" method="POST">  
                     <label for=”firstname”>Firstname<input type="text" name="firstname"/></label>
                     <label for=”lastname”>Lastname<input type="text" name="lastname"/></label>
                     <label for=”email”>Email<input type="text" name="email"/></label>
                     <label for=”password”>Password<input type="password" name="password"/></label>
-                        <input type="submit" value"submit"/>
-                    </form>
-                </div>
+                    <input type="submit" value"submit"/>
+                </form>
             </div>
-           <div id="footer">
-            <div id="contact">
-                <!--<h1>Contact Vadim <a style="color:#160000;" href="#">Here</a>!</h1>-->
-            </div>
-            <div id="copyright">
-                <h1>&#169; Vadim Pishchenko</h1>
-            </div>
-           </div>
         </div>
+        <?php require_once ('resources/templates/footer.php'); ?>
     </div>
-   
+</div> 
 </body>
 </html>

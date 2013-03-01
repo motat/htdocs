@@ -35,10 +35,8 @@ session_start();
             </div>
             <?php
                     }
-                    ?>
-            <?php
-               if(isset($_SESSION['id']))
-                    {
+                if(isset($_SESSION['id']))
+                {
                         $query = "SELECT * FROM accounts WHERE id= '" . $_SESSION['id'] . "';";
                         $result = mysql_query($query) or die(mysql_error());
                         $row = mysql_fetch_array($result) or die(mysql_error());
@@ -48,19 +46,16 @@ session_start();
                     <h3>Professor Panel</h3>
                 </div>
                 <div id='intro'>
-                    <h1>Hello Professor <?php echo $row['firstname']."  ". $row['lastname'];?></h1>
+                    <h1>Hello Professor <?php echo $row['firstname']."  ". $row['lastname']; ?></h1>
                     <h2>On this panel, you can see which listings you have put up. You are also able to manage them. If you would like to add a listing, please browse to the  <a href="http://localhost/addlist/"><font color="#411716">listings page.</font></a></h2>
                 </div>
             </div>
-            <?php
-                 require_once ('resources/templates/yourlist.php');
-               }
-               ?>
+            <?php require_once ('resources/templates/yourlist.php');  ?>
             <?php require_once ('resources/templates/pagination.php'); ?>
+            <?php } ?>
             <?php require_once ('resources/templates/footer.php'); ?>
         </div>
     </div>
     
-   
 </body>
 </html>

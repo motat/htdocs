@@ -5,52 +5,28 @@
 <head>
     <title>Ahhha Registration Page</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-    <style>
-       
-        
-    </style>
-             
 </head>
 <body>
- 
-    <div id="top">
-        <div class="main">
-            <div id="header">
-                
-            </div>
-            <div style="clear:both"></div>  
-           <a href="#"><div style=background:url('images/menu.png'); height=124px; id="menu">
-                     
-                          
-            </div></a> 
-             <ul id="header">
-                <li><a href="http://localhost/professor.php">Professor</a></li>
-                <li><a href="http://localhost/student.php">Student</a></li>
-                <li><a href="http://localhost/listings.php">Listings</a></li>
-                <?php if(!isset($_SESSION['id'])) {?>  <li><a href="http://localhost/login.php">Login</a></li><?php }else{?> <li><a href="http://localhost/logout.php">Logout</a></li><?php }?>
-            </ul>
-            <div id="content">
-                <div id="quote">
-                     <h1>&quot;Information is not knowledge.&quot;</h1>
-                <h2>-Albert Einstein</h2>
-                </div>
-            </div>
-            <div id="info">
-                <div id="minibar"><h3>Login</h3></div>
-                <div id="success">
-                <h1>You have successfully logged in! Please visit either the <a href="http://localhost/professor">professor panel</a> or the <a href="http://localhost/student">student panel</a> to continue!</h1>       
-                </div>
-            </div>
-           <div id="footer">
-            <div id="contact">
-                <!--<h1>Contact Vadim <a style="color:#160000;" href="#">Here</a>!</h1>-->
-            </div>
-            <div id="copyright">
-                <h1>&#169; Vadim Pishchenko</h1>
-            </div>
-           </div>
+<div id="top">
+    <div class="main">
+        <div id="header">
         </div>
+        <a href="#">
+            <div style=background:url('images/menu.png'); height=124px; id="menu">     
+            </div>
+        </a> 
+        <?php require_once ('resources/templates/navbar.php'); ?>
+        <?php require_once ("resources/templates/quote.php"); ?>  
+        <div id="info">
+            <div id="minibar">
+                <h3>Login</h3>
+            </div>
+            <div id="success">
+                <h1>You have successfully logged in! Please visit either the <a href="http://localhost/professor">professor panel</a> or the <a href="http://localhost/student">student panel</a> to continue!</h1>       
+            </div>
+        </div>
+        <?php require_once ('resources/templates/footer.php'); ?>
     </div>
-   
+</div>
 </body>
 </html>
