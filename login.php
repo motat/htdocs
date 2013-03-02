@@ -25,7 +25,7 @@ session_start();
             <div id="minibar">
                 <h3>Login</h3>
             </div>
-            <div id="intro">
+            <div id="intro" style=padding-top:60px; >
                 <form action="resources/library/login.php" method="POST">                    
                     <label for=”email”>Email<input type="text" name="email"/></label>
                     <label for=”password”>Password<input type="password" name="password"/></label>

@@ -31,10 +31,16 @@ a:active  {
   
 /* Main container for the page - UNIVERSAL*/
 .main{
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
     overflow:hidden;
 }
+.container{
+  width:1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 /*Input Box Config*/
 input{   
   border: none;
@@ -45,6 +51,8 @@ input{
 }
 /*AhhhA Header Picture*/
 #menu{
+    margin: 0 auto;
+    width:800px;
     background:url('images/menu.png');
     height: 124px;
     text-align: center;
@@ -67,13 +75,18 @@ ul#header li a{
     text-decoration: none;
 }
 #header{/*Also spacing for Very top*/
+    margin: 0 auto;
+    width:800px;
     margin-top: 4px;
     height: 30px;
     background-color:#712928;
     list-style: none;
 }
 /* Famous quote - UNIVERSAL*/
+
 #quote{
+    margin: 0 auto;
+    width:800px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #712928;
@@ -113,6 +126,8 @@ ul#header li a{
 }
 /*Main Content Div - UNIVERSAL*/
 #info{
+  
+    width:800px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #712928;
@@ -125,7 +140,7 @@ ul#header li a{
     margin-right: 50px;
 }
 #info h2{/*click here to register*/
-    font-size:10pt;
+    font-size:14pt;
     color:white;
 }
 #info h4{/*already logged in*/
@@ -153,6 +168,8 @@ ul#header li a{
     height:80px; 
 }
 #info2{
+    margin: 0 auto;
+    width:800px;
     padding-top:4px;
     width:800px;
     margin: 0px auto;
@@ -165,12 +182,14 @@ ul#header li a{
 }
 /*Listings - NONUNI */
 #list{
+  width:800px;
     height:130px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #712928;
 }
 #listings{
+    width:800px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #712928;
@@ -215,6 +234,8 @@ ul#header li a{
 }
 /* Pagination - NONUNI */
 #paginate{
+  margin: 0 auto;
+  width:800px;
     margin-top: 4px;
     height: 30px;
     background-color:#712928;
@@ -229,13 +250,14 @@ ul#header li a{
 }
 /* Footer - UNIVERSAL */
 #footer{
+  margin: 0 auto;
+    width:800px;
     margin-top: 4px;
     height: 30px;
-    background-color:#712928;
-    
+    background-color:#712928; 
 }
 #contact h1{
-     padding-top: 5px;
+    padding-top: 5px;
     font-weight:normal;
     font-size: 12pt;
     color: #160000;

@@ -9,8 +9,7 @@
 <?php
 include 'resources/config.php';
 ?>
-<div id="top">
-    <div class="main">
+<div class="main">
         <div id="header">
         </div>
             <a href="http://localhost">
@@ -33,7 +32,9 @@ include 'resources/config.php';
                 </div>
             </div>
             <?php require_once ('resources/templates/footer.php'); ?>
-        </div>
+            <div style="clear:both"></div>  
+       
     </div>
+
 </body>
 </html>
