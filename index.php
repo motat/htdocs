@@ -9,21 +9,23 @@
 <?php
 include 'resources/config.php';
 ?>
-<div class="main">
+<div id="main">
         <div id="header">
         </div>
             <a href="http://localhost">
                 <div style=background:url('images/menu.png'); height=124px; id="menu">
                 </div>
             </a> 
-            <?php require_once ('resources/templates/navbar.php'); ?>
-            <?php require_once ("resources/templates/quote.php"); ?>  
+            <?php require_once ("resources/templates/navbar.php"); ?>  
+            <?php require_once ("resources/templates/quote.php"); ?>
+            
             <div id="info">
                 <div id="minibar">
-                    <h3>Welcome</h3>
+                    <h3>Greetings, from Ahhha!</h3>
                 </div>
                 <div id="intro">
-                    <h1>Greetings, from Ahhha!</h1>
+                    <h2>Register, login, and get ready for your Ahhha moments!</h1>
+                    
                 </div>
             </div>
             <div id="info2">
@@ -31,10 +33,8 @@ include 'resources/config.php';
                     <h2>Currently, our service is focused on, and supported towards, The Southern California area.</h2>
                 </div>
             </div>
-            <?php require_once ('resources/templates/footer.php'); ?>
-            <div style="clear:both"></div>  
-       
+         
+        
     </div>
-
 </body>
 </html>

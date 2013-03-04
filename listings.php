@@ -10,8 +10,8 @@
 include 'resources/config.php';
 session_start();
 ?>
-<div id="top">
-    <div class="main">
+
+    <div id="main">
         <div id="header">   
         </div> 
             <a href="#">
@@ -21,10 +21,21 @@ session_start();
             <?php require_once ('resources/templates/navbar.php'); ?>
             <?php require_once ("resources/templates/quote.php"); ?>
             <?php require_once ('resources/templates/listings.php'); ?>
+           
             <?php require_once ('resources/templates/pagination.php'); ?>
+            
             <?php require_once ('resources/templates/footer.php'); ?>
+            <div id='sidebar'>
+                <h3>Search by Name or Subject</h3>
+                <form  method="post" action="search.php?go"  id="searchform"> 
+                    <input  type="text" name="name">
+                        <br/>
+                    <input  type="submit" name="submit" value="Search"> 
+                </form>
+                
+            </div>
         </div>
-    </div>
+ 
    
 </body>
 </html>

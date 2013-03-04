@@ -33,7 +33,7 @@ session_start();
                         <input type="submit" value="Login"/>
                 </form>
                     <br/>
-                    <h2>If you do not have an account, please sign up <a href="http://localhost/register">here!</a></h2>  
+                    <h3>If you do not have an account, please sign up <a href="http://localhost/register">here!</a></h3>  
             </div>
         </div>
         <?php

@@ -30,10 +30,11 @@ a:active  {
   }
   
 /* Main container for the page - UNIVERSAL*/
-.main{
-    width: 100%;
+#main{
+    width: 800px;
     margin: 0 auto;
-    overflow:hidden;
+    
+    position: relative;
 }
 .container{
   width:1400px;
@@ -112,14 +113,15 @@ ul#header li a{
 }
 /* Start of the Minibar - UNIVERSAL*/
 #minibar{
-  margin-top:20px;
+  
   float:left;
   background-color: #284D71;
-  height:20px;
-  width: 650px;
+  height:50px;
+  width: 80%;
 }
 #minibar h3{
-  font-size: 12pt;
+  padding-top: 10px;
+  font-size: 20pt;
   color: white;
   float: right;
   margin-right: 10px;
@@ -161,6 +163,18 @@ ul#header li a{
     color:white;
     padding-top: 50px;
 }
+#intro h2{
+    
+    font-size: 16px;
+    color:white;
+    padding-top: 50px;
+}
+#intro h3{
+    
+    font-size: 16px;
+    color:white;
+    padding-top: 10px;
+}
 /* Second Content Box - NONUNI */
 #intro2{
     margin: 0px auto;
@@ -176,6 +190,7 @@ ul#header li a{
 }
 
 #info2 h2{
+  padding-left: 20px;
     font-size: 14px;
     color:white;
     padding-top: 20px;
@@ -231,6 +246,17 @@ ul#header li a{
     height: 100px;
     width: 396px;
     background-color:#57201f; 
+}
+/*Sidebar - Non UNI*/
+#sidebar{
+  padding-top: 50px;
+  top: 200px;
+  left: 804px;
+  width:155px;
+  height:150px;
+  background-color: #712928;
+  position: absolute;
+  
 }
 /* Pagination - NONUNI */
 #paginate{

@@ -22,17 +22,20 @@
                             //echo $row['subject'];
                             echo "
                             <div id='list'>
-                                <!--<div id='minibar'><h3>Listings</h3></div>-->
                                 <div id='listings'>
                                     <div id='listleft'>
                                         <h1>"?><?php echo $row['subject'];?><?php echo "</h1>
                                         <h3>payment: "?><?php echo $row['payment'];?><?php echo "</h3>
                                          <span class='h2'>by</span><span class='h5'>Professor "?><?php echo $row['firstname'];?><?php echo "</span>
+                                         <form action='resources/library/postmark.php' method='POST'>                    
+                                                 <input type='submit' value='Mark'/>
+                                         </form>
                                     </div>
                                 <div id='listright'>
                                         <h4>"?><?php echo $row['information'];?><?php echo "</h4>
                                 </div>
                                 </div>
+                                
                             </div>";
                         }
                        ?>
