@@ -12,9 +12,11 @@ if(isset($_SESSION['id']))
     $result1 = mysql_query($query1) or die(mysql_error());
     $row = mysql_fetch_array($result1) or die(mysql_error());
     $createid = $_GET['createid'];
-    $lastname = $row['lastname'];
+    $subject = $_GET['subject'];
+    $uid = $_GET['uid'];
+    $firstname = $row['firstname'];
     $email = $row['email'];
-    $query="INSERT INTO marks (id,lastname,email,createid) VALUES ('$id','$lastname','$email','$createid')";
+    $query="INSERT INTO marks (id,firstname,email,createid,subject) VALUES ('$uid','$firstname','$email','$createid','$subject')";
     mysql_query($query) or die ('Error updating database');
     echo "Yes";
 }

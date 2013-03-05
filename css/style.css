@@ -198,7 +198,7 @@ ul#header li a{
 /*Listings - NONUNI */
 #list{
   width:800px;
-    height:130px;
+    height:110px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #712928;
@@ -241,19 +241,72 @@ ul#header li a{
 }
 #listright{
     margin-right: 4px;
-    margin-top: 15px;
+    margin-top: 5px;
     float:right;
     height: 100px;
     width: 396px;
     background-color:#57201f; 
 }
+/*Mark List - NON UNI*/
+#marklist{
+  width:800px;
+    height:60px;
+    margin: 0px auto;
+    margin-top: 4px;
+    background-color: #552d2c;
+}
+#marklistings{
+    width:800px;
+    margin: 0px auto;
+    margin-top: 4px;
+    background-color: #552d2c;
+    height:50px;
+}
+#marklistings h1{
+    font-size:26px;
+    color: #B8615F;
+    margin-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+}
+#marklistings h2{
+    font-size:16px;
+    color: #B8615F;
+    padding-left:70px;
+}
+#marklistings h3{
+    font-size:16px;
+    color: #B8615F;
+    padding-left:70px;
+}
+#marklistings h4{
+    text-align:center;
+    font-size:16px;
+    color: white;
+    margin-left: 30px;
+    padding-top: 14px;
+}
+#marklistleft{
+    float:left;
+    height: 50px;
+    width: 400px;
+}
+#marklistright{
+    margin-right: 4px;
+    margin-top: 5px;
+    float:right;
+    height: 50px;
+    width: 396px;
+    background-color:#B87877; 
+}
 /*Sidebar - Non UNI*/
 #sidebar{
+  text-align:center;
   padding-top: 50px;
   top: 200px;
   left: 804px;
   width:155px;
-  height:150px;
+  height:90px;
   background-color: #712928;
   position: absolute;
   

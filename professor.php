@@ -43,13 +43,14 @@ session_start();
             ?>
             <div id="info">
                 <div id="minibar">
-                    <h3>Professor Panel</h3>
+                    <h3>Hello Professor <?php echo $row['firstname']."  ". $row['lastname']; ?></h3>
                 </div>
                 <div id='intro'>
-                    <h1>Hello Professor <?php echo $row['firstname']."  ". $row['lastname']; ?></h1>
-                    <h2>On this panel, you can see which listings you have put up. You are also able to manage them. If you would like to add a listing, please browse to the  <a href="http://localhost/addlist/"><font color="#411716">listings page.</font></a></h2>
+                    <h1></h1>
+                    <h2>Here you can see which students desire you and also which listings you've put up.</h2>
                 </div>
             </div>
+            <?php require_once ('resources/templates/profmark.php');  ?>
             <?php require_once ('resources/templates/yourlist.php');  ?>
             <?php require_once ('resources/templates/pagination.php'); ?>
             <?php } ?>
