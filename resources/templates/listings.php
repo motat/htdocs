@@ -26,10 +26,9 @@
                                     <div id='listleft'>
                                         <h1>"?><?php echo $row['subject'];?><?php echo "</h1>
                                         <h3>payment: "?><?php echo $row['payment'];?><?php echo "</h3>
-                                         <span class='h2'>by</span><span class='h5'>Professor "?><?php echo $row['firstname'];?><?php echo "</span>
-                                         <form action='resources/library/postmark.php' method='POST'>                    
-                                                 <input type='submit' value='Mark'/>
-                                         </form>
+                                         <span class='h2'>by</span><span class='h5'>Professor "?><?php echo $row['firstname']; echo $row['createid'];?><?php echo "</span>
+                                         
+                                         <a href='resources/library/postmark.php?createid="?><?php echo $row['createid'];?><?php echo "'>Mark</a>
                                     </div>
                                 <div id='listright'>
                                         <h4>"?><?php echo $row['information'];?><?php echo "</h4>
