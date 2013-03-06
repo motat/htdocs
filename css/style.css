@@ -250,7 +250,7 @@ ul#header li a{
 /*Mark List - NON UNI*/
 #marklist{
     width:800px;
-    height:60px;
+    height:64.8px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #552d2c;
@@ -293,7 +293,7 @@ ul#header li a{
 }
 #marklistright{
     margin-right: 4px;
-    margin-top: 5px;
+    margin-top: 8px;
     float:right;
     height: 50px;
     width: 396px;
