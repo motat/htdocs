@@ -9,7 +9,7 @@
 <?php
 include 'resources/config.php';
 session_start();
-echo $_SESSION['id'];
+
 ?>
 
 <div id="top">
