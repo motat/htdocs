@@ -6,7 +6,7 @@
     if something changes such as your database credentials, or a path to a specific resource, 
     you'll only need to update it here. 
 */
-$mysql_con = mysql_connect("localhost", "root", "root");
+$mysql_con = mysql_connect("localhost", "root");
 
 if(!$mysql_con)
     {

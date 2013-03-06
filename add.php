@@ -22,6 +22,9 @@
                 <h3>Listings</h3>
             </div>
             <div id="intro">
+			<br/>
+			<br/>
+			<br/>
                 <form action="resources/library/addlist.php" method="POST">  
                     <label for=”subject”>Subject<input type="text" name="subject"/></label>
                     <label for=”information”>Information<input type="text" name="information"/></label>

@@ -14,7 +14,7 @@ session_start();
     <div id="main">
         <div id="header">   
         </div> 
-            <a href="#">
+            <a href="http://localhost">
                 <div style=background:url('images/menu.png'); height=124px; id="menu"> 
                 </div>
             </a> 
@@ -25,15 +25,8 @@ session_start();
             <?php require_once ('resources/templates/pagination.php'); ?>
             
             <?php require_once ('resources/templates/footer.php'); ?>
-            <div id='sidebar'>
-                <h3>Search by Name or Subject</h3>
-                <form  method="post" action="search.php?go"  id="searchform"> 
-                    <input  type="text" name="name">
-                        <br/>
-                    <input  type="submit" name="submit" value="Search"> 
-                </form>
-                
-            </div>
+			<?php require_once ('resources/templates/search.php'); ?>
+            
         </div>
  
    

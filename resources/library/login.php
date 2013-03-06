@@ -5,7 +5,7 @@ $password="root"; // Mysql password
 $db_name="ahhha"; // Database name 
 $tbl_name="accounts"; // Table name
 
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
+mysql_connect("$host", "$username")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
 
 // username and password sent from form 

@@ -28,7 +28,7 @@
                                         <h3>payment: "?><?php echo $row['payment'];?><?php echo "</h3>
                                          <span class='h2'>by</span><span class='h5'>Professor "?><?php echo $row['firstname'];?><?php echo "</span>
                                          
-                                         <a href='resources/library/postmark.php?createid="?><?php echo $row['createid'];?><?php echo "&subject="; echo $row['subject'];?><?php echo "&uid="; echo $row['id'];?><?php echo "'>Mark</a>
+                                         <a href='resources/library/postmark.php?createid="?><?php echo $row['createid'];?><?php echo "&subject="; echo $row['subject'];?><?php echo "&uid="; echo $row['id'];?><?php echo "&prof="; echo $row['firstname'];?><?php echo "&information="; echo $row['information'];?><?php echo "&markid="; echo $_SESSION['id'];?><?php echo "'>Mark</a>
                                     </div>
                                 <div id='listright'>
                                         <h4>" ;?><?php echo $row['information'];?><?php echo "</h4>

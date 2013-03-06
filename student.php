@@ -9,9 +9,7 @@
 <?php
 include 'resources/config.php';
 session_start();
-echo $_SESSION['id'];
 ?>
-
 <div id="top">
     <div class="main">
         <div id="header">    
@@ -28,11 +26,11 @@ echo $_SESSION['id'];
             ?>
             <div id="info">
                 <div id="minibar">
-                    <h3>Professor Panel</h3>
+                    <h3>Student</h3>
                 </div>
                 <div id="intro">
-                    <h1>Hello Professor </h1>
-                    <h2>This is the professor panel, you need to be logged in. <a href="http://localhost/login.php"><font color="#411716">Login here.</font></a></h2>
+                    <h1>Hello  </h1>
+                    <h2>This is the student panel, you need to be logged in to view it. <a href="http://localhost/login.php"><font color="#411716">Login here.</font></a></h2>
                 </div>
             </div>
             <?php
@@ -45,16 +43,15 @@ echo $_SESSION['id'];
             ?>
             <div id="info">
                 <div id="minibar">
-                    <h3>Hello Professor <?php echo $row['firstname']."  ". $row['lastname']; ?></h3>
+                    <h3>Hello <?php echo $row['firstname']."  ". $row['lastname']; ?></h3>
                 </div>
                 <div id='intro'>
                     <h1></h1>
-                    <h2>Here you can see which students desire you and also which listings you've put up.</h2>
+                    <h2>Below you can see a list of all the lessons you have marked. If not already, a professor should contact you via email soon.</h2>
                 </div>
             </div>
-            <?php require_once ('resources/templates/profmark.php');  ?>
-            <?php require_once ('resources/templates/yourlist.php');  ?>
-            <?php require_once ('resources/templates/pagination.php'); ?>
+            <?php require_once ('resources/templates/studmark.php');  ?>
+
             <?php } ?>
             <?php require_once ('resources/templates/footer.php'); ?>
         </div>

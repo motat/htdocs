@@ -7,7 +7,7 @@ $payment = $_POST['payment'];
 if(isset($_SESSION['id']))
 
     $id = $_SESSION['id'];
-    mysql_connect ("localhost", "root", "root") or die ('Error: ' . mysql_error());
+    mysql_connect ("localhost", "root") or die ('Error: ' . mysql_error());
     mysql_select_db ("ahhha");
     $query1 = "SELECT * FROM accounts WHERE id= '$id';";
     $result1 = mysql_query($query1) or die(mysql_error());

@@ -20,7 +20,10 @@
         <div id="info">
             <div id="minibar"><h3>Registration</h3></div>
             <div id="intro">
-                <form action="register.php" method="POST">  
+			<br/>
+			<br/>
+			<br/>
+                <form  action="resources/library/register.php" method="POST">  
                     <label for=”firstname”>Firstname<input type="text" name="firstname"/></label>
                     <label for=”lastname”>Lastname<input type="text" name="lastname"/></label>
                     <label for=”email”>Email<input type="text" name="email"/></label>

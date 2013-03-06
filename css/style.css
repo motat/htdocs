@@ -249,7 +249,7 @@ ul#header li a{
 }
 /*Mark List - NON UNI*/
 #marklist{
-  width:800px;
+    width:800px;
     height:60px;
     margin: 0px auto;
     margin-top: 4px;
@@ -258,7 +258,7 @@ ul#header li a{
 #marklistings{
     width:800px;
     margin: 0px auto;
-    margin-top: 4px;
+    margin-top: 0px;
     background-color: #552d2c;
     height:50px;
 }
@@ -284,7 +284,7 @@ ul#header li a{
     font-size:16px;
     color: white;
     margin-left: 30px;
-    padding-top: 14px;
+    padding-top: 5px;
 }
 #marklistleft{
     float:left;
@@ -299,17 +299,42 @@ ul#header li a{
     width: 396px;
     background-color:#B87877; 
 }
+/*Box - UNI*/
+#box{
+margin: 0px auto;
+height:10px;
+width:10px;
+float:left;
+background-color:black;
+}
+#box h1{
+text-align:center;
+font-size:10px;
+color:white;
+}
 /*Sidebar - Non UNI*/
 #sidebar{
   text-align:center;
-  padding-top: 50px;
   top: 200px;
   left: 804px;
   width:155px;
-  height:90px;
-  background-color: #712928;
+  height:100px;
+  background-color: #552d2c;
   position: absolute;
-  
+}
+
+#sidebarmini{
+	
+  text-align:center;
+  margin-top: 4px;
+  margin-left:4px;
+  width:147px;
+  height:30px;
+  background-color: #B87877;
+}
+#sidebar h1{
+color:white;
+font-size:18px;
 }
 /* Pagination - NONUNI */
 #paginate{
