@@ -31,7 +31,7 @@ session_start();
                     <h3>Professor Panel</h3>
                 </div>
                 <div id="intro">
-                    <h1>Hello Professor </h1>
+                    <h1>Hello Professor  </h1>
                     <h2>This is the professor panel, you need to be logged in. <a href="http://localhost/login.php"><font color="#411716">Login here.</font></a></h2>
                 </div>
             </div>
@@ -49,14 +49,14 @@ session_start();
                 </div>
                 <div id='intro'>
                     <h1></h1>
-                    <h2>Here you can see which students desire you and also which listings you've put up.</h2>
+                    <h2>Here you can see which students desire you and also which listings you've put up. Clicking the <div id='box2'>&nbsp;</div> will remove your listings or a students request for you. </h2>
                 </div>
             </div>
             <?php require_once ('resources/templates/profmark.php');  ?>
             <?php require_once ('resources/templates/yourlist.php');  ?>
             <?php require_once ('resources/templates/pagination.php'); ?>
             <?php } ?>
-            <?php require_once ('resources/templates/footer.php'); ?>
+          
         </div>
     </div>
     

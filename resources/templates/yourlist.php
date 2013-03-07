@@ -21,19 +21,21 @@
                     {
                             //echo $row['subject'];
                             echo "
-                            <div id='list'>
+                            <div id='proflist'>
                                 <!--<div id='minibar'><h3>Listings</h3></div>-->
-                                <div id='listings'>
-                                    <div id='listleft'>
+                                <div id='proflistings'>
+                                    <div id='proflistleft'>
                                         <h1>"?><?php echo $row['subject'];?><?php echo "</h1>
                                          <span class='h2'>by</span><span class='h5'>Professor "?><?php echo $row['firstname'];?><?php echo "</span>
-                                        <h3>payment: "?><?php echo $row['payment'];?><?php echo "</h3>
+                                        <!--<h3>payment: "?><?php echo $row['payment'];?><?php echo "</h3>--!>
                                         
                                     </div>
-                                <div id='listright'>
-                                        <h4>"?><?php echo $row['information'];?><?php echo "</h4>
+                                     <div id='proflistright'>
+                                          <h4>"?><?php echo $row['information'];?><?php echo "</h4>
                                 </div>
                                 </div>
-                            </div>";
+                                <a style='display:inline-block' href='resources/library/droplist.php?createid=";?><?php echo $row['createid'];?><?php echo "'?><div id='box'><h1></h1></div></a>
+                            </div>
+                            ";
                         }
                        ?>

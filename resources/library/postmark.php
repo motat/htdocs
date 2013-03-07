@@ -21,10 +21,12 @@ if(isset($_SESSION['id']))
     $email = $row['email'];
     $query="INSERT INTO marks (id,firstname,email,createid,subject,prof,information,markid) VALUES ('$uid','$firstname','$email','$createid','$subject','$prof','$information','$markid')";
     mysql_query($query) or die ('Error updating database');
-    echo "Yes";
+    require_once(realpath(dirname(__FILE__) . "/../config.php"));  
+    header("location:$baseurl/resources/templates/successmark.php");
 }
 else
 {
-    echo "no";
+    require_once(realpath(dirname(__FILE__) . "/../config.php"));  
+    header("location:$baseurl/resources/templates/requirelogin.php");
 }
 ?>

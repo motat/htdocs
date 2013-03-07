@@ -24,8 +24,7 @@ session_start();
            
             <?php require_once ('resources/templates/pagination.php'); ?>
             
-            <?php require_once ('resources/templates/footer.php'); ?>
-			<?php require_once ('resources/templates/search.php'); ?>
+	    <?php require_once ('resources/templates/search.php'); ?>
             
         </div>
  

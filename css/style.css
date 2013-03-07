@@ -164,8 +164,7 @@ ul#header li a{
     padding-top: 50px;
 }
 #intro h2{
-    
-    font-size: 16px;
+    font-size: 20px;
     color:white;
     padding-top: 50px;
 }
@@ -197,29 +196,30 @@ ul#header li a{
 }
 /*Listings - NONUNI */
 #list{
-  width:800px;
-    height:90px;
+    width:800px;
+    height:64.8px;
     margin: 0px auto;
     margin-top: 4px;
-    background-color: #712928;
+    background-color: #552d2c;
 }
 #listings{
     width:800px;
     margin: 0px auto;
-    margin-top: 4px;
-    background-color: #712928;
-    height:90px;
+    margin-top: 0px;
+    background-color: #552d2c;
+    height:50px;
+
 }
 #listings h1{
     font-size:26px;
     color: #B8615F;
     margin-left: 30px;
-    padding-top: 8px;
+    padding-top: 5px;
     padding-bottom: 2px;
 }
 #listings h2{
     font-size:16px;
-    color: white;
+    color: #B8615F;
     padding-left:70px;
 }
 #listings h3{
@@ -232,21 +232,75 @@ ul#header li a{
     font-size:16px;
     color: white;
     margin-left: 30px;
-    padding-top: 14px;
+    padding-top: 5px;
 }
 #listleft{
     float:left;
-    height: 80px;
+    height: 50px;
     width: 400px;
 }
 #listright{
     margin-right: 4px;
-    margin-top: 5px;
+    margin-top: 8px;
     float:right;
-    height: 80px;
+    height: 50px;
     width: 396px;
-    background-color:#57201f; 
+    background-color:#B87877; 
 }
+/*Proffessor Listings */
+#proflist{
+    width:800px;
+    height:64.8px;
+    margin: 0px auto;
+    margin-top: 4px;
+    background-color: #402929;
+}
+#proflistings{
+    width:800px;
+    margin: 0px auto;
+    margin-top: 0px;
+    background-color: #402929;
+    height:50px;
+
+}
+#proflistings h1{
+    font-size:26px;
+    color: #B8615F;
+    margin-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+}
+#proflistings h2{
+    font-size:16px;
+    color: #B8615F;
+    padding-left:70px;
+}
+#proflistings h3{
+    font-size:16px;
+    color: #B8615F;
+    padding-left:70px;
+}
+#proflistings h4{
+    text-align:center;
+    font-size:16px;
+    color: white;
+    margin-left: 30px;
+    padding-top: 5px;
+}
+#proflistleft{
+    float:left;
+    height: 50px;
+    width: 400px;
+}
+#proflistright{
+    margin-right: 4px;
+    margin-top: 8px;
+    float:right;
+    height: 50px;
+    width: 396px;
+    background-color:#B87877; 
+}
+
 /*Mark List - NON UNI*/
 #marklist{
     width:800px;
@@ -300,7 +354,16 @@ ul#header li a{
     background-color:#B87877; 
 }
 /*Box - UNI*/
-#box{
+#box{ /*Student Mark Mini Box*/
+margin: 0px auto;
+height:10px;
+width:10px;
+float:left;
+background-color:black;
+
+}
+#box{ /*Professor Listings Box*/
+
 margin: 0px auto;
 height:10px;
 width:10px;
@@ -333,7 +396,7 @@ color:white;
   background-color: #B87877;
 }
 #sidebar h1{
-color:white;
+color:#552d2c;
 font-size:18px;
 }
 /* Pagination - NONUNI */
@@ -379,7 +442,7 @@ font-size:18px;
 }
 /* Login Success - NONUNI */
 #success{
-    padding-top:50px;
+    padding-top:150px;
     width:700px;
     margin: 0px auto;
 }
@@ -406,5 +469,12 @@ label input {
   font-size:22px;
   color: #BC7A43;
   margin-left: 10px;
-  padding-top: 14px;
+  padding-top: 1px;
+}
+#box2{
+display:inline-block;
+
+height:10px;
+width:10px;
+background-color:black;
 }
