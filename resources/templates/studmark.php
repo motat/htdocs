@@ -2,6 +2,9 @@
     
 $sql = "SELECT * FROM marks WHERE markid= '" . $_SESSION['id'] . "' ORDER BY createid ASC";
 $query = mysql_query($sql);
+if ( mysql_num_rows( $query ) > 0 )
+        {
+            echo " <div id='halfbar' ><h1>Your requested lessons</h1></div>";
 while($row = mysql_fetch_array($query))
     {
         $firstname = $row['firstname'];
@@ -23,4 +26,5 @@ while($row = mysql_fetch_array($query))
 		<a style='display:inline-block' href='resources/library/dropmarkpost.php?firstname=";?><?php echo $firstname;?><?php echo "&subject="; echo $subject;?><?php echo "&email="; echo $email; echo "'?><div id='box'><h1></h1></div></a>		
             </div>";
                         }
+	}
 ?>

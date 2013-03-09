@@ -25,7 +25,6 @@
                 <h1>You have successfully logged in! Please visit either the <a href="http://localhost/professor">professor panel</a> or the <a href="http://localhost/student">student panel</a> to continue!</h1>       
             </div>
         </div>
-        <?php require_once ('resources/templates/footer.php'); ?>
     </div>
 </div>
 </body>
