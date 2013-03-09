@@ -25,7 +25,7 @@
                 <h2>You have successfully been logged out!</h2>    
             </div>
         </div>
-        <?php require_once ('resources/templates/footer.php'); ?>
+      
     </div>
 </div>
 </body>

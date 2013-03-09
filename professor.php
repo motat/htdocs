@@ -54,7 +54,7 @@ session_start();
             </div>
    
             <?php require_once ('resources/templates/profmark.php');  ?>
-            <div id='halfbar' ><h1>Your Listings</h1></div>
+       
             <?php require_once ('resources/templates/yourlist.php');  ?>
             <?php require_once ('resources/templates/pagination.php'); ?>
             <?php } ?>

@@ -50,7 +50,7 @@ session_start();
         <?php
         }
         ?>
-        <?php require_once ('resources/templates/footer.php'); ?>
+        
         </div>
     </div>
 </div>
