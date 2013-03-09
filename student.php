@@ -53,7 +53,7 @@ session_start();
             <?php require_once ('resources/templates/studmark.php');  ?>
 
             <?php } ?>
-            <?php require_once ('resources/templates/footer.php'); ?>
+            
         </div>
     </div>
     

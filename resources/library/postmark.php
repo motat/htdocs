@@ -22,7 +22,7 @@ if(isset($_SESSION['id']))
     $query="INSERT INTO marks (id,firstname,email,createid,subject,prof,information,markid) VALUES ('$uid','$firstname','$email','$createid','$subject','$prof','$information','$markid')";
     mysql_query($query) or die ('Error updating database');
     require_once(realpath(dirname(__FILE__) . "/../config.php"));  
-    header("location:$baseurl/resources/templates/successmark.php");
+    header("location:$baseurl/successmark.php");
 }
 else
 {

@@ -10,8 +10,8 @@
 include 'resources/config.php';
 session_start();
 ?>
-
-    <div id="main">
+<div class="container">
+    <div class="main">
         <div id="header">   
         </div> 
             <a href="http://localhost">
@@ -20,14 +20,20 @@ session_start();
             </a> 
             <?php require_once ('resources/templates/navbar.php'); ?>
             <?php require_once ("resources/templates/quote.php"); ?>
+            <div id="info"  style='height:100px;'>
+                <div id='intro'>
+                    <h2 style='padding-top:10px;'>View listings that have been put up by the public, clicking the <div id='box2'>&nbsp;</div> will mark the professor and notify him that you request his lesson. </h2>
+                </div>
+            </div>
             <?php require_once ('resources/templates/listings.php'); ?>
            
             <?php require_once ('resources/templates/pagination.php'); ?>
             
-	    <?php require_once ('resources/templates/search.php'); ?>
+	    
             
         </div>
- 
-   
+    
+ <?php require_once ('resources/templates/search.php'); ?>
+   </div>
 </body>
 </html>

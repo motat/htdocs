@@ -17,9 +17,12 @@
                         $limit = "LIMIT $start, $per_page";
                         $sql = "SELECT * FROM listings WHERE id= '" . $_SESSION['id'] . "' ORDER BY createid DESC $limit";
                         $query = mysql_query($sql);
-                        while($row = mysql_fetch_array($query))
-                    {
-                            //echo $row['subject'];
+                if ( mysql_num_rows( $query ) > 0 )
+                                {
+                                echo " <div id='halfbar' ><h1>Your Listings</h1></div>";
+                                while($row = mysql_fetch_array($query))
+                                                {
+
                             echo "
                             <div id='proflist'>
                                 <!--<div id='minibar'><h3>Listings</h3></div>-->
@@ -38,4 +41,5 @@
                             </div>
                             ";
                         }
+                                }
                        ?>

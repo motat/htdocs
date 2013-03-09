@@ -43,7 +43,7 @@ session_start();
                         $result = mysql_query($query) or die(mysql_error());
                         $row = mysql_fetch_array($result) or die(mysql_error());
             ?>
-            <div id="info">
+            <div id="info" >
                 <div id="minibar">
                     <h3>Hello Professor <?php echo $row['firstname']."  ". $row['lastname']; ?></h3>
                 </div>
@@ -52,7 +52,9 @@ session_start();
                     <h2>Here you can see which students desire you and also which listings you've put up. Clicking the <div id='box2'>&nbsp;</div> will remove your listings or a students request for you. </h2>
                 </div>
             </div>
+   
             <?php require_once ('resources/templates/profmark.php');  ?>
+            <div id='halfbar' ><h1>Your Listings</h1></div>
             <?php require_once ('resources/templates/yourlist.php');  ?>
             <?php require_once ('resources/templates/pagination.php'); ?>
             <?php } ?>

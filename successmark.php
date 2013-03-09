@@ -7,6 +7,11 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
+<?php
+include 'resources/config.php';
+
+
+?>
 <div id="top">
     <div class="main">
         <div id="header">
