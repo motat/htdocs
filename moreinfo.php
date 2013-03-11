@@ -9,8 +9,10 @@
 <body>
 <?php
 include 'resources/config.php';
-
-
+$cid=$_GET['cid'];
+$sql = mysql_query("SELECT * FROM listings WHERE createid='$cid'");
+while($row = mysql_fetch_array($sql))
+    {
 ?>
 <div id="top">
     <div class="main">
@@ -22,15 +24,15 @@ include 'resources/config.php';
         </a> 
         <?php require_once ('resources/templates/navbar.php'); ?>
         <?php require_once ("resources/templates/quote.php"); ?>  
-        <div id="info">
-            <div id="minibar">
-                <h3>Login</h3>
-            </div>
-            <div id="success">
-                <h1>You have marked the class as a requested class, and the professor will get back to you as soon as he is ready</h1>       
-            </div>
-        </div>
-        
+        <?php
+        echo "<div id='moreinfo'>
+        <h1>"?><?php echo $row['subject']; echo "</h1>
+        <h2>Professor "; echo $row['firstname']; echo "</h2>
+        <div id='moreinfobox'><h3>"; echo $row['information']; echo "</h3></div>
+        </div>" ;
+    }
+    ?>
+
     </div>
 </div>
 </body>

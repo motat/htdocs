@@ -23,7 +23,7 @@ while($row = mysql_fetch_array($query))
                         <h4>"; ?><?php echo $information;?><?php echo "</h4>
                     </div>
                 </div>
-		<a style='display:inline-block' href='resources/library/dropmarkpost.php?firstname=";?><?php echo $firstname;?><?php echo "&subject="; echo $subject;?><?php echo "&email="; echo $email; echo "'?><div id='box'><h1></h1></div></a>		
+		<a style='display:inline-block' href='resources/library/dropstudlist.php?firstname=";?><?php echo $firstname;?><?php echo "&subject="; echo $subject;?><?php echo "&email="; echo $email; echo "'?><div id='box'><h1></h1></div></a>		
             </div>";
                         }
 	}

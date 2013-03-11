@@ -8,6 +8,7 @@
 </head>
 <body>
 <?php
+
 include 'resources/config.php';
 
 
@@ -27,10 +28,10 @@ include 'resources/config.php';
                 <h3>Login</h3>
             </div>
             <div id="success">
-                <h1>You have marked the class as a requested class, and the professor will get back to you as soon as he is ready</h1>       
+                <h1>Your lesson information has successfully been submitted. If a student decides he would like to take your class, you will be notified on the Professor Panel.</h1>       
             </div>
         </div>
-        
+  
     </div>
 </div>
 </body>

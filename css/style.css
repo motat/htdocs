@@ -1,32 +1,45 @@
 body, div, h1, h2, h3, h4, h5, h6, p, ul, img {margin:0px; padding:0px; }
 body { font-family: Arial, Helvetica,comic sans ms, sans-serif; }
 body {background-color:#287171;}
+/*a links*/
 a:link    {
-  /* Applies to all unvisited links */
-  text-decoration:  none;
+  text-decoration:none;
   font-weight:      bold;
-    color: #092021;
+  color: #B89577;
   } 
 a:visited {
-  /* Applies to all visited links */
-  text-decoration:  none;
+   text-decoration:none;
   font-weight:      bold;
   background-color: #ddd;
-  color:            #092021;
+  color:            #B89577;
   } 
 a:hover   {
-  /* Applies to links under the pointer */
-  text-decoration:  none;
+   text-decoration:none;
   font-weight:      bold;
- 
-  color:            #092021;
+  color:            #B89577;
   } 
 a:active  {
-  /* Applies to activated links */
-  text-decoration:  underline;
+   text-decoration:none;
   font-weight:      bold;
-  background-color: black;
-  color: #092021;
+  color: #B89577;
+  }
+  /*b links*/
+b:link    {
+  font-weight:      bold;
+  color: white;
+  } 
+b:visited {
+  font-weight:      bold;
+  background-color: #ddd;
+  color: white;
+  } 
+b:hover   {
+  font-weight:      bold;
+  color: white;;
+  } 
+b:active  {
+  font-weight:      bold;
+  color: white;
   }
   
 /* Main container for the page - UNIVERSAL*/
@@ -129,12 +142,18 @@ ul#header li a{
 }
 /*Main Content Div - UNIVERSAL*/
 #info{
-  
     width:800px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #712928;
     height:200px;
+}
+#add{
+    width:800px;
+    margin: 0px auto;
+    margin-top: 4px;
+    background-color: #712928;
+    height:300px;
 }
 #info h1{
     font-size: 16pt;
@@ -143,6 +162,7 @@ ul#header li a{
     margin-right: 50px;
 }
 #info h2{/*click here to register*/
+  
     font-size:14pt;
     color:white;
 }
@@ -155,6 +175,7 @@ ul#header li a{
     margin-right: 50px;
 }
 #intro{
+  padding-left:50px;
     padding-top:10px;
     width:700px;
     margin: 0px auto;
@@ -165,6 +186,7 @@ ul#header li a{
     padding-top: 50px;
 }
 #intro h2{
+  
     font-size: 20px;
     color:white;
     padding-top: 30px;
@@ -183,10 +205,10 @@ ul#header li a{
 }
 #info2{
     margin: 0 auto;
-    width:800px;
+
     padding-top:4px;
     width:800px;
-    margin: 0px auto;
+
 }
 
 #info2 h2{
@@ -255,10 +277,12 @@ ul#header li a{
     width: 400px;
 }
 #listright{
+  max-length: 10;
+  overflow:hidden;
     margin-right: 4px;
-    margin-top: 8px;
+    margin-top: 9px;
     float:right;
-    height: 50px;
+    height: 48px;
     width: 396px;
     background-color:#B87877; 
 }
@@ -308,10 +332,11 @@ ul#header li a{
     width: 400px;
 }
 #proflistright{
+  overflow:hidden;
     margin-right: 4px;
     margin-top: 8px;
     float:right;
-    height: 50px;
+    height: 48px;
     width: 396px;
     background-color:#B87877; 
 }
@@ -361,12 +386,46 @@ ul#header li a{
     width: 400px;
 }
 #marklistright{
+  overflow:hidden;
     margin-right: 4px;
     margin-top: 8px;
     float:right;
-    height: 50px;
+    height: 48px;
     width: 396px;
     background-color:#B87877; 
+}
+/*MORE INFO*/
+#moreinfo{
+  margin:0 auto;
+  height:250px;
+  width:800px;
+  margin-top:4px;
+  background-color:#552d2c
+}
+#moreinfobox{
+  margin:0 auto;
+  height:150px;
+  width:750px;
+  margin-top:4px;
+  background-color:#402929
+}
+#moreinfo h1{
+  padding-top:20px;
+  padding-left:50px;
+  font-size:26pt;
+  color:#B8615F;
+}
+#moreinfo h2{
+  padding-left:80px;
+  font-size:14pt;
+  color:#B8615F;
+}
+#moreinfo h3{
+  font-align:center;
+  padding-top:10px;
+  padding-left:60px;
+  font-size:14pt;
+  color:#B8615F;
 }
 /*Box - UNI*/
 #box{ /*Student Mark Mini Box*/
@@ -471,6 +530,26 @@ label input {
   left:17em;
   margin-top: 5px;
   }
+ select {
+  position:absolute;
+  left:17em;
+  margin-top: 5px;
+  border: none;
+  background-color: #2d0000;
+  color: white;
+  font-family: Arial;
+  font-size: 14px;
+  }
+textarea{
+  position:absolute;
+  left:17em;
+  margin-top:5px;
+  border: none;
+  background-color: #2d0000;
+  color: white;
+  font-family: Arial;
+  font-size: 14px;
+}
 .h2{
   font-size:14px;
   color: #B8615F;
@@ -487,7 +566,6 @@ label input {
 }
 #box2{
 display:inline-block;
-
 height:10px;
 width:10px;
 background-color:black;

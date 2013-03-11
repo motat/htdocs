@@ -9,7 +9,8 @@
 <?php
 include 'resources/config.php';
 ?>
-<div id="main">
+<div id="top">
+    <div class="main">
         <div id="header">
         </div>
             <a href="http://localhost">
@@ -24,7 +25,7 @@ include 'resources/config.php';
                     <h3>Greetings, from Ahhha!</h3>
                 </div>
                 <div id="intro">
-                    <h2>Register, login, and get ready for your Ahhha moments!</h1>
+                    <h2 style='padding-top:50px;'>Register, login, and get ready for your Ahhha moments!</h1>
                     
                 </div>
             </div>
@@ -36,5 +37,6 @@ include 'resources/config.php';
          
         
     </div>
+</div>
 </body>
 </html>

@@ -17,7 +17,7 @@
         </a> 
         <?php require_once ('resources/templates/navbar.php'); ?>
         <?php require_once ("resources/templates/quote.php"); ?>  
-        <div id="info">
+        <div id="add">
             <div id="minibar">
                 <h3>Listings</h3>
             </div>
@@ -26,10 +26,16 @@
 			<br/>
 			<br/>
                 <form action="resources/library/addlist.php" method="POST">  
-                    <label for=”subject”>Subject<input type="text" name="subject"/></label>
-                    <label for=”information”>Information<input type="text" name="information"/></label>
-                    <label for=”payment”>Payment (if none, leave blank)<input type="text" name="payment"/></label>
-                        <input type="submit" value="Create Listing"/>
+                    <label for=”subject”>Subject<input style='left:17em;' type="text" name="subject"/></label>
+                    <label for=”information”>Information<textarea name="information" id="information" cols="40" rows="4"></textarea>
+                    <label style='margin-top:54px;' for=”payment”>Check if payment is required<input style='left:17em;' type="checkbox" name="payment" value="yes"> </label>
+                    <label for=”county”>County
+                    <select name="county">
+                    <option value="oc">Orange County</option>
+                    </select>
+                    </label>
+                    
+                        <input style='margin-top:14px; float:left;' type="submit" value="Create Listing"/>
                 </form>
             </div>
         </div>

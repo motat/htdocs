@@ -22,7 +22,7 @@
                 <h3>Login</h3>
             </div>
             <div id="success">
-                <h1>You have successfully logged in! Please visit either the <a href="http://localhost/professor">professor panel</a> or the <a href="http://localhost/student">student panel</a> to continue!</h1>       
+                <h1>You have successfully logged in! Please visit either the <a href="http://localhost/professor.php">professor panel</a> or the <a href="http://localhost/student.php">student panel</a> to continue!</h1>       
             </div>
         </div>
     </div>

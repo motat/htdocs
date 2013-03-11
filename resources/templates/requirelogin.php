@@ -25,7 +25,7 @@
                 <h1>You are required to be logged in to perform this action.</h1>       
             </div>
         </div>
-        <?php require_once ('resources/templates/footer.php'); ?>
+
     </div>
 </div>
 </body>

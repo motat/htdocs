@@ -22,7 +22,7 @@ session_start();
             <?php require_once ("resources/templates/quote.php"); ?>
             <div id="info"  style='height:100px;'>
                 <div id='intro'>
-                    <h2 style='padding-top:10px;'>View listings that have been put up by the public, clicking the <div id='box2'>&nbsp;</div> will mark the professor and notify him that you request his lesson. </h2>
+<h2 style='padding-top:10px;'>View listings that have been put up by the public, clicking the <div id='box2'>&nbsp;</div> will mark the professor and notify him that you request his lesson. <font color='#B87877'><a href='add.php'>Add a new lesson here.</a></font> </h2>
                 </div>
             </div>
             <?php require_once ('resources/templates/listings.php'); ?>

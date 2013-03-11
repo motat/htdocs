@@ -25,18 +25,17 @@
 	 ?>
             <?php echo " 
             <div id='list'>
-                                <!--<div id='minibar'><h3>Listings</h3></div>-->
-                                <div id='listings'>
-                                    <div id='listleft'>
-                                        <h1> "; ?><?php echo $subject ;?><?php echo "</h1>
-                                        <h3>payment: "; ?><?php echo $payment ; echo "</h3>
-                                         <span class='h2'>by</span><span class='h5'>Professor "?><?php echo $firstname;?><?php echo "</span>
-                                    </div>
-                                <div id='listright'>
-                                        <h4>"?><?php ;?><?php echo $information ; echo "</h4>
-                                </div>
-                                </div>
-                            </div>
+           <div id='listings'>
+               <div id='listleft'>
+                   <h1>"?><?php echo $row['subject'];?><?php echo "</h1>
+                   <span class='h2'>by</span><span class='h5'>Professor ";?><?php echo $row['firstname'];?><?php echo "</span>                                  
+               </div>
+               <div id='listright'>
+                   <h4><a style='color:white;' href='moreinfo.php?cid=";echo $row['createid']; echo"'>";?><?php echo $row['information'];?><?php echo "</a></h4>
+               </div>
+           </div>
+   <a style='display:inline-block' href='resources/library/postmark.php?createid="; ?><?php echo $row['createid'];?><?php echo "&subject="; echo $row['subject'];?><?php echo "&uid="; echo $row['id'];?><?php echo "&prof="; echo $row['firstname'];?><?php echo "&information="; echo $row['information'];?><?php echo "&county="; echo $_GET['county']?><?php echo "&markid="; echo $_SESSION['id'];?><?php echo "'><div id='box'></div></a>
+       </div>
            " ?>
            <?php
 	  } 

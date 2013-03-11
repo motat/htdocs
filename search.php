@@ -10,7 +10,8 @@
 include 'resources/config.php';
 session_start();
 ?>
-<div id='main'>
+<div id='top'>
+<div class='main'>
 	  <div id='header'>   
         </div> 
             <a href='#'>
@@ -20,8 +21,9 @@ session_start();
             <?php require_once ('resources/templates/navbar.php'); ?>
             <?php require_once ('resources/templates/quote.php'); ?>
 	    <?php require_once ('resources/templates/searchquery.php'); ?>
-            <?php require_once ('resources/templates/footer.php'); ?>
+
         </div>
+</div>
 </body>
 </html>
 
