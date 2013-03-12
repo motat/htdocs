@@ -11,5 +11,6 @@ echo "<div id='sidebar'>
                     <input  type='submit' name='submit' value='Search'> 
                 </form>
                 
-            </div>";
+            </div>
+	    </div>";
 			?>

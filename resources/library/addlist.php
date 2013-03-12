@@ -20,7 +20,7 @@ if(isset($_SESSION['id']))
         $query="INSERT INTO listings (id,subject,information,payment,firstname,county) VALUES ('$id','$subject','$information','$payment','$firstname','$county')";
         mysql_query($query) or die ('Error updating database');
         require_once(realpath(dirname(__FILE__) . "/../config.php"));  
-        header("location:$baseurl/successlisting.php");
+        header("location:$baseurl/success.php?success=listings");
         }
     else
         {
@@ -35,7 +35,7 @@ if(isset($_SESSION['id']))
         $query="INSERT INTO listings (id,subject,information,payment,firstname,county) VALUES ('$id','$subject','$information','no','$firstname','$county')";
         mysql_query($query) or die ('Error updating database');
         require_once(realpath(dirname(__FILE__) . "/../config.php"));  
-        header("location:$baseurl/successlisting.php");
+        header("location:$baseurl/success.php?success=listings");
         }
     }
  

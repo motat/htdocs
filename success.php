@@ -7,6 +7,10 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
+<?php
+include 'resources/config.php';
+$success=$_GET['success'];
+?>    
 <div id="top">
     <div class="main">
         <div id="header">
@@ -22,7 +26,28 @@
                 <h3>Login</h3>
             </div>
             <div id="success">
-                <h1>You have successfully logged in! Please visit either the <a href="http://localhost/professor">professor panel</a> or the <a href="http://localhost/student">student panel</a> to continue!</h1>       
+            <?php
+                if($success=="login")
+                {
+                    echo "<h1>You have successfully logged in! Please visit either the <a href='http://localhost/professor'>professor panel</a> or the <a href='http://localhost/student'>student panel</a> to continue!</h1>"  ;
+                }
+                if($success=="mark")
+                {
+                    echo "<h1>You have marked the class as a requested class, and the professor will get back to you as soon as he is ready</h1>";
+                }
+                if($success=="listings")
+                {
+                     echo "<h1>Your lesson information has successfully been submitted. If a student decides he would like to take your class, you will be notified on the Professor Panel.</h1>";
+                }
+                if($success="registered")
+                {
+                    echo "<h1>You have successfully created an account! Please login <a href='http://localhost/login.php'>here</a></h1>";
+                }
+                if($success="loggedout")
+                {
+                    echo "<h2>You have successfully been logged out!</h2>";
+                }
+                ?>       
             </div>
         </div>
         <?php require_once ('resources/templates/footer.php'); ?>

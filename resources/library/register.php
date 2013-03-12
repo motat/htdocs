@@ -8,5 +8,5 @@ mysql_select_db ("ahhha");
 $query="INSERT INTO accounts (firstname,lastname,email,password) VALUES ('$firstname','$lastname','$email','$password')";
 mysql_query($query) or die ('Error updating database');
 require_once(realpath(dirname(__FILE__) . "/../config.php"));  
-header("location:$baseurl/registered.php");
+header("location:$baseurl/success.php?success=registered");
 ?>

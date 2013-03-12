@@ -64,6 +64,7 @@ input{
   font-family: Arial;
   font-size: 14px;
 }
+
 /*AhhhA Header Picture*/
 #menu{
     margin: 0 auto;
@@ -451,12 +452,12 @@ color:white;
 }
 /*Sidebar - Non UNI*/
 #sidebar{
-  float:right;
+  right:22%;
   text-align:center;
   width:155px;
   height:100px;
   background-color: #552d2c;
-
+  position:absolute;
 }
 
 #sidebarmini{

@@ -10,7 +10,7 @@
 include 'resources/config.php';
 session_start();
 ?>
-<div class="container">
+<div id="top">
     <div class="main">
         <div id="header">   
         </div> 
@@ -25,6 +25,12 @@ session_start();
 <h2 style='padding-top:10px;'>View listings that have been put up by the public, clicking the <div id='box2'>&nbsp;</div> will mark the professor and notify him that you request his lesson. <font color='#B87877'><a href='add.php'>Add a new lesson here.</a></font> </h2>
                 </div>
             </div>
+            <div id='halfbar' style='display: inline-block; width:230px; height:50px;'>
+                <h1>Lesson or Name: </h1>
+                <form  method='post' action='/search.php?go'  id='searchform'>  <input  type='text' name='name'> <input  type='submit' name='submit' value='Search'>
+                </form>
+            </div>
+           
             <?php require_once ('resources/templates/listings.php'); ?>
            
             <?php require_once ('resources/templates/pagination.php'); ?>
@@ -33,7 +39,7 @@ session_start();
             
         </div>
     
- <?php require_once ('resources/templates/search.php'); ?>
-   </div>
+
+   
 </body>
 </html>
