@@ -39,7 +39,6 @@
                 </form>
             </div>
         </div>
-        <?php require_once ('resources/templates/footer.php'); ?>
     </div>
 </div>
 </body>

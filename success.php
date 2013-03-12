@@ -39,18 +39,17 @@ $success=$_GET['success'];
                 {
                      echo "<h1>Your lesson information has successfully been submitted. If a student decides he would like to take your class, you will be notified on the Professor Panel.</h1>";
                 }
-                if($success="registered")
+                if($success=="registered")
                 {
                     echo "<h1>You have successfully created an account! Please login <a href='http://localhost/login.php'>here</a></h1>";
                 }
-                if($success="loggedout")
+                if($success=="loggedout")
                 {
-                    echo "<h2>You have successfully been logged out!</h2>";
+                    echo "<h1>You have successfully been logged out!</h1>";
                 }
                 ?>       
             </div>
         </div>
-        <?php require_once ('resources/templates/footer.php'); ?>
     </div>
 </div>
 </body>
