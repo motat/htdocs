@@ -6,17 +6,19 @@
     if something changes such as your database credentials, or a path to a specific resource, 
     you'll only need to update it here. 
 */
-$mysql_con = mysql_connect("localhost", "root");
+try {
+$username='root';
+$conn = new PDO('mysql:host=localhost;dbname=ahhha', $username);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e){
+    echo 'ERROR: ' . $e->getMessage();
+}
 
-if(!$mysql_con)
+if(!$conn)
     {
         die(mysql_error());
     }
-$mysql_db = mysql_select_db("ahhha");
-if(!$mysql_db)
-    {
-        die(mysql_error());
-    }
+
 $config = array(  
     "urls" => array(  
         "baseUrl" => "localhost"  
