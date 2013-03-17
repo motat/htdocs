@@ -1,11 +1,18 @@
 <?php
-    
-$sql = "SELECT * FROM marks WHERE markid= '" . $_SESSION['id'] . "' ORDER BY createid ASC";
-$query = mysql_query($sql);
-if ( mysql_num_rows( $query ) > 0 )
+//Count Rows
+$stmt1 = $conn->prepare('SELECT COUNT(*) FROM marks');
+$stmt1->execute();
+$num = $stmt1->fetchColumn();
+//Query DB to get results
+$id = $_SESSION['id'];
+$sql = 'SELECT * FROM marks WHERE markid = %d ORDER BY createid ASC';
+$sql = sprintf($sql,$id);
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+if ($num > 0 )
         {
             echo " <div id='halfbar' ><h1>Your requested lessons</h1></div>";
-while($row = mysql_fetch_array($query))
+while($row = $stmt->fetch())
     {
         $firstname = $row['firstname'];
 	$prof = $row['prof'];

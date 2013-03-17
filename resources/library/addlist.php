@@ -1,37 +1,45 @@
 <?php
 session_start();
-require_once(realpath(dirname(__FILE__) . "/../config.php"));  
-$subject = mysql_real_escape_string($_POST['subject']);
-$information = mysql_real_escape_string($_POST['information']);
-
+require_once(realpath(dirname(__FILE__) . "/../config.php"));
+$id = $_SESSION['id'];
+        //Query to get firstname   
+        $query1 = 'SELECT * FROM accounts WHERE id= %d';
+        $query1 = sprintf($query1, $id);
+        $stmt1 = $conn->prepare($query1);
+        $stmt1->execute();
+        $row = $stmt1->fetch();
+        $firstname = $row['firstname'];
+$subject = $_POST['subject'];
+$information = $_POST['information'];
 $county = $_POST['county'];
-
 if(isset($_SESSION['id']))
     {
     if(isset($_POST['payment']))
         {
-        $payment = mysql_real_escape_string($_POST['payment']);
-        $id = mysql_real_escape_string($_SESSION['id']);
-        $query1 = "SELECT * FROM accounts WHERE id= '$id';";
-        $result1 = mysql_query($query1) or die(mysql_error());
-        $row = mysql_fetch_array($result1) or die(mysql_error());
-        $firstname = mysql_real_escape_string($row['firstname']);
-        $query="INSERT INTO listings (id,subject,information,payment,firstname,county) VALUES ('$id','$subject','$information','$payment','$firstname','$county')";
-        mysql_query($query) or die ('Error updating database');
+        $payment = $_POST['payment'];
+        //Query to insert listings 
+        $query='INSERT INTO listings (id,subject,information,payment,firstname,county) VALUES (:id,:subject,:information,:payment,:firstname,:county)';
+        $stmt= $conn->prepare($query);
+        $stmt->execute(array(
+                ':id' => $id,
+                ':subject' => $subject,
+                ':information' => $information,
+                ':payment' => $payment,
+                ':firstname' => $firstname,
+                ':county' => $county ));
         header("location:$baseurl/success.php?success=listings");
         }
     else
-        {
-        
-        $id = mysql_real_escape_string($_SESSION['id']);
-
-        $query1 = "SELECT * FROM accounts WHERE id= '$id';";
-        $result1 = mysql_query($query1) or die(mysql_error());
-        $row = mysql_fetch_array($result1) or die(mysql_error());
-        $firstname = mysql_real_escape_string($row['firstname']);
-        $query="INSERT INTO listings (id,subject,information,payment,firstname,county) VALUES ('$id','$subject','$information','no','$firstname','$county')";
-        mysql_query($query) or die ('Error updating database');
-
+        { 
+        $query='INSERT INTO listings (id,subject,information,payment,firstname,county) VALUES (:id,:subject,:information,:payment,:firstname,:county)';
+        $stmt=$conn->prepare($query);
+        $stmt->execute(array(
+                ':id' => $id,
+                ':subject' => $subject,
+                ':information' => $information,
+                ':payment' => 'no',
+                ':firstname' => $firstname,
+                ':county' => $county ));
         header("location:$baseurl/success.php?success=listings");
         }
     }
@@ -39,5 +47,4 @@ if(isset($_SESSION['id']))
     {
         Echo" login required";
     }
- 
 ?>

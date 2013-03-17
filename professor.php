@@ -39,9 +39,12 @@ session_start();
                     }
                 if(isset($_SESSION['id']))
                 {
-                        $query = "SELECT * FROM accounts WHERE id= '" . $_SESSION['id'] . "';";
-                        $result = mysql_query($query) or die(mysql_error());
-                        $row = mysql_fetch_array($result) or die(mysql_error());
+                    $id = $_SESSION['id'];
+                    $query = 'SELECT * FROM accounts WHERE id= %d';
+                    $query = sprintf($query, $id);
+                    $stmt = $conn->prepare($query);
+                    $stmt->execute();
+                    $row = $stmt->fetch();
             ?>
             <div id="info" >
                 <div id="minibar">
@@ -53,10 +56,10 @@ session_start();
                 </div>
             </div>
    
+            
             <?php require_once ('resources/templates/profmark.php');  ?>
-       
             <?php require_once ('resources/templates/yourlist.php');  ?>
-            <?php require_once ('resources/templates/pagination.php'); ?>
+    
             <?php } ?>
           
         </div>
