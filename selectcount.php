@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<?php session_start(); ?>
+<?php
+include 'resources/config.php';
+session_start();
+?>
 <!--MAKE COUNTY DISPLAYS A LIST. THAT WAY YOU CAN ADD DIFFERENT COUNTIES TO THE DATABASE AND THIS WILL MAKE IT INTO A LIST THAT QUERIES ANY COUNTIES IN THE LIST.
 BETTER FOR SCALING-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Ahhha Registration Page</title>
+    <title><?php echo $webname;?> - Select County</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />      
 </head>
 <body>

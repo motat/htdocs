@@ -6,15 +6,17 @@ if(isset($_SESSION['id']))
     $sql = sprintf($sql , $id);
     $stmt = $conn->prepare($sql);
     $stmt->execute();
-    $num = $stmt->fetchColumn();
-    if ($num > 0)
+    $result=$stmt->fetchAll();
+    if ($result!==false)
         {
-            echo " <div id='halfbar' ><h1>Student Requests</h1></div>";
+        echo " <div id='halfbar' ><h1>Student Requests</h1></div>";
+        }
             while($row = $stmt->fetch())
                     {
                             $firstname = $row['firstname'];
                             $subject = $row['subject'];
                             $email = $row['email'];
+                            $autoid = $row['autoid'];
                             //echo $row['subject'];
                             echo "
                             <div id='marklist'>
@@ -28,14 +30,10 @@ if(isset($_SESSION['id']))
                                             <h4>"; ?><?php echo $email;?><?php echo "</h4>
                                     </div>
                                 </div>
-	<a style='display:inline-block' href='resources/library/dropmarkpost.php?firstname=";?><?php echo $firstname;?><?php echo "&subject="; echo $subject;?><?php echo "&email="; echo $email; echo "'?><div id='box'><h1></h1></div></a>
+	<a style='display:inline-block' href='resources/library/dropmarkpost.php?autoid=";?><?php echo $autoid; echo "'?><div id='box'><h1></h1></div></a>
                             </div>";
                         }
         }
-    else
-        {
-        
-        }
     
-}
+
 ?>

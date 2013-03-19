@@ -9,9 +9,9 @@ $sql = 'SELECT * FROM marks WHERE markid = %d ORDER BY createid ASC';
 $sql = sprintf($sql,$id);
 $stmt = $conn->prepare($sql);
 $stmt->execute();
-if ($num > 0 )
-        {
-            echo " <div id='halfbar' ><h1>Your requested lessons</h1></div>";
+if ( $num > 0)
+    {
+	echo " <div id='halfbar' ><h1>Your requested lessons</h1></div>";
 while($row = $stmt->fetch())
     {
         $firstname = $row['firstname'];
@@ -19,6 +19,7 @@ while($row = $stmt->fetch())
 	$information = $row['information'];
         $subject = $row['subject'];
         $email = $row['email'];
+	$autoid=$row['autoid'];
         echo "
             <div id='marklist'>
                 <div id='marklistings'>
@@ -30,8 +31,8 @@ while($row = $stmt->fetch())
                         <h4>"; ?><?php echo $information;?><?php echo "</h4>
                     </div>
                 </div>
-		<a style='display:inline-block' href='resources/library/dropstudlist.php?firstname=";?><?php echo $firstname;?><?php echo "&subject="; echo $subject;?><?php echo "&email="; echo $email; echo "'?><div id='box'><h1></h1></div></a>		
+		<a style='display:inline-block' href='resources/library/dropstudlist.php?autoid=";?><?php echo $autoid; echo "'?><div id='box'><h1></h1></div></a>		
             </div>";
                         }
-	}
+    }
 ?>

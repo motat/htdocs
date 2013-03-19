@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <title>Professor Panel</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-</head>
-<body>
 <?php
 include 'resources/config.php';
 session_start();
-
 ?>
-
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title><?php echo $webname;?> - Professor Panel</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
 <div id="top">
     <div class="main">
         <div id="header">    
@@ -47,11 +45,8 @@ session_start();
                     $row = $stmt->fetch();
             ?>
             <div id="info" >
-                <div id="minibar">
-                    <h3>Hello Professor <?php echo $row['firstname']."  ". $row['lastname']; ?></h3>
-                </div>
+                    <h3>Professor <?php echo $row['firstname']; ?>,</h3>
                 <div id='intro'>
-                    <h1></h1>
                     <h2>Here you can see which students desire you and also which listings you've put up. Clicking the <div id='box2'>&nbsp;</div> will remove your listings or a students request for you. </h2>
                 </div>
             </div>

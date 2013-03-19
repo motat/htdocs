@@ -117,7 +117,7 @@ ul#header li a{
     height:125px;
 }
 #genquote {
-    padding-top: 10px;
+    padding-top: 20px;
     margin: 0px auto;
     width:400px;
     text-align: center;
@@ -601,12 +601,8 @@ textarea{
   color:#B87877;
 }
 .quote{
-  font-size:25px;
-  color:#B87877;
-}
-.author{
-  font-size:19px;
-  color:#B8615F;
+  font-size:20px;
+  color:white;
 }
 #box2{
 display:inline-block;

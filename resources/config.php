@@ -30,7 +30,8 @@ $config = array(
             "layout" => $_SERVER["DOCUMENT_ROOT"] . "/images"  
         )  
     )  
-);  
+);
+$webname = 'Ahhha';
 /* 
     I will usually place the following in a bootstrap file or some type of environment 
     setup file (code that is run at the start of every page request), but they work 

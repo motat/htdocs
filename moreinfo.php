@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<?php session_start(); ?>
+<?php
+include 'resources/config.php';
+session_start();
+?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Ahhha Registration Page</title>
+    <title><?php echo $webname;?> - More Info</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
 <?php
-include 'resources/config.php';
 $cid=$_GET['cid'];
-$sql = mysql_query("SELECT * FROM listings WHERE createid='$cid'");
-while($row = mysql_fetch_array($sql))
+//$sql = mysql_query("SELECT * FROM listings WHERE createid='$cid'");
+$sql='SELECT * FROM listings WHERE createid=:cid';
+$stmt=$conn->prepare($sql);
+$stmt->execute(array(
+    ':cid' => $cid ));
+while($row = $stmt->fetch())
     {
 ?>
 <div id="top">

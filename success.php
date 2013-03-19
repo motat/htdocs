@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<?php session_start(); ?>
+<?php
+session_start();
+include 'resources/config.php';
+$success=$_GET['success'];?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Ahhha Registration Page</title>
+    <title><?php echo $webname;?> - Success</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
-<body>
-<?php
-include 'resources/config.php';
-$success=$_GET['success'];
-?>    
+<body>  
 <div id="top">
     <div class="main">
         <div id="header">
@@ -29,7 +28,7 @@ $success=$_GET['success'];
             <?php
                 if($success=="login")
                 {
-                    echo "<h1>You have successfully logged in! Please visit either the <a href='http://localhost/professor'>professor panel</a> or the <a href='http://localhost/student'>student panel</a> to continue!</h1>"  ;
+                    echo "<h1>You have successfully logged in! Please visit either the <a href='http://localhost/professor.php'>professor panel</a> or the <a href='http://localhost/student.php'>student panel</a> to continue!</h1>"  ;
                 }
                 if($success=="mark")
                 {

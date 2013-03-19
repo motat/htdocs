@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php
+include 'resources/config.php';
+session_start();
+?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Ahhha!</title>
+    <title><?php echo $webname;?></title>
     <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
 
 </head>
 <body>
-<?php
-include 'resources/config.php';
-session_start();
-?>
-
 <div id="top">
     <div class="main">
         <div id="header">
@@ -26,9 +25,7 @@ session_start();
             <?php require_once ("resources/templates/quote.php"); ?>
             
             <div id="info">
-                <div id="minibar">
                     <h3>Greetings, from Ahhha!</h3>
-                </div>
                 <div id="intro">
                     <h2 style='padding-top:50px;'>Register, login, and get ready for your Ahhha moments!</h1>
                     
@@ -42,6 +39,17 @@ session_start();
          
         
     </div>
+<!--<div class='footer'>
+    <div id='footer'>
+        <div id='footerleft'>
+            Left
+        </div>
+       
+        <div id='footerright'>
+            Right
+        </div>
+    </div>
+</div>-->
 </div>
 </body>
 </html>
