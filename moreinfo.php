@@ -7,7 +7,15 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title><?php echo $webname;?> - More Info</title>
+    <meta name="description" content="more information on a listing. subject and class ">
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script>
+        $('document').ready(function(){
+            $('.menu').fixedMenu();
+        });
+        </script>
 </head>
 <body>
 <?php
@@ -25,7 +33,7 @@ while($row = $stmt->fetch())
         <div id="header">
         </div>
         <a href="#">
-            <div style=background:url('images/menu.png'); height=124px; id="menu">     
+            <div style=background:url('images/menu.png'); height=124px; id="headerimage">     
             </div>
         </a> 
         <?php require_once ('resources/templates/navbar.php'); ?>
@@ -40,6 +48,7 @@ while($row = $stmt->fetch())
     ?>
 
     </div>
+<?php require_once ('resources/templates/footer.php'); ?>
 </div>
 </body>
 </html>

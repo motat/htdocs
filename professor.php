@@ -7,7 +7,15 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title><?php echo $webname;?> - Professor Panel</title>
+    <meta name="description" content="professor panel to manage any listings or requests for any class or lesson you have">
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script>
+        $('document').ready(function(){
+            $('.menu').fixedMenu();
+        });
+        </script>
 </head>
 <body>
 <div id="top">
@@ -15,7 +23,7 @@ session_start();
         <div id="header">    
         </div>
             <a href="http://localhost">
-                <div style=background:url('images/menu.png'); height=124px; id="menu">        
+                <div style=background:url('images/menu.png'); height=124px; id="headerimage">        
                 </div>
             </a> 
             <?php require_once ('resources/templates/navbar.php'); ?>
@@ -25,12 +33,9 @@ session_start();
                     {
             ?>
             <div id="info">
-                <div id="minibar">
-                    <h3>Professor Panel</h3>
-                </div>
-                <div id="intro">
-                    <h1>Hello Professor  </h1>
-                    <h2>This is the professor panel, you need to be logged in. <a href="http://localhost/login.php"><font color="#411716">Login here.</font></a></h2>
+                <h3>Professor,  </h3>
+                <div id="intro">  
+                    <h2>This is the professor panel, you need to be logged in. <a href="http://localhost/login.php"><br/><font color="#411716">Login here.</font></a></h2>
                 </div>
             </div>
             <?php
@@ -58,6 +63,7 @@ session_start();
             <?php } ?>
           
         </div>
+    <?php require_once ('resources/templates/footer.php'); ?>
     </div>
     
 </body>

@@ -9,7 +9,15 @@ BETTER FOR SCALING-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title><?php echo $webname;?> - Select County</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />      
+    <meta name="description" content="select a county that you wish to find a lesson in. only orange county is supported">
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script>
+        $('document').ready(function(){
+            $('.menu').fixedMenu();
+        });
+        </script>      
 </head>
 <body>
 <div id="top">
@@ -17,7 +25,7 @@ BETTER FOR SCALING-->
         <div id="header">
         </div>
         <a href="#">
-            <div style=background:url('images/menu.png'); height=124px; id="menu">          
+            <div style=background:url('images/menu.png'); height=124px; id="headerimage">          
             </div>
         </a> 
         <?php require_once ('resources/templates/navbar.php'); ?>
@@ -39,6 +47,7 @@ BETTER FOR SCALING-->
 	</div>
         
     </div>
+    <?php require_once ('resources/templates/footer.php'); ?>
 </div>
 </body>
 </html>

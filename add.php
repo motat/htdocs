@@ -7,7 +7,14 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title><?php echo $webname;?> - Add Listing</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />      
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script>
+        $('document').ready(function(){
+            $('.menu').fixedMenu();
+        });
+        </script>
 </head>
 <body>
 <div id="top">
@@ -15,18 +22,15 @@ session_start();
         <div id="header">
         </div>
         <a href="#">
-            <div style=background:url('images/menu.png'); height=124px; id="menu">          
+            <div style=background:url('images/menu.png'); height=124px; id="headerimage">          
             </div>
         </a> 
         <?php require_once ('resources/templates/navbar.php'); ?>
         <?php require_once ("resources/templates/quote.php"); ?>  
         <div id="add">
-            <div id="minibar">
-                <h3>Listings</h3>
-            </div>
             <div id="intro">
-			<br/>
-			<br/>
+        <?php if(isset($_SESSION['id']))
+            {?>
 			<br/>
                 <form action="resources/library/addlist.php" method="POST">  
                     <label for=”subject”>Subject<input style='left:17em;' type="text" name="subject"/></label>
@@ -40,9 +44,18 @@ session_start();
                     
                         <input style='margin-top:14px; float:left;' type="submit" value="Create Listing"/>
                 </form>
+                <?php }
+                else{
+                    ?>
+                    <h1>In order to create a listing you need to have an account and be logged in.</h1>
+                    <h3></h3>
+                    
+                    
+                <?php }?>
             </div>
         </div>
     </div>
+            <?php require_once ('resources/templates/footer.php'); ?>
 </div>
 </body>
 </html>

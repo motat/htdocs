@@ -31,7 +31,7 @@ $config = array(
         )  
     )  
 );
-$webname = 'Ahhha';
+$webname = 'Ahhyes website for people to find a tutor or trainer for any skill or subject';
 /* 
     I will usually place the following in a bootstrap file or some type of environment 
     setup file (code that is run at the start of every page request), but they work 

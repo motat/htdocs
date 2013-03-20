@@ -9,7 +9,7 @@ $sql = 'SELECT * FROM marks WHERE markid = %d ORDER BY createid ASC';
 $sql = sprintf($sql,$id);
 $stmt = $conn->prepare($sql);
 $stmt->execute();
-if ( $num > 0)
+if ( $stmt->rowCount() > 0 )
     {
 	echo " <div id='halfbar' ><h1>Your requested lessons</h1></div>";
 while($row = $stmt->fetch())

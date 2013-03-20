@@ -7,7 +7,15 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title><?php echo $webname;?> - Registration</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />            
+    <meta name="description" content="register and make an account to create listings or view them and find a class you desire">
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script>
+        $('document').ready(function(){
+            $('.menu').fixedMenu();
+        });
+        </script>            
 </head>
 <body>
 <div id="top">
@@ -15,15 +23,13 @@ session_start();
         <div id="header">      
         </div>  
         <a href="#">
-            <div style=background:url('images/menu.png'); height=124px; id="menu">            
+            <div style=background:url('images/menu.png'); height=124px; id="headerimage">            
             </div>
         </a> 
         <?php require_once ('resources/templates/navbar.php'); ?>
         <?php require_once ("resources/templates/quote.php"); ?>  
         <div id="info">
-            <div id="minibar"><h3>Registration</h3></div>
             <div id="intro">
-			<br/>
 			<br/>
 			<br/>
                 <form  action="resources/library/register.php" method="POST">  
@@ -37,6 +43,7 @@ session_start();
         </div>
         <?php require_once ('resources/templates/footer.php'); ?>
     </div>
+    <?php require_once ('resources/templates/footer.php'); ?>
 </div> 
 </body>
 </html>

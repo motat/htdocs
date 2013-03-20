@@ -28,3 +28,17 @@ else
     echo "Wrong Username or Password" ;
     }
 ?>
+<?php
+$email=$_POST['email']; 
+$password=$_POST['password'];
+$sqlcount='SELECT COUNT(*) FROM accounts WHERE email=:email AND password=:password';
+$stmtcount=$conn->prepare($sqlcount);
+$stmtcount->execute(array(
+    ':email' => $email,
+    ':password' => $password));
+$count = $stmtcount->fetchColumn();
+if($count==1)
+    {
+        echo "success";
+    }
+?>

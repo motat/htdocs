@@ -25,7 +25,7 @@ $sql = 'SELECT * FROM listings WHERE id = :id ORDER BY createid DESC LIMIT %d,%d
 $sql = sprintf($sql,$start, $per_page);
 $stmt = $conn->prepare($sql);
 $stmt->execute(array('id' => $id));
-if ( $num > 0)
+if ( $stmt->rowCount() > 0)
     {
     echo " <div id='halfbar' ><h1>Your Listings</h1></div>";
     while($row = $stmt->fetch())

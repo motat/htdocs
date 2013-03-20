@@ -7,7 +7,15 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title><?php echo $webname;?> - Student Panel</title>
+    <meta name="description" content="student panel to see which classes you wish to take and to manage those classes">
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script>
+        $('document').ready(function(){
+            $('.menu').fixedMenu();
+        });
+        </script>
 </head>
 <body>
 <div id="top">
@@ -15,7 +23,7 @@ session_start();
         <div id="header">    
         </div>
             <a href="http://localhost">
-                <div style=background:url('images/menu.png'); height=124px; id="menu">        
+                <div style=background:url('images/menu.png'); height=124px; id="headerimage">        
                 </div>
             </a> 
             <?php require_once ('resources/templates/navbar.php'); ?>
@@ -25,12 +33,9 @@ session_start();
                     {
             ?>
             <div id="info">
-                <div id="minibar">
-                    <h3>Student</h3>
-                </div>
+                <h3>Hello</h3>
                 <div id="intro">
-                    <h1>Hello  </h1>
-                    <h2>This is the student panel, you need to be logged in to view it. <a href="http://localhost/login.php"><font color="#411716">Login here.</font></a></h2>
+                    <h2>This is the student panel, you need to be logged in to view it. <a href="http://localhost/login.php"><br/><font color="#411716">Login here.</font></a></h2>
                 </div>
             </div>
             <?php
@@ -45,11 +50,8 @@ session_start();
                     $row = $stmt->fetch();
             ?>
             <div id="info">
-                <div id="minibar">
-                    <h3>Hello <?php echo $row['firstname']."  ". $row['lastname']; ?></h3>
-                </div>
+                    <h3><?php echo $row['firstname'];?>, </h3>
                 <div id='intro'>
-                    <h1></h1>
                     <h2>Below you can see a list of all the lessons you have marked. If not already, a professor should contact you via email soon.</h2>
                 </div>
             </div>
@@ -58,6 +60,7 @@ session_start();
             <?php } ?>
             
         </div>
+    <?php require_once ('resources/templates/footer.php'); ?>
     </div>
     
 </body>
