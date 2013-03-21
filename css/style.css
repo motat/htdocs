@@ -530,7 +530,7 @@ font-size:18px;
 }
 #footerright{
   float:right;
-  width:300px;
+  width:200px;
   margin-right:2px;
   margin-top:20px;
 }
@@ -570,6 +570,7 @@ font-size:18px;
 }
 /*Help and Tips DIV */
 #tip{
+  padding-top:1px;
   width:800px;
   height:140px;
   margin: 0 auto;
@@ -607,6 +608,55 @@ font-size:18px;
   word-wrap:break-word;
   font-size:16px;
   color:#B87877;
+}
+/*Recent Box DIV*/
+#recent{
+  padding-top:4px;
+  width:800px;
+  height:30px;
+  margin:0 auto;
+}
+#recentbox{
+  height:30px;
+  float:left;
+  width:400px;
+  background-color:#552d2c;
+}
+#recentright{
+  height:30px;
+  width:150px;
+  float:right;
+  background-color:#552d2c;
+}
+#recentleft{
+  height:30px;
+  width:250px;
+  float:left;
+  background-color:#552d2c;
+}
+#recentrate{
+  text-align:center;
+  float:right;
+  height:30px;
+  width:400px;
+  background-color:#B87877;
+}
+#recent h1{
+  padding-left:4px;
+   padding-top:4px;
+  font-size:16px;
+  color:white;
+}
+#recent h2{
+  padding-top:4px;
+  font-size:18px;
+  color:white;
+}
+.rate{
+  margin-top:10px;
+  padding-left:10px;
+  font-size:12pt;
+  color:white;
 }
 .tip{
   font-size:20px;

@@ -50,7 +50,18 @@ include 'resources/config.php';
                     <div id='tipright'>
                          <h2>No parameters over your lesson are set by the website. You are in <span class='tip'>total control</span> of the length of your lesson, the payment required (if any), <span class='tip'>difficulty</span>, and material of the lesson.</h2>
                     </div>
-            </div> 
+            </div>
+             <div id='tip'>
+               <div id='tipleft'>
+                    <div id='tipmini'>
+                         <h1>from Home</h1>
+                    </div>
+               </div>
+               
+                    <div id='tipright'>
+                         <h2>Interested in <span class='tip'>teaching from home?</span> That's easy! Using a program such as skype requires <span class='tip'>only</span> an average internet connection, and a webcam. You can then <span class='tip'>bring you student into your living room</span> and proceed with your lesson as you like.</h2>
+                    </div>
+            </div>
         
     </div>
 <?php require_once ('resources/templates/footer.php'); ?>

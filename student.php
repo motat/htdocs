@@ -55,6 +55,7 @@ include 'resources/config.php';
                     <h2>Below you can see a list of all the lessons you have requested. If not already, a professor should contact you via email soon.</h2>
                 </div>
             </div>
+            <?php require_once ('resources/templates/listrecent.php');  ?>
             <?php require_once ('resources/templates/liststud.php');  ?>
 
             <?php } ?>
