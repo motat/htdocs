@@ -30,6 +30,8 @@ if ( $stmt->rowCount() > 0)
     echo " <div id='halfbar' ><h1>Your Listings</h1></div>";
     while($row = $stmt->fetch())
         {
+            $information=$row['information'];
+            $information=substr($information,0,90).'...';
             echo "
                 <div id='proflist'>
                     <div id='proflistings'>

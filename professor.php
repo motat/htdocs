@@ -1,11 +1,14 @@
+<?php session_start(); ?>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
 include 'resources/config.php';
-session_start();
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+   <link rel="icon" 
+      type="image/png" 
+      href="images/myicon.png">        
     <title><?php echo $webname;?> - Professor Panel</title>
     <meta name="description" content="professor panel to manage any listings or requests for any class or lesson you have">
     <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
@@ -22,10 +25,7 @@ session_start();
     <div class="main">
         <div id="header">    
         </div>
-            <a href="http://localhost">
-                <div style=background:url('images/menu.png'); height=124px; id="headerimage">        
-                </div>
-            </a> 
+            <?php require_once ("resources/templates/logo.php"); ?>
             <?php require_once ('resources/templates/navbar.php'); ?>
             <?php require_once ('resources/templates/quote.php'); ?>
             <?php
@@ -35,7 +35,7 @@ session_start();
             <div id="info">
                 <h3>Professor,  </h3>
                 <div id="intro">  
-                    <h2>This is the professor panel, you need to be logged in. <a href="http://localhost/login.php"><br/><font color="#411716">Login here.</font></a></h2>
+                    <h2>This is the professor panel, you need to be logged in. <a href="<?php echo $root;?>/login.php"><br/><font color="#411716">Login here.</font></a></h2>
                 </div>
             </div>
             <?php
@@ -52,13 +52,13 @@ session_start();
             <div id="info" >
                     <h3>Professor <?php echo $row['firstname']; ?>,</h3>
                 <div id='intro'>
-                    <h2>Here you can see which students desire you and also which listings you've put up. Clicking the <div id='box2'>&nbsp;</div> will remove your listings or a students request for you. </h2>
+                    <h2>Here you can see which students requested you and also which listings you've put up. Clicking the <div id='box2'>&nbsp;</div> will remove your listings or a students request for you. </h2>
                 </div>
             </div>
    
             
-            <?php require_once ('resources/templates/profmark.php');  ?>
-            <?php require_once ('resources/templates/yourlist.php');  ?>
+            <?php require_once ('resources/templates/listpmark.php');  ?>
+            <?php require_once ('resources/templates/listprof.php');  ?>
     
             <?php } ?>
           

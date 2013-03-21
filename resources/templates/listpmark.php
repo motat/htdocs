@@ -16,6 +16,7 @@ if(isset($_SESSION['id']))
         $subject = $row['subject'];
         $email = $row['email'];
         $autoid = $row['autoid'];
+        
         echo "
             <div id='marklist'>
                 <div id='marklistings'>

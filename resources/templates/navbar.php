@@ -1,14 +1,21 @@
 <div class="menu">
     <ul>            
-        <li class="single-link"><a href="http://localhost/professor.php">Professor</a></li>
-        <li class="single-link"><a href="http://localhost/student.php">Student</a></li>
+        <li class="single-link"><a href="<?php echo $root;?>/professor.php">Professor</a></li>
+        <li class="single-link"><a href="<?php echo $root;?>/student.php">Student</a></li>
         <li><a href="#">Listings<span class="box"></span></a>
             <ul>
-                <li><a href="http://localhost/selectcount.php">Select a County</a></li>
-                <li><a href="http://localhost/listings.php?county=oc">Orange County</a></li>
-                <li><a href="http://localhost/listings.php?county=">All</a></li>
+                <li><a href="<?php echo $root;?>/add.php">Add Listing</a></li>
+                <li><a href="<?php echo $root;?>/selectcount.php">Select a County</a></li>
+                <li><a href="<?php echo $root;?>/listings.php?county=oc">Orange County</a></li>
+                <li><a href="<?php echo $root;?>/listings.php?county=">All</a></li>
             </ul>
         </li>
-        <?php if(!isset($_SESSION['id'])) {?>  <li><a href="http://localhost/login.php">Login</a></li><?php }else{?> <li><a href="http://localhost/logout.php">Logout</a></li><?php }?>
+        <li><a href="#">Account</a>
+            <ul>
+                <?php if(!isset($_SESSION['id'])) {?> <li><a href="<?php echo $root;?>/login.php">Login</a></li><?php }?>
+                <?php if(isset($_SESSION['id'])) {?><li><a href="<?php echo $root;?>/logout.php">Logout</a></li><?php }?>
+                <?php if(!isset($_SESSION['id'])) {?> <li><a href="<?php echo $root;?>/register.php">Create Account</a></li><?php }?>
+            </ul>    
+        </li>
     </ul>
 </div>

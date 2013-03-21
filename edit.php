@@ -39,11 +39,25 @@ while($row = $stmt->fetch())
         <?php require_once ('resources/templates/navbar.php'); ?>
         <?php require_once ("resources/templates/quote.php"); ?>  
         <?php
-        echo "<div id='moreinfo'>
-        <h1>"?><?php echo $row['subject']; echo "</h1>
-        <h2>Professor "; echo $row['firstname']; echo "</h2>
-        <div id='moreinfobox'><h3>"; echo $row['information']; echo "</h3></div>
-        </div>" ;
+        echo"
+	
+	<div style='padding-top:30px' id='add'>
+            <div id='intro'>
+		<form action='resources/library/editlist.php?createid=";echo $row['createid']; echo "' method='POST'>  
+                    <label for='subject'>Subject<input value='";?><?php echo $row['subject']; echo"' style='left:17em;' type='text' name='subject'/></label>
+                    <label for='information'>Information<textarea name='information' id='information' cols='40' rows='4'>";?><?php echo $row['information']; echo"</textarea>
+                    <label style='margin-top:54px;' for='payment'>Check if payment is required<input style='left:17em;' type='checkbox' name='payment' value='yes'> </label>
+                    <label for='county'>County
+			<select name='county'>
+			    <option value='oc'>Orange County</option>
+			</select>
+                    </label>
+                    
+                        <input style='margin-top:14px; float:left;' type='submit' value='Edit Listing'/>
+                </form>
+	    </div>
+	</div>
+		    ";
     }
     ?>
 

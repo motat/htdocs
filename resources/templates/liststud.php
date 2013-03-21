@@ -17,6 +17,7 @@ while($row = $stmt->fetch())
         $firstname = $row['firstname'];
 	$prof = $row['prof'];
 	$information = $row['information'];
+	$information=substr($information,0,90).'...';;
         $subject = $row['subject'];
         $email = $row['email'];
 	$autoid=$row['autoid'];

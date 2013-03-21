@@ -1,6 +1,10 @@
 <?php
 require_once(realpath(dirname(__FILE__) . "/../config.php"));
-// username and password sent from form 
+
+
+
+
+// username and password sent from form
 $email=$_POST['email']; 
 $password=$_POST['password'];
 //SQL to get account ID
@@ -9,6 +13,8 @@ $stmt1=$conn->prepare($sql1);
 $stmt1->execute(array(
     ':email' => $email ));
 $row=$stmt1->fetch();
+$salt=$row['salt'];
+$password=sha1($password.$salt);
 //SQL to count and compare if user/pass is correct
 $sqlcount='SELECT COUNT(*) FROM accounts WHERE email=:email AND password=:password';
 $stmtcount=$conn->prepare($sqlcount);
@@ -25,20 +31,6 @@ if($count==1)
     }
 else
     {
-    echo "Wrong Username or Password" ;
-    }
-?>
-<?php
-$email=$_POST['email']; 
-$password=$_POST['password'];
-$sqlcount='SELECT COUNT(*) FROM accounts WHERE email=:email AND password=:password';
-$stmtcount=$conn->prepare($sqlcount);
-$stmtcount->execute(array(
-    ':email' => $email,
-    ':password' => $password));
-$count = $stmtcount->fetchColumn();
-if($count==1)
-    {
-        echo "success";
+    header("location:$root/failed.php?success=wronginfo");
     }
 ?>

@@ -5,5 +5,5 @@ $sql='DELETE FROM marks WHERE autoid=:autoid';
 $stmt=$conn->prepare($sql);
 $stmt->execute(array(
     ':autoid' => $autoid ));
-header("location:$baseurl/professor.php");
+header("location:$baseurl/student.php");
 ?>

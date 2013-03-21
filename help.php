@@ -30,19 +30,27 @@ include 'resources/config.php';
             <?php require_once ("resources/templates/logo.php"); ?>
             <?php require_once ("resources/templates/navbar.php"); ?>  
             <?php require_once ("resources/templates/quote.php"); ?>
-            
-            <div id="info">
-                    <h3>Greetings, </h3>
-                <div id="intro">
-                    <h2 style='padding-top:20px;'>No matter what the subject is, there is always someone willing to teach it, and someone to learn it. Learn! Teach!</h2>
-                </div>
+            <div id='tip'>
+               <div id='tipleft'>
+                    <div id='tipmini'>
+                         <h1>the Win Win</h1>
+                    </div>
+               </div>
+               <div id='tipright'>
+                    <h2>If you are looking to gain more students, <span class='tip'>consider this</span>; offering a short and <span class='tip'>free</span> course lets the student 'test the waters' and be more comfortable about <span class='tip'>investing in a higher level lesson</span> of yours. Also, students who take a free course such as this, can decide not to continue with the subject, <span class='tip'>without wasting any money</span>.</h2>
+               </div>
             </div>
-            <div id="info2">
-                <div id="intro2">
-                    <h2>Currently, our service is focused on and supported towards The Southern California area.</h2>
-                </div>
-            </div>
-         
+            <div id='tip'>
+               <div id='tipleft'>
+                    <div id='tipmini'>
+                         <h1>your Rules</h1>
+                    </div>
+               </div>
+               
+                    <div id='tipright'>
+                         <h2>No parameters over your lesson are set by the website. You are in <span class='tip'>total control</span> of the length of your lesson, the payment required (if any), <span class='tip'>difficulty</span>, and material of the lesson.</h2>
+                    </div>
+            </div> 
         
     </div>
 <?php require_once ('resources/templates/footer.php'); ?>

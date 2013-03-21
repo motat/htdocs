@@ -1,4 +1,5 @@
 <?php
+include 'resources/config.php';
 if(isset($_SESSION['id']))
     {
     $id=$_SESSION['id'];
@@ -11,10 +12,11 @@ if(isset($_SESSION['id']))
 echo "<div id='footer'>
     <div id='footerin'>
         <div id='footerinleft'>
-            <h1>facebook</h1>
+            <h1>media</h1>
         </div>
         <div id='footerinright'>
-            <h1>contact us</h1>
+            <h1><a href='";?><?php echo $root; echo "/contact.php'>contact us</a></h1>
+            <h1><a href='";?><?php echo $root; echo "/help.php'>tips and help</a></h1>
         </div>
     </div>
     <div id='footerright'>
@@ -28,14 +30,15 @@ else
     <div id='footer'>
         <div id='footerin'>
             <div id='footerinleft'>
-                <h1>facebook</h1>
+                <h1>media</h1>
             </div>
             <div id='footerinright'>
-                <h1>contact us</h1>
+                <h1><a href='";?><?php echo $root; echo "/contact.php'>contact us</a></h1>
+                <h1><a href='";?><?php echo $root; echo "/help.php'>tips and help</a></h1>
             </div>
         </div>
         <div id='footerright'>
-            <h1>Ahh Yes</h1>
+            <h2>Ahh Yes</h2>
         </div>
     </div>";
     }

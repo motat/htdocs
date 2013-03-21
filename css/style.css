@@ -109,10 +109,12 @@ ul#header li a{
 /* Famous quote - UNIVERSAL*/
 
 #quote{
+  
     margin: 0 auto;
     width:800px;
     margin: 0px auto;
     margin-top: 4px;
+    margin-bottom:4px;
     background-color: #712928;
     height:125px;
 }
@@ -505,7 +507,7 @@ font-size:18px;
 }
 #footerin{
   text-align:center;
-    width:400px;
+    width:450px;
     margin: 0px auto;
     margin-top: 0px;
     background-color: #562d2c;
@@ -513,7 +515,8 @@ font-size:18px;
     float:left;
 }
 #footerinright{
-  margin-top:20px;
+  text-align:center;
+  margin-top:10px;
   width:100px;
   float:right;
   height:40px;
@@ -532,6 +535,11 @@ font-size:18px;
   margin-top:20px;
 }
 #footer h1{
+  font-weight:thin;
+  font-size:14px;
+  color:#B87877;
+}
+#footer h2{
   font-weight:thin;
   font-size:14px;
   color:#B87877;
@@ -559,6 +567,50 @@ font-size:18px;
     padding-top:20px;
     width:700px;
     margin: 0px auto;
+}
+/*Help and Tips DIV */
+#tip{
+  width:800px;
+  height:140px;
+  margin: 0 auto;
+}
+#tipright{
+  width:600px;
+  height:140px;
+  float:right;
+  background-color:#402929;
+}
+#tipright{
+  width:600px;
+  height:140px;
+  float:right;
+  background-color:#402929;
+}
+#tipleft{
+  width:200px;
+  height:140px;
+  float:left;
+}
+#tipmini{
+  width:200px;
+  height:30px;
+  background-color:#712928;  
+}
+#tip h1{
+  padding-left:10px;
+  font-size:26px;
+  color:#B87877;
+}
+#tip h2{
+  padding-top:10px;
+  padding-left:5px;
+  word-wrap:break-word;
+  font-size:16px;
+  color:#B87877;
+}
+.tip{
+  font-size:20px;
+  color:#B8615F;
 }
 form { position:relative; }
 label {

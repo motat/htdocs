@@ -9,8 +9,8 @@ include 'resources/config.php';
     <link rel="icon" 
       type="image/png" 
       href="images/myicon.png">
-    <title><?php echo $webname;?> - Listings</title>
-    <meta name="description" content="listings of any skill trade or lesson. ">
+    <title><?php echo $webname;?> - More Info</title>
+    <meta name="description" content="more information on a listing. subject and class ">
     <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
@@ -18,21 +18,26 @@ include 'resources/config.php';
         $('document').ready(function(){
             $('.menu').fixedMenu();
         });
-        </script>
+    </script>
 </head>
 <body>
 
-<div id='top'>
-<div class='main'>
-	  <div id='header'>   
-        </div> 
-            <?php require_once ("resources/templates/logo.php"); ?>
-            <?php require_once ('resources/templates/navbar.php'); ?>
-            <?php require_once ('resources/templates/quote.php'); ?>
-	    <?php require_once ('resources/templates/searchquery.php'); ?>
-		    
+<div id="top">
+    <div class="main">
+        <div id="header">
         </div>
-<?php require_once ("resources/templates/footer.php"); ?>
+        <?php require_once ("resources/templates/logo.php"); ?>
+        <?php require_once ('resources/templates/navbar.php'); ?>
+        <?php require_once ("resources/templates/quote.php"); ?>          
+        <div id='moreinfo'>
+            <h1>Contact</h1>
+            <h2>Vadim</h2>
+            <div id='moreinfobox'>
+                <h3>vadimpish@yahoo.com</h3>
+            </div>
+        </div>
+    </div>
+<?php require_once ('resources/templates/footer.php'); ?>
 </div>
 </body>
 </html>
