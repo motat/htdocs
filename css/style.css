@@ -53,44 +53,21 @@ body {background-color:#287171;}
 /*a links*/
 a:link    {
   text-decoration:none;
-  font-weight:      bold;
   color: #B89577;
+  font-weight:550;
   } 
 a:visited {
-   text-decoration:none;
-  font-weight:      bold;
   background-color: #ddd;
   color:            #B89577;
   } 
 a:hover   {
    text-decoration:none;
-  font-weight:      bold;
   color:            #B89577;
   } 
 a:active  {
    text-decoration:none;
-  font-weight:      bold;
   color: #B89577;
-  }
-  /*b links*/
-b:link    {
-  font-weight:      bold;
-  color: white;
-  } 
-b:visited {
-  font-weight:      bold;
-  background-color: #ddd;
-  color: white;
-  } 
-b:hover   {
-  font-weight:      bold;
-  color: white;;
-  } 
-b:active  {
-  font-weight:      bold;
-  color: white;
-  }
-  
+  }  
 /* Main container for the page - UNIVERSAL*/
 .main{
     width: 800px;
@@ -117,18 +94,16 @@ input{
   border: none;
   background-color: #2d0000;
   color: white;
-  font-family: inherit;
   font-size: 14px;
 }
 
 /*AhhhA Header Picture*/
 #headerimage{
     margin: 0 auto;
-    width:800px;
+    width:100%;
     background:url('images/menu.png');
     height: 124px;
     text-align: center;
-    font-family: inherit;
 }
 /*Navigation Bar and other - UNIVERSAL */
 ul#header{
@@ -149,7 +124,7 @@ ul#header li a{
 }
 #header{/*Also spacing for Very top*/
     margin: 0 auto;
-    width:800px;
+    width:100%;
     margin-top: px;
     height: 30px;
     background-color:#712928;
@@ -158,9 +133,8 @@ ul#header li a{
 /* Famous quote - UNIVERSAL*/
 
 #quote{
-  
     margin: 0 auto;
-    width:800px;
+    width:100%;
     margin: 0px auto;
     margin-top: 4px;
     margin-bottom:4px;
@@ -201,7 +175,7 @@ ul#header li a{
 }
 /*Profile Divs for Index*/
 #profile{
-  width:800px;
+  width:100%;
   margin: 0px auto;
   margin-top:4px;
   background-color:#712928;
@@ -233,14 +207,14 @@ ul#header li a{
 }
 /*Main Content Div - UNIVERSAL*/
 #info{
-    width:800px;
+    width:100%;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #712928;
     height:200px;
 }
 #add{
-    width:800px;
+    width:100%;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #712928;
@@ -310,7 +284,7 @@ ul#header li a{
     margin: 0 auto;
 
     padding-top:4px;
-    width:800px;
+    width:100%;
 
 }
 
@@ -328,21 +302,22 @@ ul#header li a{
 
 }
 #halfbar h1{
-  padding-top:5px;
+  font-weight:bold;
+  padding-top:.5em;
   font-size:16px;
   color:black;
   padding-left:5px;
 }
 /*Listings - NONUNI */
 #list{
-    width:800px;
+    width:100%;
     height:64.8px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #552d2c;
 }
 #listings{
-    width:800px;
+    width:100%;
     margin: 0px auto;
     margin-/*top*/: 0px;
     background-color: #552d2c;
@@ -375,7 +350,7 @@ ul#header li a{
 }
 #listleft{
     float:left;
-    height: 50px;
+    height: 51px;
     width: 400px;
 }
 #listright{
@@ -390,14 +365,14 @@ ul#header li a{
 }
 /*Proffessor Listings */
 #proflist{
-    width:800px;
+    width:100%;
     height:64.8px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #402929;
 }
 #proflistings{
-    width:800px;
+    width:100%;
     margin: 0px auto;
     margin-top: 0px;
     background-color: #402929;
@@ -445,14 +420,14 @@ ul#header li a{
 
 /*Mark List - NON UNI*/
 #marklist{
-    width:800px;
+    width:100%;
     height:64.8px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #552d2c;
 }
 #marklistings{
-    width:800px;
+    width:100%;
     margin: 0px auto;
     margin-top: 0px;
     background-color: #552d2c;
@@ -500,7 +475,7 @@ ul#header li a{
 #moreinfo{
   margin:0 auto;
   height:250px;
-  width:800px;
+  width:100%;
   margin-top:4px;
   background-color:#552d2c
 }
@@ -569,7 +544,7 @@ font-size:18px;
 /* Pagination - NONUNI */
 #paginate{
   margin: 0 auto;
-  width:800px;
+  width:100%;
     margin-top: 4px;
     height: 30px;
     background-color:#712928;
@@ -583,7 +558,7 @@ font-size:18px;
     float:right;
 }
 #pageid{
-  width:800px;
+  width:100%;
   height:60px;
   margin:0 auto;
   background-color:#562d2c;
@@ -669,7 +644,7 @@ font-size:18px;
 /*Help and Tips DIV */
 #tip{
   padding-top:1px;
-  width:800px;
+  width:100%;
   height:140px;
   margin: 0 auto;
 }
@@ -717,7 +692,7 @@ font-size:18px;
 /*Recent Box DIV*/
 #recent{
   padding-top:4px;
-  width:800px;
+  width:100%;
   height:30px;
   margin:0 auto;
 }
@@ -795,7 +770,6 @@ label input {
   border: none;
   background-color: #2d0000;
   color: white;
-  font-family: Arial;
   font-size: 14px;
   }
 textarea{
@@ -805,7 +779,6 @@ textarea{
   border: none;
   background-color: #2d0000;
   color: white;
-  font-family: Arial;
   font-size: 14px;
 }
 .h2{
@@ -872,7 +845,7 @@ background-color:black;
 .menu{
 margin-top:4px;
 width:100%;
-font:13px/27px Arial,sans-serif;
+font:13px/27px helvetica;
 color:#3366cc;
 height:30px;
 background:#551e1d;

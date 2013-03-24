@@ -64,7 +64,7 @@ $marks=$row['marks'];
                    }
                 }     
             ?>
-                        <div id='info' style='height:600px;'>
+                        <div id='info' style='height:500px;'>
                                 <h3>Greetings, </h3>
                             <div id='intro'>
                                 <h2 style='padding-top:20px;'>Ahh Yes is a tool designed for any person to teach students any skill or lesson. </h2>
