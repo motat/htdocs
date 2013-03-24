@@ -27,7 +27,12 @@ if(isset($_SESSION['id']))
         ':createid' => $createid,
         ':markid' => $id ));
     $rowcheck=$stmtcheck->fetch();
-
+    if ( $stmtcheck->rowCount() > 0)
+        {
+        header("location:$baseurl/listings.php?county=".$_GET['county']."&pageid=2");
+        }
+    else
+        {
         //Script to check if professor already has a mark
         //'1' = new message
         //'0' = no message
@@ -65,9 +70,9 @@ if(isset($_SESSION['id']))
             ':prof' => $prof,
             ':information' => $information,
             ':markid' => $id )); 
-        header("location:$baseurl/listings.php?county=".$_GET['county']."&marked=yes");
+        header("location:$baseurl/listings.php?county=".$_GET['county']."&pageid=1");
         
-    //}
+    }
 }
 else
 {   

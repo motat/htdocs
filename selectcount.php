@@ -13,8 +13,8 @@ BETTER FOR SCALING-->
       href="images/myicon.png">
     <title><?php echo $webname;?> - Select County</title>
     <meta name="description" content="select a county that you wish to find a lesson in. only orange county is supported">
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){

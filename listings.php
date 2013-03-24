@@ -12,8 +12,8 @@ include 'resources/config.php';
       href="images/myicon.png">
     <title><?php echo $webname;?> - Listings</title>
     <meta name="description" content="listings of any skill trade or lesson. ">
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
@@ -29,6 +29,29 @@ include 'resources/config.php';
             <?php require_once ("resources/templates/logo.php"); ?>
             <?php require_once ('resources/templates/navbar.php'); ?>
             <?php require_once ("resources/templates/quote.php"); ?>
+             <?php
+            if(isset($_GET['pageid']))
+                {
+                if($_GET['pageid']=="1")
+                   {
+                       echo "
+                        <div id='pageid'> 
+                            <h1>Lesson requested.</h1> 
+                        </div>";
+                   }
+                }
+            if(isset($_GET['pageid']))
+                {
+                if($_GET['pageid']=="2")
+                   {
+                       echo "
+                        <div id='pageid'> 
+                            <h1>You have already requested that class.</h1> 
+                     </div>";
+                   }
+                }            
+
+                ?>
             <div id="info"  style='height:125px;'>
                 <div id='intro'>
                     <h2 style='padding-top:10px;'>Clicking the <div id='box2'>&nbsp;</div> will notify the professor that you request his lesson.</h2>
@@ -36,22 +59,6 @@ include 'resources/config.php';
                     <a href='add.php'><span class='add'>Add a new lesson here.</span></a>
                 </div>
             </div>
-             <?php
-             if(isset($_GET['marked']))
-                {
-                if($_GET['marked']=="yes")
-                   {
-                       echo "
-                        <div id='info'  style='height:50px;'>
-                           <div id='intro'>
-                               <h2 style='padding-top:5px;'>Lesson requested..</h2>
-                           </div>
-                       </div>";
-                   }
-                }
-            
-                
-                ?>
             <div id='halfbar' style='display: inline-block; width:230px; height:50px;'>
                 <h1>Lesson or Name: </h1>
                 <form  method='post' action='/search.php?go'  id='searchform'>  <input  type='text' name='name'> <input  type='submit' name='submit' value='Search'>

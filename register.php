@@ -11,8 +11,8 @@ include 'resources/config.php';
       href="images/myicon.png">
     <title><?php echo $webname;?> - Registration</title>
     <meta name="description" content="register and make an account to create listings or view them and find a class you desire">
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
@@ -34,10 +34,8 @@ include 'resources/config.php';
             if($pageid=="1")
                 {
                 echo "
-                    <div id='info'  style='height:50px;'>
-                        <div id='intro'>
-                            <h2 style='padding-top:5px;'>The email you entered is not a valid email. </h2>
-                        </div>
+                    <div id='pageid'> 
+                            <h1>The email you entered is not a valid email.</h1> 
                     </div>
                     "  ;
                 }
@@ -48,10 +46,8 @@ include 'resources/config.php';
             if($pageid=="2")
                 {
                 echo "
-                    <div id='info'  style='height:50px;'>
-                        <div id='intro'>
-                            <h2 style='padding-top:5px;'>That email has already been registered as an account here. Please try another email, or try logging in.</h2>
-                        </div>
+                    <div id='pageid'> 
+                            <h1>That email has already been registered as an account here. Please try another email, or try logging in.</h1> 
                     </div>
                     "  ;
                 }

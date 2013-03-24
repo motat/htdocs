@@ -34,4 +34,4 @@ $stmtdel=$conn->prepare($sqldel);
 $stmtdel->execute(array(
     ':rid' => $recentid ));
 
-header("location:$root/success.php?success=rated");  
+header("location:$root/student.php?pageid=1");  

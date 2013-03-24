@@ -11,8 +11,8 @@ include 'resources/config.php';
       href="images/myicon.png">
     <title><?php echo $webname;?> - More Info</title>
     <meta name="description" content="more information on a listing. subject and class ">
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
@@ -21,16 +21,6 @@ include 'resources/config.php';
     </script>
 </head>
 <body>
-<?php
-$cid=$_GET['cid'];
-//$sql = mysql_query("SELECT * FROM listings WHERE createid='$cid'");
-$sql='SELECT * FROM listings WHERE createid=:cid';
-$stmt=$conn->prepare($sql);
-$stmt->execute(array(
-    ':cid' => $cid ));
-while($row = $stmt->fetch())
-    {
-?>
 <div id="top">
     <div class="main">
         <div id="header">
@@ -39,12 +29,32 @@ while($row = $stmt->fetch())
         <?php require_once ('resources/templates/navbar.php'); ?>
         <?php require_once ("resources/templates/quote.php"); ?>  
         <?php
-        echo "<div id='moreinfo'>
-        <h1>"?><?php echo $row['subject']; echo "</h1>
-        <h2>Professor "; echo $row['firstname']; echo "</h2>
-        <div id='moreinfobox'><h3>"; echo $row['information']; echo "</h3></div>
-        </div>" ;
-    }
+        $cid=$_GET['cid'];
+        //$sql = mysql_query("SELECT * FROM listings WHERE createid='$cid'");
+        $sql='SELECT * FROM listings WHERE createid=:cid';
+        $stmt=$conn->prepare($sql);
+        $stmt->execute(array(
+            ':cid' => $cid ));
+        while($row = $stmt->fetch())
+            {
+            echo "
+            <div id='tip'>
+                <div id='tipleft'>
+                    <div id='tipmini'>
+                            <h1>"; echo $row['subject']; echo "</h1>
+                            <h1 style='font-size:15px; padding-top:20px;'><a style='display:inline-block' href='resources/library/postmark.php?createid="; ?><?php echo $row['createid']; echo "&uid="; echo $row['id'];?><?php echo "'>(request class)</a>
+    
+                    </div>
+                </div>
+                <div id='tipright'>
+                
+                    <h2>"; echo $row['firstname']; echo "</h2>
+                    <h2>"; echo $row['information']; echo "</h2>
+                </div>
+            </div>
+            
+            " ;
+            }   
     ?>
 
     </div>

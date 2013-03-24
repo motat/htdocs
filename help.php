@@ -13,8 +13,8 @@ include 'resources/config.php';
     <meta name="description" content="connect with professor or tutor for any lesson. you can list any trade or skill you want to teach">
     <meta name="keywords" content="looking for class student any subject">
     <meta name="robots" content="index,follow">
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){

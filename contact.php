@@ -11,8 +11,8 @@ include 'resources/config.php';
       href="images/myicon.png">
     <title><?php echo $webname;?> - More Info</title>
     <meta name="description" content="more information on a listing. subject and class ">
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
@@ -30,16 +30,16 @@ include 'resources/config.php';
         <?php require_once ('resources/templates/navbar.php'); ?>
         <?php require_once ("resources/templates/quote.php"); ?>          
         <div id='tip'>
-               <div id='tipleft'>
-                    <div id='tipmini'>
-                         <h1>Contact</h1>
-                    </div>
-               </div>
-               <div id='tipright'>
-                    <h2>Vadim Pishchenko</h2>
-                    <h2>contact@ahhyes.org</h2>
+            <div id='tipleft'>
+                <div id='tipmini'>
+                        <h1>Contact</h1>
                 </div>
             </div>
+            <div id='tipright'>
+                <h2>Vadim Pishchenko</h2>
+                <h2>contact@ahhyes.org</h2>
+            </div>
+        </div>
     </div>
 <?php require_once ('resources/templates/footer.php'); ?>
 </div>

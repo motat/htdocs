@@ -11,8 +11,8 @@ $success=$_GET['success'];?>
       href="images/myicon.png">
     <title><?php echo $webname;?> - Success</title>
     <meta name="description" content="created to pair professor and student together for any subject">
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
@@ -28,22 +28,14 @@ $success=$_GET['success'];?>
         <?php require_once ("resources/templates/logo.php"); ?>
         <?php require_once ('resources/templates/navbar.php'); ?>
         <?php require_once ("resources/templates/quote.php"); ?>  
-        <div style='height:100px;' id="info">
-            <div id="success">
+            <div id="pageid">
             <?php
-                
-                 if($success=="exsists")
-                {
-                    echo "<h1>You have already requested this class.</h1>"  ;
-                }
                  if($success=="loginreq")
                 {
                     echo "<h1>You are required to login to perform this task.</h1>"  ;
                 }
-
                 ?>       
             </div>
-        </div>
     </div>
 <?php require_once ('resources/templates/footer.php'); ?>
 </div>

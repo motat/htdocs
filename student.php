@@ -11,8 +11,8 @@ include 'resources/config.php';
       href="images/myicon.png">
     <title><?php echo $webname;?> - Student Panel</title>
     <meta name="description" content="student panel to see which classes you wish to take and to manage those classes">
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
@@ -31,6 +31,16 @@ include 'resources/config.php';
             <?php
                if(!isset($_SESSION['id']))
                     {
+                    if(isset($_GET['pageid']))
+                        {
+                        if($_GET['pageid']=="1")
+                            {
+                            echo "
+                                <div id='pageid'> 
+                                    <h1>Thank you for taking the time to rate your professor! This really helps.</h1> 
+                                </div>";
+                            }
+                        }     
             ?>
             <div id="info">
                 <h3>Hello</h3>

@@ -27,7 +27,7 @@ if($count==1)
     session_start();
     $_SESSION['id']=$row['id'];
     require_once(realpath(dirname(__FILE__) . "/../config.php"));  
-    header("location:$baseurl/success.php?success=login");
+    header("location:$baseurl/index.php?pageid=2");
     }
 else
     {

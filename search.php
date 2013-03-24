@@ -11,8 +11,8 @@ include 'resources/config.php';
       href="images/myicon.png">
     <title><?php echo $webname;?> - Listings</title>
     <meta name="description" content="listings of any skill trade or lesson. ">
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
@@ -35,11 +35,9 @@ include 'resources/config.php';
                 if($pageid=="1")
                     {
                     echo "
-                        <div id='info'  style='height:50px;'>
-                            <div id='intro'>
-                                <h2 style='padding-top:5px;'>Your search returned no results, please try again.</h2>
-                            </div>
-                        </div>
+                        <div id='pageid'> 
+                            <h1>Your search returned no results, please try again.</h1> 
+			</div>
 			"  ;
                     }
                 }

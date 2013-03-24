@@ -10,8 +10,8 @@ include 'resources/config.php';
       type="image/png" 
       href="images/myicon.png">
     <title><?php echo $webname;?> - Add Listing</title>
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
@@ -26,7 +26,10 @@ include 'resources/config.php';
         </div>
         <?php require_once ("resources/templates/logo.php"); ?>
         <?php require_once ('resources/templates/navbar.php'); ?>
-        <?php require_once ("resources/templates/quote.php"); ?>  
+        <?php require_once ("resources/templates/quote.php"); ?>
+        <div id='pageid'>
+            <h1>Before you post a course, check out the <a href='help.php'>help and tips</a> page for some general knowledge on listings.</h1>
+        </div>
         <div id="add">
             <div id="intro">
         <?php if(isset($_SESSION['id']))

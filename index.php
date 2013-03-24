@@ -13,8 +13,8 @@ include 'resources/config.php';
     <meta name="description" content="connect with professor or tutor for any lesson. you can list any trade or skill you want to teach">
     <meta name="keywords" content="looking for class student any subject">
     <meta name="robots" content="index,follow">
-    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.google_menu.js"></script>
+    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
@@ -45,7 +45,25 @@ $marks=$row['marks'];
         </div>
             <?php require_once ("resources/templates/logo.php"); ?>
             <?php require_once ("resources/templates/navbar.php"); ?>  
-            <?php require_once ("resources/templates/quote.php"); ?>
+            <?php require_once ("resources/templates/quote.php");
+            if(isset($_GET['pageid']))
+                {
+                if($_GET['pageid']=="1")
+                   {
+                       echo "
+                        <div id='pageid'> 
+                            <h1>You have been logged out!</h1> 
+                        </div>";
+                   }
+                if($_GET['pageid']=="2")
+                   {
+                       echo "
+                        <div id='pageid'> 
+                            <h1>You have logged in! Check out or submit a post at the <a href='selectcount.php'>listings page</a></h1> 
+                        </div>";
+                   }
+                }     
+            ?>
                         <div id='info' style='height:600px;'>
                                 <h3>Greetings, </h3>
                             <div id='intro'>
