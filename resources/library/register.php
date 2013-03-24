@@ -7,21 +7,34 @@ $salt=md5($email);
 $salt=substr($salt,0,22);
 $password = $_POST['password'];
 $password=sha1($password.$salt);
-if (filter_var($email, FILTER_VALIDATE_EMAIL))
+//Check to see if Email already registered
+$sqlcheck='SELECT * FROM accounts WHERE email=:email';
+$stmtcheck=$conn->prepare($sqlcheck);
+$stmtcheck->execute(array(
+    ':email' => $email));
+if ( $stmtcheck->rowCount() > 0)
     {
-    $sql='INSERT INTO accounts (firstname,lastname,email,password,salt) VALUES (:firstname, :lastname, :email, :password, :salt)';
-    $stmt=$conn->prepare($sql);
-    $stmt->execute(array(
-        ':firstname' => $firstname,
-        ':lastname' => $lastname,
-        ':email' => $email,
-        ':password' => $password,
-        ':salt' => $salt));
-    header("location:$root/success.php?success=registered");  
+         header("location:$root/register.php?pageid=2"); 
     }
-else
+    else
     {
-    header("location:$root/failed.php?success=wrongemail"); 
-    }
+        if (filter_var($email, FILTER_VALIDATE_EMAIL))
+            {
+            $sql='INSERT INTO accounts (firstname,lastname,email,password,salt,marks) VALUES (:firstname, :lastname, :email, :password, :salt, :marks)';
+            $stmt=$conn->prepare($sql);
+            $stmt->execute(array(
+                ':firstname' => $firstname,
+                ':lastname' => $lastname,
+                ':email' => $email,
+                ':password' => $password,
+                ':salt' => $salt,
+                ':marks' => '0' ));
+            header("location:$root/success.php?success=registered");  
+            }
+        else
+            {
+            header("location:$root/register.php?pageid=1"); 
+            }
+    }       
 
 ?>

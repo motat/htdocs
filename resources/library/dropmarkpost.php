@@ -1,8 +1,27 @@
 <?php
-/*NOTE ADD SECURITY MESSURE SO PEOPLE DONT EDIT INFO IN BROWSER AND DELETE MARKS - NOT DONE*/
 require_once(realpath(dirname(__FILE__) . "/../config.php"));
+
 $autoid=$_GET['autoid'];
-//mysql_query("DELETE FROM marks WHERE firstname= '$firstname' AND subject= '$subject' AND email='$email'");
+
+$sqlgetrec='SELECT * FROM marks WHERE autoid=:autoid';
+$stmtgetrec=$conn->prepare($sqlgetrec);
+$stmtgetrec->execute(array(
+    ':autoid' => $autoid ));
+$row = $stmtgetrec->fetch();
+
+$uid=$row['id'];
+$createid=$row['createid'];
+$subject=$row['subject'];
+$name=$row['prof'];
+
+$sqlget='INSERT INTO recents (uid,createid,subject,firstname) VALUES (:uid,:createid,:subject,:name)';
+$stmtget=$conn->prepare($sqlget);
+$stmtget->execute(array(
+    ':uid' => $uid,
+    ':createid' => $createid,
+    ':subject' => $subject,
+    ':name' => $name ));
+
 $sql='DELETE FROM marks WHERE autoid=:autoid';
 $stmt=$conn->prepare($sql);
 $stmt->execute(array(

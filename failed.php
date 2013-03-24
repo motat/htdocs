@@ -31,19 +31,16 @@ $success=$_GET['success'];?>
         <div style='height:100px;' id="info">
             <div id="success">
             <?php
-                if($success=="wrongemail")
-                {
-                    echo "<h1>An incorrect email address was entered, please make sure that it is correct.</h1>"  ;
-                }
-                if($success=="wrongeinfo")
-                {
-                    echo "<h1>You entered an incorrect email or password.</h1>"  ;
-                }
-                if($success=="nosearch")
-                {
-                    echo "<h1>No search results.</h1>"  ;
-                }
                 
+                 if($success=="exsists")
+                {
+                    echo "<h1>You have already requested this class.</h1>"  ;
+                }
+                 if($success=="loginreq")
+                {
+                    echo "<h1>You are required to login to perform this task.</h1>"  ;
+                }
+
                 ?>       
             </div>
         </div>

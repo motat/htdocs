@@ -1,9 +1,27 @@
-<?php session_start(); ?>
+<?php
+session_start();
+include 'resources/config.php';
+if(isset($_SESSION['id']))
+    {
+    $sid=$_SESSION['id'];
+    $sql='SELECT * FROM accounts WHERE id=:id';
+    $stmt=$conn->prepare($sql);
+    $stmt->execute(array(
+        ':id' => $sid));
+    $checkrow=$stmt->fetch();
+    $newid=$checkrow['new'];
+    if($newid == 1)
+        {
+            $sql='UPDATE accounts SET new=:new WHERE id=:sid';
+            $stmt=$conn->prepare($sql);
+            $stmt->execute(array(
+                ':new' => '0',
+                ':sid' => $sid ));      
+        }
+    }
+?>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<?php
-include 'resources/config.php';
-?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
    <link rel="icon" 
@@ -49,14 +67,6 @@ include 'resources/config.php';
                     $stmt->execute();
                     $row = $stmt->fetch();
             ?>
-            <div id="info" >
-                    <h3>Professor <?php echo $row['firstname']; ?>,</h3>
-                <div id='intro'>
-                    <h2>Here you can see which students requested you and also which listings you've put up. Clicking the <div id='box2'>&nbsp;</div> will remove your listings or a students request for you. </h2>
-                </div>
-            </div>
-   
-            
             <?php require_once ('resources/templates/listpmark.php');  ?>
             <?php require_once ('resources/templates/listprof.php');  ?>
     

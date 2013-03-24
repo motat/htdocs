@@ -29,13 +29,17 @@ include 'resources/config.php';
         <?php require_once ("resources/templates/logo.php"); ?>
         <?php require_once ('resources/templates/navbar.php'); ?>
         <?php require_once ("resources/templates/quote.php"); ?>          
-        <div id='moreinfo'>
-            <h1>Contact</h1>
-            <h2>Vadim</h2>
-            <div id='moreinfobox'>
-                <h3>vadimpish@yahoo.com</h3>
+        <div id='tip'>
+               <div id='tipleft'>
+                    <div id='tipmini'>
+                         <h1>Contact</h1>
+                    </div>
+               </div>
+               <div id='tipright'>
+                    <h2>Vadim Pishchenko</h2>
+                    <h2>contact@ahhyes.org</h2>
+                </div>
             </div>
-        </div>
     </div>
 <?php require_once ('resources/templates/footer.php'); ?>
 </div>

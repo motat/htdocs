@@ -13,6 +13,7 @@ while($row = $stmt->fetch())
     {
         $firstname=$row['firstname'];
 	$subject=$row['subject'];
+	$recentid=$row['rid'];
         echo "
 	    <div id='recent'>
 		<div id='recentbox'>
@@ -24,7 +25,7 @@ while($row = $stmt->fetch())
 		    </div>
 		</div>
 		<div id='recentrate'>
-		    <a href='#'><span class='rate'>Good</span></a> <a href='#'><span class='rate'>Bad</span></a> <a href='#'><span class='rate'>Not Taken</span></a>
+		    <a href='resources/library/droprecent.php?rate=1&recentid=";echo $recentid; echo "'><span class='good'>Good</span></a> &bull; <a href='resources/library/droprecent.php?rate=0&recentid=";echo $recentid; echo "'><span class='nottaken'>Not Taken</span></a> &bull; <a href='resources/library/droprecent.php?rate=-1&recentid=";echo $recentid; echo "'><span class='bad'>Bad</span></a> 
 		</div>
 	    </div>";
                         }

@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php session_start();
+;?>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
@@ -35,6 +36,22 @@ include 'resources/config.php';
                     <a href='add.php'><span class='add'>Add a new lesson here.</span></a>
                 </div>
             </div>
+             <?php
+             if(isset($_GET['marked']))
+                {
+                if($_GET['marked']=="yes")
+                   {
+                       echo "
+                        <div id='info'  style='height:50px;'>
+                           <div id='intro'>
+                               <h2 style='padding-top:5px;'>Lesson requested..</h2>
+                           </div>
+                       </div>";
+                   }
+                }
+            
+                
+                ?>
             <div id='halfbar' style='display: inline-block; width:230px; height:50px;'>
                 <h1>Lesson or Name: </h1>
                 <form  method='post' action='/search.php?go'  id='searchform'>  <input  type='text' name='name'> <input  type='submit' name='submit' value='Search'>

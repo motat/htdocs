@@ -28,7 +28,23 @@ include 'resources/config.php';
         </div> 
             <?php require_once ("resources/templates/logo.php"); ?>
             <?php require_once ('resources/templates/navbar.php'); ?>
-            <?php require_once ('resources/templates/quote.php'); ?>
+            <?php require_once ('resources/templates/quote.php');
+	    if(isset($_GET['pageid']))
+                {
+                $pageid=$_GET['pageid'];
+                if($pageid=="1")
+                    {
+                    echo "
+                        <div id='info'  style='height:50px;'>
+                            <div id='intro'>
+                                <h2 style='padding-top:5px;'>Your search returned no results, please try again.</h2>
+                            </div>
+                        </div>
+			"  ;
+                    }
+                }
+	    ?>
+	    
 	    <?php require_once ('resources/templates/searchquery.php'); ?>
 		    
         </div>

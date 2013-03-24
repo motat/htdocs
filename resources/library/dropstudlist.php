@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once(realpath(dirname(__FILE__) . "/../config.php"));
+$sid=$_SESSION['id'];
 
 $autoid=$_GET['autoid'];
 
@@ -17,7 +19,7 @@ $name=$row['prof'];
 $sqlget='INSERT INTO recents (uid,createid,subject,firstname) VALUES (:uid,:createid,:subject,:name)';
 $stmtget=$conn->prepare($sqlget);
 $stmtget->execute(array(
-    ':uid' => $uid,
+    ':uid' => $sid,
     ':createid' => $createid,
     ':subject' => $subject,
     ':name' => $name ));

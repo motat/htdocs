@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php
+session_start();
+?>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
@@ -50,6 +52,10 @@ $success=$_GET['success'];?>
                 if($success=="loggedout")
                 {
                     echo "<h1>You have successfully been logged out!</h1>";
+                }
+                if($success=="rated")
+                {
+                    echo "<h1>Thank you for taking the time to rate your professor, this really helps!</h1>";
                 }
                 ?>       
             </div>

@@ -12,11 +12,12 @@ if(isset($_SESSION['id']))
 echo "<div id='footer'>
     <div id='footerin'>
         <div id='footerinleft'>
-            <h1>media</h1>
+            <h1><a href='https://www.facebook.com/pages/Ahhyesorg/165579820265516'>facebook</a></h1>
         </div>
         <div id='footerinright'>
-            <h1><a href='";?><?php echo $root; echo "/contact.php'>contact us</a></h1>
             <h1><a href='";?><?php echo $root; echo "/help.php'>tips and help</a></h1>
+            <h1><a href='";?><?php echo $root; echo "/contact.php'>contact</a></h1>
+            <h1><a href='";?><?php echo $root; echo "/tos.php'>tos</a></h1>
         </div>
     </div>
     <div id='footerright'>
@@ -30,11 +31,12 @@ else
     <div id='footer'>
         <div id='footerin'>
             <div id='footerinleft'>
-                <h1>media</h1>
+                <h1><a href='https://www.facebook.com/pages/Ahhyesorg/165579820265516?fref=ts'>facebook</a></h1>
             </div>
             <div id='footerinright'>
-                <h1><a href='";?><?php echo $root; echo "/contact.php'>contact us</a></h1>
                 <h1><a href='";?><?php echo $root; echo "/help.php'>tips and help</a></h1>
+                <h1><a href='";?><?php echo $root; echo "/contact.php'>contact</a></h1>
+                <h1><a href='";?><?php echo $root; echo "/tos.php'>tos</a></h1>
             </div>
         </div>
         <div id='footerright'>

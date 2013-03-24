@@ -31,6 +31,6 @@ if($count==1)
     }
 else
     {
-    header("location:$root/failed.php?success=wronginfo");
+    header("location:$root/login.php?pageid=1");
     }
 ?>

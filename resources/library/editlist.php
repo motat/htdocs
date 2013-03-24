@@ -48,6 +48,6 @@ if(isset($_SESSION['id']))
     }
     else
     {
-        Echo" login required";
+        header("location:$root/failed.php?success=wrongemail"); 
     }
 ?>

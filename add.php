@@ -33,9 +33,9 @@ include 'resources/config.php';
             {?>
 			<br/>
                 <form action="resources/library/addlist.php" method="POST">  
-                    <label for=”subject”>Subject<input style='left:17em;' type="text" name="subject"/></label>
+                    <label for=”subject”>Subject (short)<input maxlength='20' style='left:17em;' type="text" name="subject"/></label>
                     <label for=”information”>Information<textarea name="information" id="information" cols="40" rows="4"></textarea>
-                    <label style='margin-top:54px;' for=”payment”>Check if payment is required<input style='left:17em;' type="checkbox" name="payment" value="yes"> </label>
+                    <label style='margin-top:5em;' for=”payment”>Check if payment is required<input style='left:17em;' type="checkbox" name="payment" value="yes"> </label>
                     <label for=”county”>County
                     <select name="county">
                     <option value="oc">Orange County</option>

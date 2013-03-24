@@ -35,12 +35,9 @@ if(isset($_POST['submit']))
     }
     else
     {
-	header("location:$root/failed.php?success=nosearch");
+	header("location:$root/search.php?pageid=1");
     }
 }
-else
-{ 
-    echo  "<p>Please enter a search query</p>"; 
-}
+
 
 	?> 

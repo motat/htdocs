@@ -30,20 +30,27 @@ if ( $stmt->rowCount() > 0)
     echo " <div id='halfbar' ><h1>Your Listings</h1></div>";
     while($row = $stmt->fetch())
         {
+            $uid=$row['id'];
+            $sqlacc='SELECT * FROM accounts WHERE id=:uid';
+            $stmtacc=$conn->prepare($sqlacc);
+            $stmtacc->execute(array(
+                ':uid' => $uid ));
+            $rowacc=$stmtacc->fetch();
+            $marks=$rowacc['marks'];
             $information=$row['information'];
             $information=substr($information,0,90).'...';
             echo "
                 <div id='proflist'>
                     <div id='proflistings'>
                         <div id='proflistleft'>
-                            <h1>"?><?php echo $row['subject'];?><?php echo "</h1>
-                            <span class='h2'>by</span><span class='h5'>Professor "?><?php echo $row['firstname'];?><?php echo "</span>                                        
+                            <h1>"; echo $row['subject']; echo "</h1>
+                            <span class='h2'>by</span><span class='h5'>"; echo $row['firstname']; echo " ("; echo $marks; echo " pts) </span><a href='edit.php?cid="; echo $row['createid']; echo"'><span class='edit'>Edit</span></a>                                        
                         </div>
                         <div id='proflistright'>
-                            <h4>"?><?php echo $row['information'];?><?php echo "</h4>
+                            <h4>"; echo $row['information'];echo "</h4>
                         </div>
                     </div>
-                    <a style='display:inline-block' href='resources/library/droplist.php?createid=";?><?php echo $row['createid'];?><?php echo "'?><div id='box'><h1></h1></div></a>
+                    <a style='display:inline-block' href='resources/library/droplist.php?createid="; echo $row['createid']; echo "'?><div id='box'><h1></h1></div></a>
                 </div>
                     ";
             }

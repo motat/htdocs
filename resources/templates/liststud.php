@@ -14,6 +14,13 @@ if ( $stmt->rowCount() > 0 )
 	echo " <div id='halfbar' ><h1>Your requested lessons</h1></div>";
 while($row = $stmt->fetch())
     {
+	$uid=$row['id'];
+	$sqlacc='SELECT * FROM accounts WHERE id=:uid';
+	$stmtacc=$conn->prepare($sqlacc);
+	$stmtacc->execute(array(
+	    ':uid' => $uid ));
+	$rowacc=$stmtacc->fetch();
+	$marks=$rowacc['marks'];
         $firstname = $row['firstname'];
 	$prof = $row['prof'];
 	$information = $row['information'];
@@ -25,8 +32,8 @@ while($row = $stmt->fetch())
             <div id='marklist'>
                 <div id='marklistings'>
                     <div id='marklistleft'>
-                        <h1>Professor"; ?> <?php echo $prof;?><?php echo "</h1>
-                        <h3> "; ?><?php echo $subject;?><?php echo "</h3>                                  
+                        <h1>"; ?><?php echo $subject;?><?php echo "</h1>
+                        <h3>by "; ?> <?php echo $prof;?><?php echo " (";echo $marks;echo " pts)</h3>                                  
                     </div>
                     <div id='marklistright'>
                         <h4>"; ?><?php echo $information;?><?php echo "</h4>

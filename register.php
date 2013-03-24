@@ -27,7 +27,36 @@ include 'resources/config.php';
         </div>  
         <?php require_once ("resources/templates/logo.php"); ?>
         <?php require_once ('resources/templates/navbar.php'); ?>
-        <?php require_once ("resources/templates/quote.php"); ?>  
+        <?php require_once ("resources/templates/quote.php");
+        if(isset($_GET['pageid']))
+            {
+            $pageid=$_GET['pageid'];
+            if($pageid=="1")
+                {
+                echo "
+                    <div id='info'  style='height:50px;'>
+                        <div id='intro'>
+                            <h2 style='padding-top:5px;'>The email you entered is not a valid email. </h2>
+                        </div>
+                    </div>
+                    "  ;
+                }
+            }
+        if(isset($_GET['pageid']))
+            {
+            $pageid=$_GET['pageid'];
+            if($pageid=="2")
+                {
+                echo "
+                    <div id='info'  style='height:50px;'>
+                        <div id='intro'>
+                            <h2 style='padding-top:5px;'>That email has already been registered as an account here. Please try another email, or try logging in.</h2>
+                        </div>
+                    </div>
+                    "  ;
+                }
+            }        
+        ?>  
         <div id="info">
             <div id="intro">
 			<br/>
@@ -38,6 +67,8 @@ include 'resources/config.php';
                     <label for=”email”>Email<input type="text" name="email"/></label>
                     <label for=”password”>Password<input type="password" name="password"/></label>
                     <input type="submit" value"submit"/>
+                    <br/>
+                    <h3>Creating an account states that you agree with the <a href="<?php echo $root;?>/tos.php">terms of service.</a></h3>
                 </form>
             </div>
         </div>

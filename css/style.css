@@ -150,6 +150,38 @@ ul#header li a{
   float: right;
   margin-right: 10px;
 }
+/*Profile Divs for Index*/
+#profile{
+  width:800px;
+  margin: 0px auto;
+  margin-top:4px;
+  background-color:#712928;
+  height:300px;
+}
+#profilefacts{
+  padding-top:20px;
+  text-align:center;
+  width:400px;
+  height:300px;
+  margin:0 auto;
+  background-color:#552d2c;
+}
+#profiletop{
+  text-align:center;
+  width:400px;
+  height:50px;
+  margin:0 auto;
+  background-color:#B87877;
+}
+#profile h1{
+  padding-top:20px;
+  font-size:20pt;
+  color:white;
+}
+#profile h2{
+  font-size:14pt;
+  color:#B8615F;
+}
 /*Main Content Div - UNIVERSAL*/
 #info{
     width:800px;
@@ -202,7 +234,6 @@ ul#header li a{
     padding-top: 50px;
 }
 #intro h2{
-  
     font-size: 20px;
     color:white;
     padding-top: 30px;
@@ -213,6 +244,12 @@ ul#header li a{
     color:white;
     padding-top: 10px;
 }
+#intro h6{
+    font-size: 20px;
+    color:white;
+    padding-top: 5px;
+}
+
 
 /* Second Content Box - NONUNI */
 #intro2{
@@ -500,7 +537,7 @@ font-size:18px;
 /* Footer - UNIVERSAL */
 #footer{
     width:800px;
-    height:50px;
+    height:60px;
     margin: 0px auto;
     margin-top: 4px;
     background-color: #562d2c;
@@ -511,21 +548,21 @@ font-size:18px;
     margin: 0px auto;
     margin-top: 0px;
     background-color: #562d2c;
-    height:50px;
+    height:60px;
     float:left;
 }
 #footerinright{
   text-align:center;
-  margin-top:10px;
+  margin-top:5px;
   width:100px;
   float:right;
-  height:40px;
+  height:50px;
 }
 #footerinleft{
   margin-top:20px;
   margin-left:20px;
   width:100px;
-  height:40px;
+  height:50px;
   float:left;
 }
 #footerright{
@@ -598,7 +635,7 @@ font-size:18px;
   background-color:#712928;  
 }
 #tip h1{
-  padding-left:10px;
+  padding-left:4px;
   font-size:26px;
   color:#B87877;
 }
@@ -607,6 +644,13 @@ font-size:18px;
   padding-left:5px;
   word-wrap:break-word;
   font-size:16px;
+  color:#B87877;
+}
+#tip h3{
+  padding-top:10px;
+  padding-left:5px;
+  word-wrap:break-word;
+  font-size:12px;
   color:#B87877;
 }
 /*Recent Box DIV*/
@@ -652,15 +696,25 @@ font-size:18px;
   font-size:18px;
   color:white;
 }
-.rate{
-  margin-top:10px;
-  padding-left:10px;
-  font-size:12pt;
-  color:white;
+.good{
+  font-size:17pt;
+  color:#234325;
+}
+.bad{
+  font-size:17pt;
+  color:#370F0E;
+}
+.nottaken{
+  font-size:17pt;
+  color:#402929;
 }
 .tip{
   font-size:20px;
   color:#B8615F;
+}
+.edit{
+  font-size:12px;
+  color:#76A179;
 }
 form { position:relative; }
 label {
@@ -729,11 +783,29 @@ textarea{
   color:#B8615F;
   padding-left:10px;
 }
+.exs{
+  font-size:20px;
+  color:#B87877;
+  text-align:center;
+}
+.learn{
+  font-weight:bolder;
+  font-size:24px;
+  color:#B87877;
+  text-align:center;
+}
+.white{
+  color:white;
+  
+}
 #box2{
 display:inline-block;
 height:10px;
 width:10px;
 background-color:black;
+}
+#exs{
+  text-align:center;
 }
 
 .menu{

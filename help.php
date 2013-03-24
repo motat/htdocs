@@ -62,6 +62,17 @@ include 'resources/config.php';
                          <h2>Interested in <span class='tip'>teaching from home?</span> That's easy! Using a program such as skype requires <span class='tip'>only</span> an average internet connection, and a webcam. You can then <span class='tip'>bring you student into your living room</span> and proceed with your lesson as you like.</h2>
                     </div>
             </div>
+             <div id='tip'>
+               <div id='tipleft'>
+                    <div id='tipmini'>
+                         <h1>Privacy</h1>
+                    </div>
+               </div>
+               
+                    <div id='tipright'>
+                         <h2>Privacy is very important to us, your emails are used by the website <span class='tip'>only for verification</span>. Professors can <span class='tip'>only view a students email</span> when he is <span class='tip'>requested</span>. The student can <span class='tip'>never</span> view the email of a professor <span class='tip'>until</span> the professor contacts the student.</h2>
+                    </div>
+            </div>
         
     </div>
 <?php require_once ('resources/templates/footer.php'); ?>

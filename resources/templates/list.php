@@ -45,6 +45,13 @@ else
     {
         $pay='';
     }
+    $uid=$row['id'];
+    $sqlacc='SELECT * FROM accounts WHERE id=:uid';
+    $stmtacc=$conn->prepare($sqlacc);
+    $stmtacc->execute(array(
+        ':uid' => $uid ));
+    $rowacc=$stmtacc->fetch();
+    $marks=$rowacc['marks'];
     $information=$row['information'];
     $information=substr($information,0,90).'...';;
     echo "
@@ -52,13 +59,13 @@ else
         <div id='listings'>
             <div id='listleft'>
                 <h1>"?><?php echo $row['subject']; echo $pay;?><?php echo "</h1>
-                <span class='h2'>by</span><span class='h5'>Professor ";?><?php echo $row['firstname'];?><?php echo "</span>                                  
+                <span class='h2'>by</span><span class='h5'>"; echo $row['firstname']; echo " (";echo $marks;echo " pts)</span>                                    
             </div>
             <div id='listright'>
                 <h4><a style='color:white;' href='moreinfo.php?cid=";echo $row['createid']; echo"'>";?><?php echo $information;?><?php echo "</a></h4>
             </div>
         </div>
-    <a style='display:inline-block' href='resources/library/postmark.php?createid="; ?><?php echo $row['createid'];?><?php echo "'><div id='box'></div></a>
+    <a style='display:inline-block' href='resources/library/postmark.php?createid="; ?><?php echo $row['createid']; echo "&uid="; echo $row['id'];?><?php echo "'><div id='box'></div></a>
     </div>
             ";
     }

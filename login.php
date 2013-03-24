@@ -28,7 +28,24 @@ include 'resources/config.php';
         <?php require_once ("resources/templates/logo.php"); ?>
         <?php require_once ('resources/templates/navbar.php'); ?>
         <?php require_once ("resources/templates/quote.php"); ?>  
-        <?php if(!isset($_SESSION['id'])) { ?>
+        <?php if(!isset($_SESSION['id']))
+                    {
+                    if(isset($_GET['pageid']))
+                        {
+                        $pageid=$_GET['pageid'];
+                        if($pageid=="1")
+                            {
+                            echo "
+                            <div id='info'  style='height:50px;'>
+                                   <div id='intro'>
+                                       <h2 style='padding-top:5px;'>You entered in a wrong email or password, please try again</h2>
+                                   </div>
+                               </div>
+                            "  ;
+                            }
+                        }
+            ?>
+        
         <div id="info">
             <div id="intro" style=padding-top:20px; >
                 <form action="resources/library/login.php" method="POST">                    
