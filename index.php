@@ -24,7 +24,7 @@ include 'resources/config.php';
 </head>
 <body>
 <?php
-if(isset($_SESSION['id']))
+/*if(isset($_SESSION['id']))
     {
 $uid=$_SESSION['id'];
     
@@ -37,79 +37,69 @@ $firstname=$row['firstname'];
 $lastname=$row['lastname'];
 $email=$row['email'];
 $marks=$row['marks'];
-}
+}*/
 ?>
-<div id="top">
-    <div class="main">
-        <div id="header">
+<div class='container'>
+    <?php //require_once ("resources/templates/logo.php"); ?>
+    <?php //require_once ("resources/templates/navbar.php"); ?>  
+    <?php //require_once ("resources/templates/quote.php");
+    /*if(isset($_GET['pageid']))
+        {
+        if($_GET['pageid']=="1")
+            {
+            echo "
+                <div id='pageid'> 
+                    <h1>You have been logged out!</h1> 
+                </div>";
+            }
+        if($_GET['pageid']=="2")
+            {
+                echo "
+                    <div id='pageid'> 
+                        <h1>You have logged in! Check out or submit a post at the <a href='selectcount.php'>listings page</a></h1> 
+                    </div>";
+            }
+        }     
+    */?>
+    <div class='logo'></div>
+    <div class='extralarge'>
+        </br>
+        <span class='h1 leftmini '>Greetings,</span>
+        </br>
+        </br>
+        <div class='large leftmini'>
+            <span class='h2 topminiwrap '>Ahh Yes is a tool designed for any person to teach students any skill or lesson.</span>
+            <span class='h3 topmini'>Here are some examples of what you can do with Ahh Yes:</span>
+                <span class='h3 center topmini'>&bull; </spac><span class='exs'>teach a student how to bake a cake via webcam right in your kitchen</span>
+                    <br/>
+                    <br/>
+                <span class='h3 center'>&bull;learn how to blow a glass vase</span>
+                    <br/>
+                    <br/>
+                <span class='h3 center'>&bull;teach as a hobby, rather then a career</span>
+                    <br/>
+                    <br/>
+                <span class='h3 center'>&bull; introduce yourself to a topic before making life changing career choices</span>
+                    <br/>
+                    <br/>
+                <span class='h3 center'>&bull; learn how to take apart a computer</span>
+                    <br/>
+                    <br/>
+                <span class='h3 center'>&bull; learn how to prepare a efficient irrigation system for your garden</span>
+                    <br/>
+                    <br/>
+                <span class='h3 center'>&bull; find out how to change your cars break pads</span>
+                    <br/>
+                    <br/>
+                <span class='learn'>There is no limit on the amount of things you can learn, other then your dedication and will to LEARN.</span>
+                    <br/>
+                    <br/>
         </div>
-            <?php require_once ("resources/templates/logo.php"); ?>
-            <?php require_once ("resources/templates/navbar.php"); ?>  
-            <?php require_once ("resources/templates/quote.php");
-            if(isset($_GET['pageid']))
-                {
-                if($_GET['pageid']=="1")
-                   {
-                       echo "
-                        <div id='pageid'> 
-                            <h1>You have been logged out!</h1> 
-                        </div>";
-                   }
-                if($_GET['pageid']=="2")
-                   {
-                       echo "
-                        <div id='pageid'> 
-                            <h1>You have logged in! Check out or submit a post at the <a href='selectcount.php'>listings page</a></h1> 
-                        </div>";
-                   }
-                }     
-            ?>
-                        <div id='info' style='height:500px;'>
-                                <h3>Greetings, </h3>
-                            <div id='intro'>
-                                <h2 style='padding-top:20px;'>Ahh Yes is a tool designed for any person to teach students any skill or lesson. </h2>
-                                <h2 style='padding-bottom:20px;'>Here are some examples of what you can do with Ahh Yes:</h2>
-                                <div id='exs'>
-                                    <span class='white'>&bull; </spac><span class='exs'>teach a student how to bake a cake via webcam right in your kitchen</span>
-                                    <br/>
-                                    <br/>
-                                    <span class='white'>&bull; </spac><span class='exs'>learn how to blow a glass vase</span>
-                                    <br/>
-                                    <br/>
-                                    <span class='white'>&bull; </spac><span class='exs'>teach as a hobby, rather then a career</span>
-                                    <br/>
-                                    <br/>
-                                    <span class='white'>&bull; </spac><span class='exs'>introduce yourself to a topic before making life changing career choices</span>
-                                    <br/>
-                                    <br/>
-                                    <span class='white'>&bull; </spac><span class='exs'>learn how to take apart a computer</span>
-                                    <br/>
-                                    <br/>
-                                    <span class='white'>&bull; </spac><span class='exs'>learn how to prepare a efficient irrigation system for your garden</span>
-                                    <br/>
-                                    <br/>
-                                    <span class='white'>&bull; </spac><span class='exs'>find out how to change your cars break pads</span>
-                                    <br/>
-                                    <br/>
-                                    <span class='learn'>There is no limit on the amount of things you can learn, other then your dedication and will to LEARN.</span>
-                                    <br/>
-                                    <br/>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div id='info2'>
-                            <div id='intro2'>
-                                <h2>Currently, our service is focused on and supported towards The Southern California area.</h2>
-                            </div>
-                        </div>
-                    
-                
-        
-         
-        
     </div>
-<?php require_once ('resources/templates/footer.php'); ?>
+    <div class='medium'>
+            <h3>Currently, our service is focused on and supported towards The Southern California area.</h2>
+    </div>
+    <?php //require_once ('resources/templates/footer.php'); ?>
 </div>
 </body>
 </html>
