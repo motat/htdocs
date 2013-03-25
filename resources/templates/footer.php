@@ -10,42 +10,40 @@ if(isset($_SESSION['id']))
     $row=$stmt->fetch();
     $email=$row['email'];
     echo "
-        <div class='small'>
+        <div class='footer'>
             <div id='wrapper'>
-            <div id='mid'>
+            <div id='fmid'>
                 <h4><a href='";?><?php echo $root; echo "/help.php'>tips and help</a></h4>
                 <h4><a href='";?><?php echo $root; echo "/contact.php'>contact</a></h4>
                 <h4><a href='";?><?php echo $root; echo "/tos.php'>tos</a></h4>
             </div>
             </div>
-            <div id='left'>
+            <div id='fleft'>
                 <h4><a href='https://www.facebook.com/pages/Ahhyesorg/165579820265516'>facebook</a></h4>
              </div>     
-            <div id='right'>
+            <div id='fright'>
                 <h4>"; echo $email; echo"</h4>
             </div>
         </div>";
     }
 else
     {
-    echo"
-
-    <div id='footer'>
-        <div id='footerin'>
-            <div id='footerinleft'>
-                <h1><a href='https://www.facebook.com/pages/Ahhyesorg/165579820265516?fref=ts'>facebook</a></h1>
+    echo "
+        <div class='footer'>
+            <div id='wrapper'>
+                <div id='fmid'>
+                    <h4><a href='";?><?php echo $root; echo "/help.php'>tips and help</a></h4>
+                    <h4><a href='";?><?php echo $root; echo "/contact.php'>contact</a></h4>
+                    <h4><a href='";?><?php echo $root; echo "/tos.php'>tos</a></h4>
+                </div>
             </div>
-            <div id='footerinright'>
-                <h1><a href='";?><?php echo $root; echo "/help.php'>tips and help</a></h1>
-                <h1><a href='";?><?php echo $root; echo "/contact.php'>contact</a></h1>
-                <h1><a href='";?><?php echo $root; echo "/tos.php'>tos</a></h1>
+            <div id='fleft'>
+                <h4><a href='https://www.facebook.com/pages/Ahhyesorg/165579820265516'>facebook</a></h4>
+             </div>     
+            <div id='fright'>
+                <h4>ahhyes.org</h4>
             </div>
-        </div>
-        <div id='footerright'>
-            <h2>Ahh Yes</h2>
-        </div>
-    </div>
-";
+        </div>";
     }
     ?>
     

@@ -15,11 +15,16 @@ include 'resources/config.php';
     <meta name="robots" content="index,follow">
     <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="script/jquery.google_menu.js"></script>
-    <link href="css/stylenew.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
             $('.menu').fixedMenu();
         });
+        
+        $(".box2").click(function(){
+     window.location=$(this).find("a").attr("href"); 
+     return false;
+});
         </script>
 </head>
 <body>
@@ -63,7 +68,7 @@ $marks=$row['marks'];
     </div>
     <?php require_once ("resources/templates/navbar.php"); ?>
     <?php require_once ("resources/templates/quote.php"); ?>
-    <div class='extralarge'>
+    <div class='huge'>
         </br>
         <h1><l1><strong>Greetings,</strong></l1></h1>
         </br>
@@ -90,6 +95,21 @@ $marks=$row['marks'];
     <div class='small'>
         <br/>
             <h3><l1>Currently, our service is focused on and supported towards The Southern California area.</l1></h3>
+    </div>
+    <div class='listings'>
+          <div id='wrapper'>
+               <div id='mid'>
+                    <h3>Author</h3>
+                    <h3>Payment</h3>
+               </div>
+          </div>
+          <div id='left'>
+               <h1>CSS Styling For Noobs</h1>
+               <div onclick="location.href='#';" style="cursor: pointer;" id='box2'></div>
+          </div>
+          <div id='right'>
+               <h3>Information</h3>
+          </div>
     </div>
 </div>
     <?php require_once ('resources/templates/footer.php'); ?>
