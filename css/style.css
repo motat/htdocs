@@ -109,14 +109,14 @@ r2 { padding-left: 50px; }
 #largeright { text-align:left;float:right; padding-top:1%;  padding-right:50px; width:300px; }
 
 #fleft { float: left; width: 200px; margin-left: -800px; }
-#fmid { margin: 0 200px 0 200px;}
+#fmid { margin: 0 200px 0 200px; }
 #fright { float:left; width: 200px; margin-left: -200px; }
 
 #left, #mid, #right { margin-top:4px }
 #left{  float:left; width:250px; margin-left: -800px; }
-#mid {  margin: 0 350px 0 250px; margin-top:4px; background-color:#BC7A43; height:57px; }
-#mid h3, #right h3 { color:white; padding-top:5px; }
-#right {   float:left; width:349px; margin-left:-349px; background-color:#B87877;  height:57px;}
+#mid {  margin: 0 350px 0 250px; margin-top:4px; background-color:#BC7A43; height:57px; border-bottom-left-radius:5px; border-top-left-radius: 5px; }
+#mid h3, #right h3 { color:white; padding-top:5px;  }
+#right {   float:left; width:344px; margin-left:-349px; background-color:#B87877;  height:57px; border-bottom-right-radius:5px; border-top-right-radius: 5px;}
 
 #quote {width:50%; margin: 0 auto; padding-top: 10px; }
 #wrapper { float: left; width: 100%}
