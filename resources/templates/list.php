@@ -55,17 +55,21 @@ else
     $information=$row['information'];
     $information=substr($information,0,90).'...';;
     echo "
-    <div id='list'>
-        <div id='listings'>
-            <div id='listleft'>
-                <h1>"?><?php echo $row['subject']; echo $pay;?><?php echo "</h1>
-                <span class='h2'>by</span><span class='h5'>"; echo $row['firstname']; echo " (";echo $marks;echo " pts)</span>                                    
-            </div>
-            <div id='listright'>
-                <h4><a style='color:white;' href='moreinfo.php?cid=";echo $row['createid']; echo"'>";?><?php echo $information;?><?php echo "</a></h4>
-            </div>
-        </div>
-    <a style='display:inline-block' href='resources/library/postmark.php?createid="; ?><?php echo $row['createid']; echo "&uid="; echo $row['id'];?><?php echo "'><div id='box'></div></a>
+   
+    <div class='listings'>
+          <div id='wrapper'>
+               <div id='mid'>
+                    <h3>"; echo $row['firstname']; echo " (";echo $marks; echo " pts)</h3>
+                    <h3>"; echo $pay; echo "</h3>
+               </div>
+          </div>
+          <div id='left'>
+               <h1>"?><?php echo $row['subject']; echo "</h1>
+               <div onclick='location.href='resources/library/postmark.php?createid="; ?><?php echo $row['createid']; echo "&uid="; echo $row['id'];?><?php echo "';' style='cursor: pointer;' id='box2'></div>
+          </div>
+          <div id='right'>
+               <h3><a style='color:white;' href='moreinfo.php?cid=";echo $row['createid']; echo"'>";?><?php echo $information;?><?php echo "</a></h3>
+          </div>
     </div>
             ";
     }
