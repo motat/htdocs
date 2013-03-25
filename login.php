@@ -13,7 +13,7 @@ include 'resources/config.php';
     <meta name="description" content="login to be able to select a professor for a lesson of your choice">
     <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="script/jquery.google_menu.js"></script>
-    <link href="css/stylenew.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
             $('.menu').fixedMenu();
@@ -45,7 +45,7 @@ include 'resources/config.php';
             }
 	}
     ?>  
-    <div class="large">
+    <div class="medium">
 	<div id='largeleft'>
 	    <h3>Email</h3>
 	    <h3>Password</h3>

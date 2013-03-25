@@ -65,7 +65,7 @@ else
           </div>
           <div id='left'>
                <h1>"?><?php echo $row['subject']; echo "</h1>
-               <div onclick='location.href='resources/library/postmark.php?createid="; ?><?php echo $row['createid']; echo "&uid="; echo $row['id'];?><?php echo "';' style='cursor: pointer;' id='box2'></div>
+               <div onclick='location.href='resources/library/postmark.php?createid="; echo $row['createid']; echo "&uid="; echo $row['id']; echo "';' style='cursor: pointer;' id='box2'></div>
           </div>
           <div id='right'>
                <h3><a style='color:white;' href='moreinfo.php?cid=";echo $row['createid']; echo"'>";?><?php echo $information;?><?php echo "</a></h3>

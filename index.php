@@ -96,21 +96,6 @@ $marks=$row['marks'];
         <br/>
             <h3><l1>Currently, our service is focused on and supported towards The Southern California area.</l1></h3>
     </div>
-    <div class='listings'>
-          <div id='wrapper'>
-               <div id='mid'>
-                    <h3>Author</h3>
-                    <h3>Payment</h3>
-               </div>
-          </div>
-          <div id='left'>
-               <h1>CSS Styling For Noobs</h1>
-               <div onclick="location.href='#';" style="cursor: pointer;" id='box2'></div>
-          </div>
-          <div id='right'>
-               <h3>Information</h3>
-          </div>
-    </div>
 </div>
     <?php require_once ('resources/templates/footer.php'); ?>
 </body>

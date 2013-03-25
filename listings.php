@@ -52,8 +52,8 @@ include 'resources/config.php';
     ?>
     <div class='medium'>
         <div class='pad'>
-            <h2 style='padding-top:10px;'>Clicking the <div id='box2'>&nbsp;</div> will notify the professor that you request his lesson.</h2>
-            <h2 style='padding-top:1px;'>For more information on the lesson, click on the <span class='h6'>information box</span>.</h2>
+            <h2>Clicking the <div id='box'>&nbsp;</div> will notify the professor that you request his lesson.</h2>
+            <h2>For more information on the lesson, click on the <span class='h6'>information box</span>.</h2>
             <br/>
             <a href='add.php'><span class='add'>+Add a new lesson here.</span></a>
         </div>
