@@ -10,23 +10,23 @@ if(isset($_SESSION['id']))
         {      
             echo "
            
-             <div style='height:100px;' id='info'>
-                <div id='intro'>
-                    <h6>Clicking the <div id='box2'>&nbsp;</div> will remove your listings or a students request for you.</h6>
-                    <h6>Pressing the <span class='edit'>Edit</span> text will bring you to a page where you can edit the selected listing.</h6>
+            <div class='smallplus'>
+                <div class='pad'>
+                    <h3>Clicking the <div id='box'>&nbsp;</div> will remove your listings or a students request for you.</h3>
+                    <h3>Pressing the Edit text will bring you to a page where you can edit the selected listing.</h3>
                 </div>
             </div>
-            <div id='halfbar' ><h1>Student Requests</h1></div>
+            <div id='halfbar' ><h2>Student Requests</h2></div>
            ";
         }
         else
         {
             echo "
            
-             <div style='height:100px;' id='info'>
-                <div id='intro'>
-                    <h6>Clicking the <div id='box2'>&nbsp;</div> will remove your listings or a students request for you.</h6>
-                    <h6>Pressing the <span class='edit'>Edit</span> text will bring you to a page where you can edit the selected listing.</h6>
+             <div class='smallplus'>
+                <div class='pad'>
+                    <h3>Clicking the <div id='box'>&nbsp;</div> will remove your listings or a students request for you.</h3>
+                    <h3>Pressing the Edit text will bring you to a page where you can edit the selected listing.</h3>
                 </div>
             </div>";
         }
@@ -45,17 +45,21 @@ if(isset($_SESSION['id']))
         $autoid = $row['autoid'];
         
         echo "
-            <div id='marklist'>
-                <div id='marklistings'>
-                    <div id='marklistleft'>
-                        <h1>"; ?><?php echo $subject;?><?php echo "</h1>
-                        <h3>by "; ?> <?php echo $firstname;?><?php echo " (";echo $marks;echo " pts)</h3>                                  
-                    </div>
-                    <div id='marklistright'>
-                        <h4>"; ?><?php echo $email;?><?php echo "</h4>
+       
+            <div class='listings'>
+                <div id='wrapper'>
+                    <div id='mid'>
+                        <h3>"; echo $firstname; echo " (";echo $marks; echo " pts)</h3>
                     </div>
                 </div>
-                <a style='display:inline-block' href='resources/library/dropmarkpost.php?autoid=";?><?php echo $autoid; echo "'?><div id='box'><h1></h1></div></a>
+                <div id='left'>
+                    <h1>"?><?php echo $subject; echo "</h1>
+                    <div onclick='location.href='resources/library/dropmarkpost.php?autoid="; echo $autoid; echo "';' style='cursor: pointer;' id='box2'>
+                    </div>
+                </div>
+                <div id='right'>
+                    <h3><a style='color:white;' href='moreinfo.php?cid=";echo $row['createid']; echo"'>";?><?php echo $email;?><?php echo "</a></h3>
+                </div>
             </div>
             ";
         }
@@ -66,12 +70,12 @@ if(isset($_SESSION['id']))
     if ($stmt->rowCount() > 0)
         {
         echo "
-        <div style='text-align:center;' id='marklist'>
-            <div id='marklistings'>
+        <div class='small'>
+            <div id='pad'>
                 ";
         while($row2=$stmtemail->fetch())
             {    
-            echo "<span class='email'>"; echo $row2['email']; echo "</span>";
+            echo "<center><h3>"; echo $row2['email']; echo "</h3></center>";
             }
         echo "
             </div>

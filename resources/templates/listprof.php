@@ -27,7 +27,7 @@ $stmt = $conn->prepare($sql);
 $stmt->execute(array('id' => $id));
 if ( $stmt->rowCount() > 0)
     {
-    echo " <div id='halfbar' ><h1>Your Listings</h1></div>";
+    echo " <div id='halfbar'><h2>Your Listings</h2></div>";
     while($row = $stmt->fetch())
         {
             $uid=$row['id'];
@@ -40,18 +40,21 @@ if ( $stmt->rowCount() > 0)
             $information=$row['information'];
             $information=substr($information,0,90).'...';
             echo "
-                <div id='proflist'>
-                    <div id='proflistings'>
-                        <div id='proflistleft'>
-                            <h1>"; echo $row['subject']; echo "</h1>
-                            <span class='h2'>by</span><span class='h5'>"; echo $row['firstname']; echo " ("; echo $marks; echo " pts) </span><a href='edit.php?cid="; echo $row['createid']; echo"'><span class='edit'>Edit</span></a>                                        
-                        </div>
-                        <div id='proflistright'>
-                            <h4>"; echo $row['information'];echo "</h4>
-                        </div>
-                    </div>
-                    <a style='display:inline-block' href='resources/library/droplist.php?createid="; echo $row['createid']; echo "'?><div id='box'><h1></h1></div></a>
-                </div>
+                <div class='listings'>
+                      <div id='wrapper'>
+                           <div id='mid'>
+                                <h3>"; echo $row['firstname']; echo " (";echo $marks; echo " pts)</h3>
+                                <h3>"; echo $row['payment']; echo "</h3>
+                           </div>
+                      </div>
+                      <div id='left'>
+                           <h1>"; echo $row['subject']; echo "</h1><a href='edit.php?cid="; echo $row['createid']; echo"'><span class='edit'>Edit &nbsp; </span></a>
+                           <div onclick='location.href='resources/library/droplist.php?createid="; echo $row['createid']; echo "';' style='cursor: pointer;' id='box2'></div>
+                      </div>
+                      <div id='right'>
+                           <h3><a style='color:white;' href='moreinfo.php?cid=";echo $row['createid']; echo"'>";echo $information; echo "</a></h3>
+                      </div>
+                </div>                
                     ";
             }
         }
