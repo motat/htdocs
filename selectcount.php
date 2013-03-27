@@ -23,31 +23,28 @@ BETTER FOR SCALING-->
         </script>      
 </head>
 <body>
-<div id="top">
-    <div class="main">
-        <div id="header">
-        </div>
-        <?php require_once ("resources/templates/logo.php"); ?>
-        <?php require_once ('resources/templates/navbar.php'); ?>
-        <?php require_once ("resources/templates/quote.php"); ?>  
-        <div id='halfbar' ><h1>Select your County</h1></div>
-        <div id='marklist'>
-            <div id='marklistings'>
-                <div id='marklistleft'>
-                    <h1><a href='listings.php?county=oc'>Orange County</a></h1>
-                </div>
-            </div>
-	</div>
-	<div id='marklist'>
-            <div id='marklistings'>
-                <div id='marklistleft'>
-                    <h1><a href='listings.php?county='>All Counties</a></h1>
-                </div>
-            </div>
-	</div>
-        
+<div class='container'>
+    <?php require_once ("resources/templates/logo.php"); ?>
+    <?php require_once ('resources/templates/navbar.php'); ?>
+    <?php require_once ("resources/templates/quote.php"); ?>  
+    <div id='halfbar'>
+        <h6>Select your County</h6>
     </div>
-    <?php require_once ('resources/templates/footer.php'); ?>
+    <div class='listings'>
+        <div class='pad'>
+            <div id='largeleft'>
+                <h1><a href='listings.php?county=oc'>Orange County</a></h1>
+            </div>
+        </div>
+    </div>
+	<div class='listings'>
+        <div class='pad'>
+            <div id='largeleft'>
+                <h1><a href='listings.php?county='>All Counties</a></h1>
+            </div>
+        </div>
+	</div>
 </div>
+    <?php require_once ('resources/templates/footer.php'); ?>
 </body>
 </html>

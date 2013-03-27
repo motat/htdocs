@@ -40,8 +40,6 @@ if(isset($_SESSION['id']))
 </head>
 <body>
 <div class='container'>
-    <div class='logo'>
-    </div>
     <?php require_once ("resources/templates/logo.php"); ?>
     <?php require_once ('resources/templates/navbar.php'); ?>
     <?php require_once ('resources/templates/quote.php'); ?>

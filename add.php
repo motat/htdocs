@@ -20,45 +20,58 @@ include 'resources/config.php';
         </script>
 </head>
 <body>
-<div id="top">
-    <div class="main">
-        <div id="header">
-        </div>
-        <?php require_once ("resources/templates/logo.php"); ?>
-        <?php require_once ('resources/templates/navbar.php'); ?>
-        <?php require_once ("resources/templates/quote.php"); ?>
-        <div id='pageid'>
-            <h1>Before you post a course, check out the <a href='help.php'>help and tips</a> page for some general knowledge on listings.</h1>
-        </div>
-        <div id="add">
-            <div id="intro">
-        <?php if(isset($_SESSION['id']))
-            {?>
-			<br/>
-                <form action="resources/library/addlist.php" method="POST">  
-                    <label for=”subject”>Subject (short)<input maxlength='20' style='left:17em;' type="text" name="subject"/></label>
-                    <label for=”information”>Information<textarea name="information" id="information" cols="40" rows="4"></textarea>
-                    <label style='margin-top:5em;' for=”payment”>Check if payment is required<input style='left:17em;' type="checkbox" name="payment" value="yes"> </label>
-                    <label for=”county”>County
-                    <select name="county">
-                    <option value="oc">Orange County</option>
-                    </select>
-                    </label>
-                    
-                        <input style='margin-top:14px; float:left;' type="submit" value="Create Listing"/>
-                </form>
-                <?php }
-                else{
-                    ?>
-                    <h1>In order to create a listing you need to have an account and be logged in.</h1>
-                    <h3></h3>
-                    
-                    
-                <?php }?>
-            </div>
+<div class='container'>
+    <?php require_once ("resources/templates/logo.php"); ?>
+    <?php require_once ('resources/templates/navbar.php'); ?>
+    <?php require_once ("resources/templates/quote.php"); ?>
+    <div class='small'>
+        <div class='pad'>
+            <h2>Before you post a course, check out the <a href='help.php'>help and tips</a> page for some general knowledge on listings.</h1>
         </div>
     </div>
-            <?php require_once ('resources/templates/footer.php'); ?>
+    <form action="resources/library/addlist.php" method="POST">  
+        <div class='extralarge'>
+            <div class='noheight'>
+                <div id='largeleft'>
+                    <h3>Subject (short)</h3>
+                </div>
+                <div id='largeright'>
+                    <input maxlength='20' style='left:17em;' type="text" name="subject"/>
+                </div>
+            </div>
+            <div class='noheight'>
+                <div id='largeleft'>
+                    <h3>Information</h3>
+                </div>
+                <div id='largeright'>
+                    <textarea name="informtaion" id="information" cols="40" rows="4"></textarea>
+                </div>
+            <div class='noheight'>
+                <div id='largeleft'>
+                    <h3>Check if payment is required</h3>
+                </div>
+                <div id='largeright'>
+                    <input style='left:17em;' type="checkbox" name="payment" value="yes"> </label>
+                </div>
+            </div>
+            <div class='noheight'>
+                <div id='largeleft'>
+                    <h3>County</h3>
+                </div>
+                <div id='largeright'>
+                    <select name='county'>
+                        <option value='oc'>Orange County</option>
+                    </select>
+                </div>
+            </div>
+            <div class='noheight'>
+                <div id='largeright'>
+                    <input style='margin-top:14px; float:left;' type='submit' value='Edit Listing'/>
+                </div>
+            </div> 
+        </div>
+    </form>
 </div>
+    <?php require_once ('resources/templates/footer.php'); ?>
 </body>
 </html>

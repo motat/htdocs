@@ -13,7 +13,7 @@ include 'resources/config.php';
     <meta name="description" content="register and make an account to create listings or view them and find a class you desire">
     <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="script/jquery.google_menu.js"></script>
-    <link href="css/stylenew.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script>
         $('document').ready(function(){
             $('.menu').fixedMenu();
@@ -22,8 +22,6 @@ include 'resources/config.php';
 </head>
 <body>
 <div class='container'>
-    <div class='logo'>
-    </div> 
     <?php require_once ("resources/templates/logo.php"); ?>
     <?php require_once ('resources/templates/navbar.php'); ?>
     <?php require_once ("resources/templates/quote.php");
@@ -51,30 +49,53 @@ include 'resources/config.php';
             "  ;
 	    }
         }        
-    ?>  
-    <div class='extralarge'>
-        <div id='largeleft'>
-	    <h3>First Name</h3>
-	    <h3>Last Name</h3>
-	    <h3>Email</h3>
-	    <h3>Password</h3>
-	</div>
-	<div id='largeright'>
-	    <form  action="resources/library/register.php" method="POST">  
-		<input type="text" name="firstname"/>
-		<br/>
-		<input type="text" name="lastname"/>
-		<br/>
-		<input type="text" name="email"/>
-		<br/>
-		<input type="password" name="password"/>
-		<br/>
-		<input type="submit" value="Register"/>
-	    </form>
-	</div>
-	<div style='clear:both;'></div>
+    ?>
+    <div class='small'>
+        <div class='pad'>
+            <h3>Creating an account states that you agree with the <a href="<?php echo $root;?>/tos.php">terms of service.</h3>
+        </div>
+    </div>
+    <form action="resources/library/register.php" method="POST">  
+        <div class='extralarge'>
+            <div class='noheight'>
+                <div id='largeleft'>
+                    <h3>First Name</h3>
+                </div>
+                <div id='largeright'>
+                    <input type="text" name="firstname"/>
+                </div>
+            </div>
+            <div class='noheight'>
+                <div id='largeleft'>
+                    <h3>Last Name</h3>
+                </div>
+                <div id='largeright'>
+                    <input type="text" name="lastname"/> 
+                </div>
+            <div class='noheight'>
+                <div id='largeleft'>
+                    <h3>Email</h3>
+                </div>
+                <div id='largeright'>
+                    <input type="text" name="email"/>
+                </div>
+            </div>
+            <div class='noheight'>
+                <div id='largeleft'>
+                    <h3>Password</h3>
+                </div>
+                <div id='largeright'>
+                    <input type="password" name="password"/>
+                </div>
+            </div>
+            <div class='noheight'>
+                <div id='largeright'>
+                    <input type="submit" value="Register"/>
+                </div>
+            </div> 
+        </div>
+    </form>
 	<br/>
-        <h6>Creating an account states that you agree with the <a href="<?php echo $root;?>/tos.php">terms of service.</a></h6>
     </div>
 </div>
     <?php require_once ('resources/templates/footer.php'); ?>

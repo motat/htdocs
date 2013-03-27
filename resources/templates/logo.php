@@ -1,4 +1,4 @@
-<a href="<?php echo $root;?>">
-    <div style=background:url('images/menu.png'); height=124px; id="headerimage">
+<a href='http://localhost'>
+    <div class='logo'>
     </div>
-</a> 
+</a>

@@ -23,8 +23,6 @@ include 'resources/config.php';
 </head>
 <body>
 <div class='container'>
-    <div class='logo'>
-    </div> 
     <?php require_once ("resources/templates/logo.php"); ?>
     <?php require_once ('resources/templates/navbar.php'); ?>
     <?php require_once ("resources/templates/quote.php"); ?>
@@ -50,16 +48,16 @@ include 'resources/config.php';
             }
         }            
     ?>
-    <div class='medium'>
+    <div class='smallplus'>
         <div class='pad'>
-            <h2>Clicking the <div id='box'>&nbsp;</div> will notify the professor that you request his lesson.</h2>
-            <h2>For more information on the lesson, click on the <span class='h6'>information box</span>.</h2>
+            <h3>Clicking the <div id='box'>&nbsp;</div> will notify the professor that you request his lesson.</h3>
+            <h3>For more information on the lesson, click on the <span class='h6'>information box</span>.</h3>
             <br/>
             <a href='add.php'><span class='add'>+Add a new lesson here.</span></a>
         </div>
     </div>
-    <div id='halfbar' style='display: inline-block; width:230px; height:50px;'>
-        <h1>Lesson or Name: </h1>
+    <div id='search'>
+        <h6>Lesson or Name: </h6>
         <form  method='post' action='/search.php?go'  id='searchform'>  <input  type='text' name='name'> <input  type='submit' name='submit' value='Search'>
         </form>
     </div>

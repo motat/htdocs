@@ -16,7 +16,7 @@ if(isset($_SESSION['id']))
                     <h3>Pressing the Edit text will bring you to a page where you can edit the selected listing.</h3>
                 </div>
             </div>
-            <div id='halfbar' ><h2>Student Requests</h2></div>
+            <div id='halfbar'><h6>Student Requests</h6></div>
            ";
         }
         else

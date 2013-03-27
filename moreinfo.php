@@ -21,44 +21,38 @@ include 'resources/config.php';
     </script>
 </head>
 <body>
-<div id="top">
-    <div class="main">
-        <div id="header">
-        </div>
-        <?php require_once ("resources/templates/logo.php"); ?>
-        <?php require_once ('resources/templates/navbar.php'); ?>
-        <?php require_once ("resources/templates/quote.php"); ?>  
-        <?php
-        $cid=$_GET['cid'];
-        //$sql = mysql_query("SELECT * FROM listings WHERE createid='$cid'");
-        $sql='SELECT * FROM listings WHERE createid=:cid';
-        $stmt=$conn->prepare($sql);
-        $stmt->execute(array(
-            ':cid' => $cid ));
-        while($row = $stmt->fetch())
-            {
-            echo "
-            <div id='tip'>
-                <div id='tipleft'>
-                    <div id='tipmini'>
-                            <h1>"; echo $row['subject']; echo "</h1>
-                            <h1 style='font-size:15px; padding-top:20px;'><a style='display:inline-block' href='resources/library/postmark.php?createid="; ?><?php echo $row['createid']; echo "&uid="; echo $row['id'];?><?php echo "'>(request class)</a>
-    
+<div class='container'>
+    <?php require_once ("resources/templates/logo.php"); ?>
+    <?php require_once ('resources/templates/navbar.php'); ?>
+    <?php require_once ("resources/templates/quote.php"); ?>  
+    <?php
+    $cid=$_GET['cid'];
+    //$sql = mysql_query("SELECT * FROM listings WHERE createid='$cid'");
+    $sql='SELECT * FROM listings WHERE createid=:cid';
+    $stmt=$conn->prepare($sql);
+    $stmt->execute(array(
+        ':cid' => $cid ));
+    while($row = $stmt->fetch())
+        {
+        echo "
+            <div class='noheight'>
+                <div id='halfleft'>
+                    <h1>"; echo $row['subject']; echo "</h1>
+                    <h1 style='font-size:15px; padding-top:20px;'><a style='display:inline-block' href='resources/library/postmark.php?createid="; ?><?php echo $row['createid']; echo "&uid="; echo $row['id'];?><?php echo "'>(request class)</a>
+                </div>
+                <div id='halfright'>
+                    <div class='pad'>
+                        <h2>"; echo $row['firstname']; echo "</h2>
+                        <br/>
+                        <h3>"; echo $row['information']; echo "</h3>
                     </div>
                 </div>
-                <div id='tipright'>
-                
-                    <h2>"; echo $row['firstname']; echo "</h2>
-                    <h2>"; echo $row['information']; echo "</h2>
-                </div>
             </div>
-            
             " ;
-            }   
+        }   
     ?>
-
-    </div>
-<?php require_once ('resources/templates/footer.php'); ?>
 </div>
+<?php require_once ('resources/templates/footer.php'); ?>
+
 </body>
 </html>

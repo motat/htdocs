@@ -21,24 +21,19 @@ $success=$_GET['success'];?>
         </script>
 </head>
 <body>  
-<div id="top">
-    <div class="main">
-        <div id="header">
-        </div>
-        <?php require_once ("resources/templates/logo.php"); ?>
-        <?php require_once ('resources/templates/navbar.php'); ?>
-        <?php require_once ("resources/templates/quote.php"); ?>  
-            <div id="pageid">
+<div class='container'>
+    <?php require_once ("resources/templates/logo.php"); ?>
+    <?php require_once ('resources/templates/navbar.php'); ?>
+    <?php require_once ("resources/templates/quote.php"); ?>  
+        <div id="small">
             <?php
                  if($success=="loginreq")
                 {
                     echo "<h1>You are required to login to perform this task.</h1>"  ;
                 }
                 ?>       
-            </div>
-    </div>
-<?php require_once ('resources/templates/footer.php'); ?>
+        </div>
 </div>
-
+<?php require_once ('resources/templates/footer.php'); ?>
 </body>
 </html>

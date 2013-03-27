@@ -15,19 +15,19 @@ while($row = $stmt->fetch())
 	$subject=$row['subject'];
 	$recentid=$row['rid'];
         echo "
-	    <div id='recent'>
-		<div id='recentbox'>
-		    <div id='recentleft'>
-			<h1>";echo $subject; echo " by</h1>
+	    <div class='listings'>
+			<div id='wrapper'>
+		    	<div id='mid'>
+					<h3>";echo $subject; echo " by</h3>
+		    	</div>
 		    </div>
-		    <div id='recentright'>
-			<h2>Professor ";echo $firstname; echo "</h2>
-		    </div>
-		</div>
-		<div id='recentrate'>
-		    <a href='resources/library/droprecent.php?rate=1&recentid=";echo $recentid; echo "'><span class='good'>Good</span></a> &bull; <a href='resources/library/droprecent.php?rate=0&recentid=";echo $recentid; echo "'><span class='nottaken'>Not Taken</span></a> &bull; <a href='resources/library/droprecent.php?rate=-1&recentid=";echo $recentid; echo "'><span class='bad'>Bad</span></a> 
-		</div>
+		    	<div id='left'>
+		    		<h1>Professor ";echo $firstname; echo "</h1>
+		    	</div>
+		    	<div id='right'>
+		    		<a href='resources/library/droprecent.php?rate=1&recentid=";echo $recentid; echo "'><span class='good'>Good</span></a> &bull; <a href='resources/library/droprecent.php?rate=0&recentid=";echo $recentid; echo "'><span class='nottaken'>Not Taken</span></a> &bull; <a href='resources/library/droprecent.php?rate=-1&recentid=";echo $recentid; echo "'><span class='bad'>Bad</span></a> 
+		    	</div>
 	    </div>";
-                        }
+    }
     }
 ?>

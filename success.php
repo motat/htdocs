@@ -23,28 +23,23 @@ $success=$_GET['success'];?>
         </script>
 </head>
 <body>  
-<div id="top">
-    <div class="main">
-        <div id="header">
-        </div>
-        <?php require_once ("resources/templates/logo.php"); ?>
-        <?php require_once ('resources/templates/navbar.php'); ?>
-        <?php require_once ("resources/templates/quote.php"); ?>  
-            <div id="pageid">
-            <?php
-                if($success=="listings")
-                {
-                     echo "<h1>Your lesson information has successfully been submitted. If a student decides he would like to take your class, you will be notified on the Professor Panel.</h1>";
-                }
-                if($success=="registered")
-                {
-                    echo "<h1>You have successfully created an account! Please login <a href='";?><?php echo $root;?><?php echo "/login.php'>here</a></h1>";
-                }
-                ?>       
-            </div>
+<div class='container'>
+    <?php require_once ("resources/templates/logo.php"); ?>
+    <?php require_once ('resources/templates/navbar.php'); ?>
+    <?php require_once ("resources/templates/quote.php"); ?>  
+    <div id="small">
+        <?php
+        if($success=="listings")
+            {
+            echo "<h1>Your lesson information has successfully been submitted. If a student decides he would like to take your class, you will be notified on the Professor Panel.</h1>";
+            }
+        if($success=="registered")
+            {
+            echo "<h1>You have successfully created an account! Please login <a href='";?><?php echo $root;?><?php echo "/login.php'>here</a></h1>";
+            }
+        ?>       
     </div>
-<?php require_once ('resources/templates/footer.php'); ?>
 </div>
-
+<?php require_once ('resources/templates/footer.php'); ?>
 </body>
 </html>

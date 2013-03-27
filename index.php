@@ -68,6 +68,11 @@ $marks=$row['marks'];
     </div>
     <?php require_once ("resources/templates/navbar.php"); ?>
     <?php require_once ("resources/templates/quote.php"); ?>
+    <div class='small'>
+        <div class='pad'>
+            <h3>Currently, our service is focused on and supported towards The Southern California area.</h3>
+        </div>
+    </div>
     <div class='huge'>
         </br>
         <h1><l1><strong>Greetings,</strong></l1></h1>
@@ -91,10 +96,6 @@ $marks=$row['marks'];
             <br/>
             <center><h2>There is no limit on the amount of things you can learn, other then your dedication and will to LEARN.</h2></center>
         </div>
-    </div>
-    <div class='small'>
-        <br/>
-            <h3><l1>Currently, our service is focused on and supported towards The Southern California area.</l1></h3>
     </div>
 </div>
     <?php require_once ('resources/templates/footer.php'); ?>

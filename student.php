@@ -21,58 +21,55 @@ include 'resources/config.php';
         </script>
 </head>
 <body>
-<div id="top">
-    <div class="main">
-        <div id="header">    
-        </div>
-            <?php require_once ("resources/templates/logo.php"); ?>
-            <?php require_once ('resources/templates/navbar.php'); ?>
-            <?php require_once ('resources/templates/quote.php'); ?>
-            <?php
-               if(!isset($_SESSION['id']))
-                    {
-                    if(isset($_GET['pageid']))
-                        {
-                        if($_GET['pageid']=="1")
-                            {
-                            echo "
-                                <div id='pageid'> 
-                                    <h1>Thank you for taking the time to rate your professor! This really helps.</h1> 
-                                </div>";
-                            }
-                        }     
-            ?>
-            <div id="info">
-                <h3>Hello</h3>
-                <div id="intro">
-                    <h2>This is the student panel, you need to be logged in to view it. <a href="<?php echo $root;?>/login.php"><br/><font color="#411716">Login here.</font></a></h2>
-                </div>
-            </div>
-            <?php
-                    }
-               if(isset($_SESSION['id']))
+<div class='container'>
+    <?php require_once ("resources/templates/logo.php"); ?>
+    <?php require_once ('resources/templates/navbar.php'); ?>
+    <?php require_once ('resources/templates/quote.php'); ?>
+    <?php
+        if(!isset($_SESSION['id']))
+        {
+            if(isset($_GET['pageid']))
+            {
+                if($_GET['pageid']=="1")
                 {
-                    $id = $_SESSION['id'];
-                    $query = 'SELECT * FROM accounts WHERE id= %d';
-                    $query = sprintf($query, $id);
-                    $stmt = $conn->prepare($query);
-                    $stmt->execute();
-                    $row = $stmt->fetch();
-            ?>
-            <div id="info">
-                    <h3><?php echo $row['firstname'];?>, </h3>
-                <div id='intro'>
-                    <h2>Below you can see a list of all the lessons you have requested. If not already, a professor should contact you via email soon.</h2>
-                </div>
-            </div>
-            <?php require_once ('resources/templates/listrecent.php');  ?>
-            <?php require_once ('resources/templates/liststud.php');  ?>
-
-            <?php } ?>
-            
+                    echo "
+                        <div class='small'>
+                            <div class='pad'>
+                                <h1>Thank you for taking the time to rate your professor! This really helps.</h1> 
+                            </div>
+                        </div>";
+                }
+            }     
+    ?>
+    <div class="smallplus">
+        <div class='pad'>
+            <h3>Hello,</h3>
+            <h3>This is the student panel, you need to be logged in to view it. <a href="<?php echo $root;?>/login.php"><br/><font color="#411716">Login here.</font></a></h3>
         </div>
-    <?php require_once ('resources/templates/footer.php'); ?>
     </div>
-    
+    <?php
+        }
+        if(isset($_SESSION['id']))
+        {
+            $id = $_SESSION['id'];
+            $query = 'SELECT * FROM accounts WHERE id= %d';
+            $query = sprintf($query, $id);
+            $stmt = $conn->prepare($query);
+            $stmt->execute();
+            $row = $stmt->fetch();
+    ?>
+    <div class="smallplus">
+        <div class='pad'>
+            <h3><?php echo $row['firstname'];?>, </h3>
+            <h3>Below you can see a list of all the lessons you have requested. If not already, a professor should contact you via email soon.</h3>
+        </div>
+   </div>
+    <?php require_once ('resources/templates/listrecent.php');  ?>
+    <?php require_once ('resources/templates/liststud.php');  ?>
+    <?php
+         } 
+    ?>
+</div>
+    <?php require_once ('resources/templates/footer.php'); ?>    
 </body>
 </html>

@@ -35,50 +35,43 @@ $lastname=$row['lastname'];
 $email=$row['email'];
 $marks=$row['marks'];
 ?>
-<div id="top">
-    <div class="main">
-        <div id="header">
-        </div>
-            <?php require_once ("resources/templates/logo.php"); ?>
-            <?php require_once ("resources/templates/navbar.php"); ?>  
-            <?php require_once ("resources/templates/quote.php"); ?>
-            <?php if(isset($_SESSION['id']))
-                {
-                    echo"
-                        <div id='profile'>
-                            <div id='profiletop'>
-                                <h1>User Account Panel</h1>
-                            </div>
-                            <div id='profilefacts'>
-                                <h2>"; echo $firstname; echo " "; echo $lastname; echo"</h2>
-                                <h2>"; echo $email; echo"</h2>
-                                <h2>Points: "; echo $marks; echo"</h2>                                
-                                <form action='resources/library/editemail.php' method='POST'>  
-                                    <input type='text' name='email'/>
-                                    <input style='margin-top:14px;' type='submit' value='Change Email'/>
-                                    
-                                </form>
-                            </div>
-                        
-                        </div>                       
-                    ";
-                }
-                else
-                {
-                    echo"
-                        <div id='info'>
-                                <h3>Hello, </h3>
-                            <div id='intro'>
-                                <h2 style='padding-top:20px;'>To access the user account panel, please log in!</h2>
-                            </div>
+<div class='container'>
+    <?php require_once ("resources/templates/logo.php"); ?>
+    <?php require_once ("resources/templates/navbar.php"); ?>  
+    <?php require_once ("resources/templates/quote.php"); ?>
+    <?php 
+    if(isset($_SESSION['id']))
+        {
+        echo"
+            <div class='noheight'>
+                <div class='darkback'>
+                    <div id='halfleft'>
+                        <h2>"; echo $firstname; echo " "; echo $lastname; echo"</h2>
+                    </div>
+                    <div id='halfright'>
+                        <div class='pad'>
+                            <h2>"; echo $email; echo"</h2>
+                            <h2>You have "; echo $marks; echo" points.</h2>
+                            <form action='resources/library/editemail.php' method='POST'>  
+                                <input type='text' name='email'/>
+                                <input style='margin-top:14px;' type='submit' value='Change Email'/>    
+                            </form>
                         </div>
+                    </div>
+                </div>
+            </div>";
+        }
+    else
+        {
+            echo"
+                <div class='medium'>
+                    <h3>Hello, </h3>
+                    <h2 style='padding-top:20px;'>To access the user account panel, please log in!</h2>
+                </div>
                     ";
-                }
-            ?>
-         
-        
-    </div>
-<?php require_once ('resources/templates/footer.php'); ?>
+        }
+    ?>
 </div>
+<?php require_once ('resources/templates/footer.php'); ?>
 </body>
 </html>

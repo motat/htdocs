@@ -31,37 +31,59 @@ $stmt->execute(array(
 while($row = $stmt->fetch())
     {
 ?>
-<div id="top">
-    <div class="main">
-        <div id="header">
-        </div>
-        <?php require_once ("resources/templates/logo.php"); ?>
-        <?php require_once ('resources/templates/navbar.php'); ?>
-        <?php require_once ("resources/templates/quote.php"); ?>  
-        <?php
+<div class='container'>
+    <?php require_once ("resources/templates/logo.php"); ?>
+    <?php require_once ('resources/templates/navbar.php'); ?>
+    <?php require_once ("resources/templates/quote.php"); ?>  
+    <?php
         echo"
-	
-	<div style='padding-top:30px' id='add'>
-            <div id='intro'>
-		<form action='resources/library/editlist.php?createid=";echo $row['createid']; echo "' method='POST'>  
-                    <label for='subject'>Subject<input value='";?><?php echo $row['subject']; echo"' style='left:17em;' type='text' name='subject'/></label>
-                    <label for='information'>Information<textarea name='information' id='information' cols='40' rows='4'>";?><?php echo $row['information']; echo"</textarea>
-                    <label style='margin-top:54px;' for='payment'>Check if payment is required<input style='left:17em;' type='checkbox' name='payment' value='yes'> </label>
-                    <label for='county'>County
-			<select name='county'>
-			    <option value='oc'>Orange County</option>
-			</select>
-                    </label>
-                    
-                        <input style='margin-top:14px; float:left;' type='submit' value='Edit Listing'/>
-                </form>
-	    </div>
-	</div>
+            <form action='resources/library/editlist.php?createid=";echo $row['createid']; echo "' method='POST'>  
+    	        <div class='extralarge'>
+                    <div class='noheight'>
+                        <div id='largeleft'>
+                            <h3>Subject</h3>
+        	            </div>
+                        <div id='largeright'>
+                            <input value='";?><?php echo $row['subject']; echo"' style='left:17em;' type='text' name='subject'/>
+                        </div>
+                    </div>
+                    <div class='noheight'>
+                        <div id='largeleft'>
+                            <h3>Information</h3>
+                        </div>
+                        <div id='largeright'>
+                            <textarea name='information' id='information' cols='40' rows='4'>";?><?php echo $row['information']; echo"</textarea>
+                        </div>
+                    </div>
+                    <div class='noheight'>
+                        <div id='largeleft'>
+                            <h3>Check if payment is required</h3>
+                        </div>
+                        <div id='largeright'>
+                            <input style='left:17em;' type='checkbox' name='payment' value='yes'>
+                        </div>
+                    </div>
+                    <div class='noheight'>
+                        <div id='largeleft'>
+                            <h3>County</h3>
+                        </div>
+                        <div id='largeright'>
+                            <select name='county'>
+                                <option value='oc'>Orange County</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class='noheight'>
+                        <div id='largeright'>
+                            <input style='margin-top:14px; float:left;' type='submit' value='Edit Listing'/>
+                        </div>
+                    </div> 
+    	        </div>
+            </form>
 		    ";
     }
     ?>
-
-    </div>
+</div>
 <?php require_once ('resources/templates/footer.php'); ?>
 </div>
 </body>

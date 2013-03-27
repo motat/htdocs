@@ -23,58 +23,59 @@ include 'resources/config.php';
         </script>
 </head>
 <body>
-<div id="top">
-    <div class="main">
-        <div id="header">
-        </div>
-            <?php require_once ("resources/templates/logo.php"); ?>
-            <?php require_once ("resources/templates/navbar.php"); ?>  
-            <?php require_once ("resources/templates/quote.php"); ?>
-            <div id='tip'>
-               <div id='tipleft'>
-                    <div id='tipmini'>
-                         <h1>the Win Win</h1>
+<div class='container'>
+     <?php require_once ("resources/templates/logo.php"); ?>
+     <?php require_once ("resources/templates/navbar.php"); ?>  
+     <?php require_once ("resources/templates/quote.php"); ?>
+     <div class='noheight'>
+          <div class='darkback'>
+               <div id='halfleft'>
+                    <h1>the Win Win</h1>
+               </div>
+               <div id='halfright'>
+                    <div class='pad'>
+                         <h2>If you are looking to gain more students, <high>consider this</high>; offering a short and <high>free</high> course lets the student 'test the waters' and be more comfortable about <high>investing in a higher level lesson</high> of yours. Also, students who take a free course such as this, can decide not to continue with the subject, <high>without wasting any money</high>.</h2>
                     </div>
                </div>
-               <div id='tipright'>
-                    <h2>If you are looking to gain more students, <span class='tip'>consider this</span>; offering a short and <span class='tip'>free</span> course lets the student 'test the waters' and be more comfortable about <span class='tip'>investing in a higher level lesson</span> of yours. Also, students who take a free course such as this, can decide not to continue with the subject, <span class='tip'>without wasting any money</span>.</h2>
-               </div>
-            </div>
-            <div id='tip'>
-               <div id='tipleft'>
-                    <div id='tipmini'>
-                         <h1>your Rules</h1>
+          </div>
+     </div>
+     <div class='noheight'>
+          <div class='darkback'>
+               <div id='halfleft'>
+                    <h1>your Rules</h1>
+               </div>      
+               <div id='halfright'>
+                    <div class='pad'>
+                         <h2>No parameters over your lesson are set by the website. You are in <high>total control</high> of the length of your lesson, the payment required (if any), <high>>difficulty</high>, and material of the lesson.</h2>
                     </div>
                </div>
-               
-                    <div id='tipright'>
-                         <h2>No parameters over your lesson are set by the website. You are in <span class='tip'>total control</span> of the length of your lesson, the payment required (if any), <span class='tip'>difficulty</span>, and material of the lesson.</h2>
-                    </div>
-            </div>
-             <div id='tip'>
-               <div id='tipleft'>
-                    <div id='tipmini'>
-                         <h1>from Home</h1>
+          </div>
+     </div>
+     <div class='noheight'>
+          <div class='darkback'>
+               <div id='halfleft'>
+                    <h1>from Home</h1>
+               </div>
+               <div id='halfright'>
+                    <div class='pad'>
+                         <h2>Interested in <high>teaching from home?</high> That's easy! Using a program such as skype requires <high>only</high> an average internet connection, and a webcam. You can then <high>bring you student into your living room</high> and proceed with your lesson as you like.</h2>
                     </div>
                </div>
-               
-                    <div id='tipright'>
-                         <h2>Interested in <span class='tip'>teaching from home?</span> That's easy! Using a program such as skype requires <span class='tip'>only</span> an average internet connection, and a webcam. You can then <span class='tip'>bring you student into your living room</span> and proceed with your lesson as you like.</h2>
-                    </div>
-            </div>
-             <div id='tip'>
-               <div id='tipleft'>
-                    <div id='tipmini'>
-                         <h1>Privacy</h1>
-                    </div>
+          </div>
+     </div>
+     <div class='noheight'>
+          <div class='darkback'>
+               <div id='halfleft'>
+                    <h1>Privacy</h1>
                </div>
-               
-                    <div id='tipright'>
-                         <h2>Privacy is very important to us, your emails are used by the website <span class='tip'>only for verification</span>. Professors can <span class='tip'>only view a students email</span> when he is <span class='tip'>requested</span>. The student can <span class='tip'>never</span> view the email of a professor <span class='tip'>until</span> the professor contacts the student.</h2>
-                    </div>
-            </div>
-        
-    </div>
+               <div id='halfright'>
+                    <div class='pad'>
+                         <h2>Privacy is very important to us, your emails are used by the website <high>only for verification</high>. Professors can <high>only view a students email</high> when he is <high>requested</high>. The student can <high>never</high> view the email of a professor <high>until</high> the professor contacts the student.</h2>
+                    </div>     
+               </div>
+          </div>
+     </div>
+</div>
 <?php require_once ('resources/templates/footer.php'); ?>
 </div>
 </body>

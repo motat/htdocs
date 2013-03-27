@@ -21,27 +21,24 @@ include 'resources/config.php';
     </script>
 </head>
 <body>
-
-<div id="top">
-    <div class="main">
-        <div id="header">
-        </div>
-        <?php require_once ("resources/templates/logo.php"); ?>
-        <?php require_once ('resources/templates/navbar.php'); ?>
-        <?php require_once ("resources/templates/quote.php"); ?>          
-        <div id='tip'>
-            <div id='tipleft'>
-                <div id='tipmini'>
-                        <h1>Contact</h1>
-                </div>
+<div class='container'>
+    <?php require_once ("resources/templates/logo.php"); ?>
+    <?php require_once ('resources/templates/navbar.php'); ?>
+    <?php require_once ("resources/templates/quote.php"); ?>          
+    <div class='noheight'>
+        <div class='darkback'>
+            <div id='halfleft'>
+                <h1>Contact</h1>
             </div>
-            <div id='tipright'>
-                <h2>Vadim Pishchenko</h2>
-                <h2>contact@ahhyes.org</h2>
+            <div id='halfright'>
+                <div class='pad'>
+                    <h2>Vadim Pishchenko</h2>
+                    <h2>contact@ahhyes.org</h2>
+                </div>
             </div>
         </div>
     </div>
-<?php require_once ('resources/templates/footer.php'); ?>
 </div>
+<?php require_once ('resources/templates/footer.php'); ?>
 </body>
 </html>

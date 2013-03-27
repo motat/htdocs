@@ -1,10 +1,8 @@
 <?php
 $county=$_GET['county'];
-echo "<div id='paginate'>
-                    <div id='pagination'>
-                <h1>";
-                
-echo "<a href='?county=".$county."&page=".$first_page."'><<</a> ";
+echo "<div class='noheight'>
+            <h1>
+                <a href='?county=".$county."&page=".$first_page."'><<</a> ";
                     if($page == $first_page)
                         {
                             echo "< ";
@@ -17,7 +15,7 @@ echo "<a href='?county=".$county."&page=".$first_page."'><<</a> ";
                             }
                             else
                             {
-                    $previous = $page-1;
+                                $previous = $page-1;
                                 echo "<a href='?county=".$county."&page=".$previous."'><</a> ";
                             }
                         }
@@ -38,10 +36,10 @@ echo "<a href='?county=".$county."&page=".$first_page."'><<</a> ";
                                 echo "<a href='?county=".$county."&page=".$next."'>></a> ";
                             }
                         }
-                    echo "<a href='?county=".$county."&page=".$last_page."'>>></a>";
-                             echo "</h1>
-            </div>
-           </div>";
+           echo "<a href='?county=".$county."&page=".$last_page."'>>></a>";
+      echo "</h1>
+
+    </div>";
                         ?>
                         
                         

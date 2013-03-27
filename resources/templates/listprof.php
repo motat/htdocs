@@ -27,7 +27,7 @@ $stmt = $conn->prepare($sql);
 $stmt->execute(array('id' => $id));
 if ( $stmt->rowCount() > 0)
     {
-    echo " <div id='halfbar'><h2>Your Listings</h2></div>";
+    echo " <div id='halfbar'><h6>Your Listings</h6></div>";
     while($row = $stmt->fetch())
         {
             $uid=$row['id'];
