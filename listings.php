@@ -32,8 +32,10 @@ include 'resources/config.php';
         if($_GET['pageid']=="1")
             {
             echo "
-                <div id='small'> 
-                    <h2>Lesson requested.</h2> 
+                <div class='small'>
+                    <div class='pad'>
+                        <h2>Lesson requested.</h2>
+                    </div>
                 </div>";
             }
         }
@@ -42,8 +44,10 @@ include 'resources/config.php';
         if($_GET['pageid']=="2")
             {
             echo "
-                <div id='small'> 
-                    <h2>You have already requested that class.</h2> 
+                <div class='small'>'
+                    <div class='pad'>
+                        <h2>You have already requested that class.</h2> 
+                    </div>
                 </div>";
             }
         }            

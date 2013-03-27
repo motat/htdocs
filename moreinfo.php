@@ -36,15 +36,17 @@ include 'resources/config.php';
         {
         echo "
             <div class='noheight'>
-                <div id='halfleft'>
-                    <h1>"; echo $row['subject']; echo "</h1>
-                    <h1 style='font-size:15px; padding-top:20px;'><a style='display:inline-block' href='resources/library/postmark.php?createid="; ?><?php echo $row['createid']; echo "&uid="; echo $row['id'];?><?php echo "'>(request class)</a>
-                </div>
-                <div id='halfright'>
-                    <div class='pad'>
-                        <h2>"; echo $row['firstname']; echo "</h2>
-                        <br/>
-                        <h3>"; echo $row['information']; echo "</h3>
+                <div class='darkback'>
+                    <div id='halfleft'>
+                        <h1>"; echo $row['subject']; echo "</h1>
+                        <h3><a style='display:inline-block' href='resources/library/postmark.php?createid="; ?><?php echo $row['createid']; echo "&uid="; echo $row['id'];?><?php echo "'>(request class)</a></h3>
+                    </div>
+                    <div id='halfright'>
+                        <div class='pad'>
+                            <h2>"; echo $row['firstname']; echo "</h2>
+                            <br/>
+                            <h3>"; echo $row['information']; echo "</h3>
+                        </div>
                     </div>
                 </div>
             </div>

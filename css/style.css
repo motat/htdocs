@@ -96,7 +96,7 @@ r2 { padding-left: 50px; }
 .logo { background:url('http://localhost/images/menu.png'); height:124px; }
 .listings { clear:both; height: 65px; }
 .footer {clear:both; height: 55px; width:800px; margin:0 auto; margin-top:4px; padding-top:10px; text-align:center; clear:left; }
-.noheight { overflow:hidden; clear:both; margin-top:2px; }
+.noheight { overflow:hidden; clear:both; margin-top:4px; }
 .pad { padding-top:10px; padding-left:20px; }
 
 /* -------------------------------------------------------------- 
@@ -141,16 +141,16 @@ width:100%;
 font:13px/27px helvetica;
 color:#3366cc;
 height:30px;
-background:#563F2C;
+background:#719899;
 }
 .menu a:hover{
-background-color:#402929;
-color:#B87877;
+background-color:#5C7273;
+color:black;
 }
 .menu a{/*Color of the links you see*/
 text-decoration:none;
 padding:6px 8px 7px;
-color:#B87877;
+color:black;
 outline:none;
 }
 .menu ul{
@@ -188,7 +188,7 @@ display:block !important;
 display:block !important;
 }
 .active a{
-background-color:#551e1d;
+background-color:black;
 border:1px solid #551e1d;
 border-bottom:0;
 /*box-shadow*/
@@ -212,8 +212,8 @@ color:#FFFFFF;
 font-weight:bold;
 }
 .active a:hover{
-background-color:#551e1d;
-color:#B87877;
+background-color:#5C7273;
+color:black;
 }
 .active ul a:hover{
 background-color:#402929;

@@ -32,7 +32,6 @@ while($row = $stmt->fetch())
             <div class='listings'>
                 <div id='wrapper'>
                     <div id='mid'>
-                        <h
                         <h3>by "; ?> <?php echo $prof;?><?php echo " (";echo $marks;echo " pts)</h3>                                  
                     </div>
                 </div>

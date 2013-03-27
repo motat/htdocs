@@ -20,11 +20,7 @@ include 'resources/config.php';
         $('document').ready(function(){
             $('.menu').fixedMenu();
         });
-        
-        $(".box2").click(function(){
-     window.location=$(this).find("a").attr("href"); 
-     return false;
-});
+
         </script>
 </head>
 <body>
