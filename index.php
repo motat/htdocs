@@ -60,8 +60,7 @@ $marks=$row['marks'];
             }
         }     
     -->
-    <div class='logo'>
-    </div>
+    <?php require_once ("resources/templates/logo.php"); ?>
     <?php require_once ("resources/templates/navbar.php"); ?>
     <?php require_once ("resources/templates/quote.php"); ?>
     <div class='small'>

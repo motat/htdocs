@@ -48,9 +48,9 @@ if ( $stmt->rowCount() > 0)
                            </div>
                       </div>
                       <div id='left'>
-                           <h1>"; echo $row['subject']; echo "</h1><a href='edit.php?cid="; echo $row['createid']; echo"'><span class='edit'>Edit &nbsp; </span></a>
-                           <div onclick='location.href='resources/library/droplist.php?createid="; echo $row['createid']; echo "';' style='cursor: pointer;' id='box2'></div>
-                      </div>
+                           <h1>"; echo $row['subject']; echo "</h1><a href='edit.php?cid="; echo $row['createid'];?> '><span class='edit'>Edit &nbsp; </span></a>
+                          <div onclick="javascript:window.location.href='http://localhost/resources/library/droplist.php?autoid=<?php echo $row['createid']; ?>'; return false;" style='cursor: pointer;' id='box2'></div> <?php echo"
+                      </div>                      
                       <div id='right'>
                            <h3><a style='color:white;' href='moreinfo.php?cid=";echo $row['createid']; echo"'>";echo $information; echo "</a></h3>
                       </div>

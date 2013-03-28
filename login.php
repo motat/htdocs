@@ -22,8 +22,6 @@ include 'resources/config.php';
 </head>
 <body>
 <div class='container'>
-    <div class='logo'>
-    </div>
     <?php require_once ("resources/templates/logo.php"); ?>
     <?php require_once ('resources/templates/navbar.php'); ?>
     <?php require_once ("resources/templates/quote.php"); ?>  
@@ -35,9 +33,9 @@ include 'resources/config.php';
             if($pageid=="1")
                 {
                 echo "
-                    <div id='info'  style='height:50px;'>
-                        <div id='intro'>
-			    <h2 style='padding-top:5px;'>You entered in a wrong email or password, please try again</h2>
+                    <div class='small'>
+                        <div class='pad'>
+			                 <h3>You entered in a wrong email or password, please try again</h2>
                         </div>
                     </div>
                 " ;

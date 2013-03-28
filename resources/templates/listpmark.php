@@ -53,9 +53,8 @@ if(isset($_SESSION['id']))
                     </div>
                 </div>
                 <div id='left'>
-                    <h1>"?><?php echo $subject; echo "</h1>
-                    <div onclick='location.href='resources/library/dropmarkpost.php?autoid="; echo $autoid; echo "';' style='cursor: pointer;' id='box2'>
-                    </div>
+                    <h1>"?><?php echo $row['subject'];?> </h1>
+                    <div onclick="javascript:window.location.href='http://localhost/resources/library/dropmarkpost.php?autoid=<?php echo $autoid; ?>'; return false;" style='cursor: pointer;' id='box2'></div> <?php echo"
                 </div>
                 <div id='right'>
                     <h3><a style='color:white;' href='moreinfo.php?cid=";echo $row['createid']; echo"'>";?><?php echo $email;?><?php echo "</a></h3>
