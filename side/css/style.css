@@ -1,0 +1,54 @@
+/* -------------------------------------------------------------- 
+   Reset
+-------------------------------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, h7, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, high, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol,ul {	list-style: none; }
+blockquote, q {	quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+body {background-color: #2a3644; font-family: helvetica;}
+
+.container { width:1000px; padding-top:2px; margin:0 auto;}
+.contact{ text-align:center; width:570px; margin:0 auto; margin-top:300px;  }
+.intro { padding-top:100px; width:700px; height:180px; margin:0 auto; text-align:center; clear:both;}
+.boxxright { width:249px; height:249px; float:right; }
+.prev { width:700px; margin:0 auto;}
+#navbar {width:400px; height:20px; padding-top:5px; text-align:center; float:right;  }
+#f2 { width:450px; float:left; }
+#l1 { width:250px; float:right; }
+#hb { background:url('http://localhost/side/images/hb.png'); width:195px; height:142px; float:left; }
+#ay { background:url('http://localhost/side/images/ay.png'); width:195px; height:142px; margin-top:50px; float:right; }
+#jb { background:url('http://localhost/side/images/jb.png'); width:189px; height:186px; float:right; }
+h1 { font-size:2em; color:#3f5565; }
+h2 { font-size:1em; color:#949391; font-family:sans-serif; }
+h3 { padding-top:20px; font-size:1.2em; color:#949391; font-family:consolas; }
+
+.high { color:#949391; font-size:1em; }

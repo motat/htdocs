@@ -35,15 +35,15 @@ while($row = $stmt->fetch())
                         <h3>by "; ?> <?php echo $prof;?><?php echo " (";echo $marks;echo " pts)</h3>                                  
                     </div>
                 </div>
-                    <div id='left'>
-                        <h1>"; ?><?php echo $subject;?><?php echo "</h1>
-                        <div onclick='location.href='resources/library/dropstudlist.php?autoid=";?><?php echo $autoid; echo "';' style='cursor: pointer;' id='box2'></div>
-                    </div>
-                    <div id='right'>
-                        <h3>"; ?><?php echo $information;?><?php echo "</h3>
-                    </div>
+                <div id='left'>
+                    <h1>"; ?><?php echo $subject;?> </h1>
+                    <div onclick="javascript:window.location.href='resources/library/dropstudlist.php?autoid=<?php echo $autoid;?>'; return false;" style='cursor: pointer;' id='box2'></div><?php echo "
+                </div>
+                <div id='right'>
+                    <h3>"; ?><?php echo $information;?><?php echo "</h3>
                 </div>	
-            </div>";
+            </div>
+            ";
                         }
     }
 ?>

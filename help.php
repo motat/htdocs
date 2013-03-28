@@ -46,7 +46,7 @@ include 'resources/config.php';
                </div>      
                <div id='halfright'>
                     <div class='pad'>
-                         <h2>No parameters over your lesson are set by the website. You are in <high>total control</high> of the length of your lesson, the payment required (if any), <high>>difficulty</high>, and material of the lesson.</h2>
+                         <h2>No parameters over your lesson are set by the website. You are in <high>total control</high> of the length of your lesson, the payment required (if any), <high>difficulty</high>, and material of the lesson.</h2>
                     </div>
                </div>
           </div>
