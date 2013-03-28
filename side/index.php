@@ -26,21 +26,44 @@
             </div>
         </div>
     </div>
+    <div class='info'>
+        <div id='left'>
+            <h1> skills </h1>
+            <h2> css </h2>
+            <h2> php </h2>
+            <h2>html</h2>
+            <h2>PDO (PHP Data Objects)</h2>
+            <h2>mySql</h2>
+            <h2>photoshop</h2>
+            <h2>word applications</h2>
+            <h2>javascript</h2>
+        </div>
+        <div id='right'>
+            <h1>resume</h1>
+            <h2>studying web development</h2>
+            <h2>four advanced classes</h2>
+            <h2>two years of great experience</h2>
+        </div>
+    </div>
     <div class='contact'>
-        <h1>I'm currently available for work.</h1>
-        <br/>
-        <h2>Creative ways to solve your problems.</h2>
-        <br/>
-        <h2>Tell me about your project, and I'll tell you how I can help. With over 2 years of experience as a UI designer and developer, I'd love to make your next venture a success.</h2>
-        <form>
-            <input type='text' name='name' placeholder='Name'>
+        <div id='contact'>
+            <h1>I'm currently available for work.</h1>
             <br/>
-            <input type='text' name'email' placeholder='Email'>
+            <h2>Creative ways to solve your problems.</h2>
             <br/>
-            <textarea name='body' placeholder='Tell me about your project...'></textarea>
+            <h2>Tell me about your project, and I'll tell you how I can help. With over 2 years of experience as a UI designer and developer, I'd love to make your next venture a success.</h2>
             <br/>
-            <button type='submit'>Send Message</button>
-        </form>
+            <br/>
+            <form>
+                <input type='text' name='name' placeholder='Name'>
+                <br/>
+                <input type='text' name'email' placeholder='Email'>
+                <br/>
+                <textarea name='body' placeholder='Tell me about your project...'></textarea>
+                <br/>
+                <button type='submit' class='btn'>Send Message</button>
+            </form>
+        </div>
     </div>
 </div>
 </body>
