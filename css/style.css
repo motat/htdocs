@@ -93,7 +93,7 @@ r2 { padding-left: 50px; }
 .large { height:200px; overflow:hidden;}
 .extralarge {height:300px; overflow:hidden; }
 .huge { height:600px; }
-.logo { background:url('http://localhost/images/menu.png'); height:124px; }
+.logo { background:url('http://ahhyes.org/images/menu.png'); height:124px; }
 .listings { clear:both; height: 65px; }
 .footer {clear:both; height: 50px; width:800px; margin:0 auto; margin-top:4px; padding-top:px; text-align:center; clear:left; }
 .noheight { overflow:hidden; clear:both; margin-top:4px; }

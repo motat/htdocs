@@ -26,7 +26,7 @@ while($row = $stmt->fetch())
 		    	</div>
 		    	<div id='right'>
 		    		<div class='pad'>
-		    			<a href='resources/library/droprecent.php?rate=1&recentid=";echo $recentid; echo "'><font color='black'>Good</font></a> &bull; <a href='resources/library/droprecent.php?rate=0&recentid=";echo $recentid; echo "'><font color='black'>Not Taken</font></a> &bull; <a href='resources/library/droprecent.php?rate=-1&recentid=";echo $recentid; echo "'><font color='black'>Bad</font></a> 
+		    			<a href='http://<?php echo $root;?>/resources/library/droprecent.php?rate=1&recentid=";echo $recentid; echo "'><font color='black'>Good</font></a> &bull; <a href='resources/library/droprecent.php?rate=0&recentid=";echo $recentid; echo "'><font color='black'>Not Taken</font></a> &bull; <a href='resources/library/droprecent.php?rate=-1&recentid=";echo $recentid; echo "'><font color='black'>Bad</font></a> 
 		    		</div>
 		    	</div>
 	    </div>";

@@ -37,7 +37,7 @@ while($row = $stmt->fetch())
                 </div>
                 <div id='left'>
                     <h1>"; ?><?php echo $subject;?> </h1>
-                    <div onclick="javascript:window.location.href='resources/library/dropstudlist.php?autoid=<?php echo $autoid;?>'; return false;" style='cursor: pointer;' id='box2'></div><?php echo "
+                    <div onclick="javascript:window.location.href='http://<?php echo $root;?>/resources/library/dropstudlist.php?autoid=<?php echo $autoid;?>'; return false;" style='cursor: pointer;' id='box2'></div><?php echo "
                 </div>
                 <div id='right'>
                     <h3>"; ?><?php echo $information;?><?php echo "</h3>

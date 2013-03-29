@@ -1,9 +1,5 @@
 <?php
 require_once(realpath(dirname(__FILE__) . "/../config.php"));
-
-
-
-
 // username and password sent from form
 $email=$_POST['email']; 
 $password=$_POST['password'];

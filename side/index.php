@@ -8,22 +8,22 @@
 <body>
 <div class='container'>
     <div id='navbar'>
-        <h3>PORTFOLIO &nbsp ABOUT &nbsp CONTACT</h3>
+        <a href='index.php'><span class='nav'>PORTFOLIO</span></a><a href='about.php'><span class='nav'>ABOUT</span></a><a href='index.php#contact'><span class='nav'>CONTACT</span></a>
     </div>
     <div class='intro'>
         <h1>Hello there, I'm <span class='high'>Vadim Pishchenko</span>, a russian designer & developer. I create simple to use and highly effective websites. <span class='high'>Get in touch</span></h1>
     </div>
     <div class='prev'>
         <div id='f2'>
-            <div id='hb'>
-            </div>
-            <div id='ay'>
-            </div>
+            <a href='http://honeybrescue.com'><div id='hb'>
+            </div></a>
+            <a href='http://ahhyes.org'><div id='ay'>
+            </div></a>
         </div>
         <div stlye='clear:both;'></div>
-        <div id='l1'>
+        <a href='http://juliashomebakery.com'><div id='l1'>
             <div id='jb'>
-            </div>
+            </div></a>
         </div>
     </div>
     <div class='info'>
@@ -31,7 +31,7 @@
             <h1> skills </h1>
             <h2> css </h2>
             <h2> php </h2>
-            <h2>html</h2>
+            <h2>html5</h2>
             <h2>PDO (PHP Data Objects)</h2>
             <h2>mySql</h2>
             <h2>photoshop</h2>
@@ -41,7 +41,7 @@
         <div id='right'>
             <h1>resume</h1>
             <h2>studying web development</h2>
-            <h2>four advanced classes</h2>
+            <h2>four advanced graphic classes</h2>
             <h2>two years of great experience</h2>
         </div>
     </div>
@@ -54,10 +54,10 @@
             <h2>Tell me about your project, and I'll tell you how I can help. With over 2 years of experience as a UI designer and developer, I'd love to make your next venture a success.</h2>
             <br/>
             <br/>
-            <form>
+            <form method='post' action='contact.php'>
                 <input type='text' name='name' placeholder='Name'>
                 <br/>
-                <input type='text' name'email' placeholder='Email'>
+                <input type='text' name='email' placeholder='Email'>
                 <br/>
                 <textarea name='body' placeholder='Tell me about your project...'></textarea>
                 <br/>
