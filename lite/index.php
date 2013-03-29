@@ -12,17 +12,14 @@
 <div class='container'>
     <?php require_once('resources/library/sidebar.php'); ?>
     <div class='block'></div>
+    <?php require_once('more.php'); ?>
     <div class='min'>
         <div id='holder'>
             <div class='left'>
-                <h2>all listings</h2>
-                <span class='sub'>computer development</span> - <span class='dim'>vadim pishchenko</span>
-                <span class='sub'>basics to css design</span> - <span class='dim'>vadim pishchenko</span>
+                <?php require_once('resources/library/alist.php'); ?>
             </div>
             <div class='right'>
-                <h2>your listings</h2>
-                <span class='sub'>computer development</span> - <span class='dim'>vadim pishchenko</span> 
-                <span class='sub'>basics to css design</span> - <span class='dim'>vadim pishchenko</span>
+                <?php require_once('resources/library/ylist.php'); ?>
             </div>
             <div style='clear:both;'></div>
         </div>
@@ -37,6 +34,12 @@
             </div>
             <div style='clear:both;'></div>
         </div>
+        <div id='holder'>
+                <h3><span class='plus'> + </span> add </h3>
+                <h3><span class='edit'> e </span> edit </h3>
+                <h3><span class='more'> > </span> more </h3> 
+                <h3><span class='minus'> - </span> remove </h3> 
+        </div>              
     </div>   
 </div>
 </body>

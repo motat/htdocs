@@ -21,7 +21,7 @@ $count=$stmt->fetchColumn();
 if($count==1)
 	{
 		session_start();
-		$_SESSION['id']=$row['uid']; 
+		$_SESSION['uid']=$row['uid']; 
 		header("location:$root/index.php?login=yes");
 	}
 	else
