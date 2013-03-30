@@ -13,7 +13,7 @@ if(isset($_GET['eid']))
     echo "
         <div class='min'>
             <div id='holder'>
-                <h3>"; echo $information; echo "</h3>
+                <h2>"; echo $information; echo "</h2>
             </div>
         </div>";   
     }
@@ -23,9 +23,9 @@ if(isset($_GET['msg']))
     if($msg=='1')
     {
         echo "
-            <div class='min'>
+            <div class='info'>
                 <div id='holder'>
-                    <h3>You just requested this class.</h3>
+                    <h2>You just requested this class.</h2>
                 </div>
             </div>
             ";
@@ -33,9 +33,9 @@ if(isset($_GET['msg']))
     if($msg=='2')
     {
         echo "
-            <div class='min'>
+            <div class='info'>
                 <div id='holder'>
-                    <h4>You have already requested this class.</h4>
+                    <h2>You have already requested this class.</h2>
                 </div>
             </div>
             ";

@@ -13,34 +13,15 @@
     <?php require_once('resources/library/sidebar.php'); ?>
     <div class='block'></div>
     <?php require_once('more.php'); ?>
-    <div class='min'>
-        <div id='holder'>
-            <div class='left'>
-                <?php require_once('resources/library/alist.php'); ?>
-            </div>
-            <div class='right'>
-                <?php require_once('resources/library/ylist.php'); ?>
-            </div>
-            <div style='clear:both;'></div>
-        </div>
-        <div id='holder'>
-            <div class='left'>
-                <h2>student requests</h2>
-                <span class='sub'>basics to css design</span> - <span class='dim'>john jones</span>
-            </div>
-            <div class='right'>
-                <h2>student requests</h2>
-                <span class='sub'>basics to css design</span> - <span class='dim'>john jones</span>
-            </div>
-            <div style='clear:both;'></div>
-        </div>
-        <div id='holder'>
-                <h3><span class='plus'> + </span> add </h3>
-                <h3><span class='edit'> e </span> edit </h3>
-                <h3><span class='more'> > </span> more </h3> 
-                <h3><span class='minus'> - </span> remove </h3> 
-        </div>              
-    </div>   
+    <?php require_once('indexbody.php'); ?>  
+</div>
+<div style='clear:both;'></div>
+<div class='mainfooter'>
+	<div id='mainlink'>
+		<h2><a href='#'><span class='nav'>help</span><a/> {} <a href='#'><span class='nav'>tos : <?php if(isset($_SESSION['uid'])) { echo $_SESSION['uid']; } ?></span><a/></h2>
+	</div>
+	<div style='clear:both;'></div>
+</div>
 </div>
 </body>
 </html>

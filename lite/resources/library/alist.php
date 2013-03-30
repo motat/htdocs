@@ -1,32 +1,26 @@
 <?php
 require_once(realpath(dirname(__FILE__) . "/../config.php"));
-//Get User ID in order to get Username from accounts table
-$sql='SELECT * FROM entrys';
-$stmt=$conn->prepare($sql);
-$stmt->execute();
-$row=$stmt->fetch();
-$uid=$row['uid'];
-//Get Username
-$sql='SELECT * FROM accounts WHERE uid=:uid';
-$stmt=$conn->prepare($sql);
-$stmt->execute(array(
-	':uid' => $uid
-	));
-$row=$stmt->fetch();
-$username=$row['username'];
-//Get Subject
-$sql='SELECT * FROM entrys';
+$sql='SELECT * FROM entrys ORDER BY eid DESC';
 $stmt=$conn->prepare($sql);
 $stmt->execute();
 if($stmt->rowCount()> 0)
 	{
 		echo "<h2>all listings</h2>";
 		//Get subject
+		$i = 1;
 		while($row=$stmt->fetch())
 			{	
 				$eid=$row['eid'];
 				$subject=$row['subject'];
-				echo "<span class='sub'>"; echo $subject; echo "</span> - <span class='dim'>"; echo $username; echo " <a href='resources/library/request.php?eid="; echo $eid; echo"'><span class='plus'> + </span></a><span class='minus'>-</span><a href='index.php?eid="; echo $eid; echo "'><span class='more'> > </span></a></span><br/>"; 
+				$username=$row['username'];
+				if($i%2 == 1) $color = 'lred';
+				else $color = 'lgreen';
+				echo "
+				<div id='"; echo $color; echo"'>
+					<span class='sub'>".$subject."</span> - <span class='dim'>"; echo $username; echo " <a href='resources/library/request.php?eid="; echo $eid; echo"'><span class='plus'> + </span></a><span class='minus'>-</span><a href='index.php?eid="; echo $eid; echo "'><span class='more'> > </span></a></span>
+				</div><br/>";
+				$i++;
+					
 			}
 	}
 	else

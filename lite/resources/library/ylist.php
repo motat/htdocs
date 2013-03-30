@@ -17,19 +17,28 @@ $stmt->execute(array(
 $row=$stmt->fetch();
 $username=$row['username'];
 //Check if results
-$sql='SELECT * FROM entrys WHERE uid=:uid';
+$sql='SELECT * FROM entrys WHERE uid=:uid AND vis=:vis ORDER BY eid DESC';
 $stmt=$conn->prepare($sql);
 $stmt->execute(array(
-	':uid' => $uid
+	':uid' => $uid,
+	':vis' => '1'
 	));
 if($stmt->rowCount()> 0)
 	{
 		echo "<h2>your listings</h2>";
 		//Get subject
+		$i = 1;
 		while($row=$stmt->fetch())
 			{	
+				$eid=$row['eid'];
 				$subject=$row['subject'];
-				echo "<span class='sub'>"; echo $subject; echo "</span> - <span class='dim'>"; echo $username; echo " <span class='plus'> + </span><span class='minus'>-</span><span class='more'> > </span></span><br/>"; 
+				if($i%2 == 1) $color = 'lred';
+				else $color = 'lgreen';
+				echo "
+				<div id='"; echo $color; echo"'>
+					<span class='sub'>"; echo $subject; echo "</span> - <span class='dim'>"; echo $username; echo " <a href='resources/library/del.php?eid="; echo $eid; echo"'><span class='minus'>-</span></a><a href='index.php?eid="; echo $eid; echo "'><span class='more'> > </span></a></span><br/>
+				</div>";
+				$i++;
 			}
 	}
 	else

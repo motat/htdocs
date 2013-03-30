@@ -3,7 +3,7 @@
             <a href='http://localhost/lite'><h1>ahhyes</h1></a>
         </div>
         <div class='nav'>
-            <?php if(isset($_SESSION['uid'])) {?><a href="javascript:showonlyone('add');"><span class='nav'>Add</span></a>&nbsp;&nbsp;<a href="javascript:showonlyone('edit');"><span class='nav'>Edit</span></a>&nbsp;&nbsp;<a href="javascript:showonlyone('account');"><span class='nav'>Account</span></a><?php } else { ?><a href="javascript:showonlyone('register');"><span class='nav'>Register</span></a>&nbsp;&nbsp;<a href="javascript:showonlyone('login');"><span class='nav'>Login</span></a><?php } ?>
+            <?php if(isset($_SESSION['uid'])) { $uid=$_SESSION['uid'];?><a href="javascript:showonlyone('add');"><span class='nav'>Add</span></a>&nbsp;&nbsp;<a href="javascript:showonlyone('edit');"><span class='nav'>Edit</span></a>&nbsp;&nbsp;<a href="javascript:showonlyone('account');"><span class='nav'>Account</span></a><?php } else { ?><a href="javascript:showonlyone('register');"><span class='nav'>Register</span></a>&nbsp;&nbsp;<a href="javascript:showonlyone('login');"><span class='nav'>Login</span></a><?php } ?>
         </div>
         <div style='clear:both'>
         </div>
@@ -72,6 +72,10 @@
                 </div>
                 <button type='submit' class='btn'>Add Listing</button>            
             </form>
+        </div>
+        <!--ADD-->
+        <div id='account' class='form'>
+            <?php require_once ('resources/library/account.php'); ?>
         </div>
         <div style='clear:both'>
         </div>
