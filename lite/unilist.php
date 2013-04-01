@@ -9,7 +9,9 @@
     <script type="text/javascript" src='script/showDiv.js'></script>
 </head>
 <body>
+<div class='header'></div>
 <div class='container'>
+    <?php require_once('resources/templates/header.php'); ?>
     <?php require_once('resources/library/sidebar.php'); ?>
     <?php require_once('more.php'); ?>
     <div class='min'>

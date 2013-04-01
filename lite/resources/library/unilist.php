@@ -12,7 +12,14 @@ if($stmt->rowCount()> 0)
 			{	
 				$eid=$row['eid'];
 				$subject=$row['subject'];
-				$username=$row['username'];
+				$uid=$row['uid'];
+				$sql='SELECT * FROM accounts where uid=:uid';
+				$stmtu=$conn->prepare($sql);
+				$stmtu->execute(array(
+					':uid' => $uid
+					));
+				$rowu=$stmtu->fetch();
+				$username=$rowu['username'];
 				if($i%2 == 1) $color = 'lred';
 				else $color = 'lgreen';
 				echo "

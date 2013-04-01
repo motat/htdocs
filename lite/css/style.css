@@ -48,7 +48,7 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color: #272727; }
 .top { }
 .nav { padding-top:20px; text-align:center; }
 .sidecontainer { width:250px; text-align:center; margin-top:50px; margin-bottom:20px;}
-.sidebar { border-width:4px; border-right-style:solid; border-bottom-style:solid; min-height:500px; width:250px; float:left; text-align:center; position:relative;}
+.sidebar { border-width:4px; border-right-style:solid;  min-height:500px; width:250px; float:left; text-align:center; position:relative;}
 .logomain { width:250px; height:100px; position:relative; border-width:4px; border-right-style:solid; }
 .logoback { width:200px; height: 100px;background-color:black; margin:0 auto;}
 .logo { width:200px; height:70px; position:absolute; bottom:0; text-align:center; background-color:black; margin:0 auto;}
