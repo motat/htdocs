@@ -27,7 +27,7 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL))
 				':password' => $password,
 				':salt' => $salt,
 				':new' => '0' ));
-			header("localtion:$root/index.php?createuser=yes");
+				header("location:$root/index.php?msg=3");
 		}
 	}
 	else

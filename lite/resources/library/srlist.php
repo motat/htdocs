@@ -16,15 +16,28 @@ $stmt->execute(array(
 	));
 if($stmt->rowCount()> 0)
 	{
-		echo "<h2>student requests</h2>";
+		echo "<h2>your requests</h2>";
 		//Get subject
 		$i = 1;
 		while($row=$stmt->fetch())
 			{	
-				$eid=$row['eid'];
+			$eid=$row['eid'];
+			$uid=$row['uid'];
+			$rid=$row['rid'];
+				$sql='SELECT * FROM entrys WHERE eid=:eid';
+				$stmtun=$conn->prepare($sql);
+				$stmtun->execute(array(
+					':eid' => $eid
+					));
+				$row1=$stmtun->fetch();
+				$subject=$row1['subject'];
+				$sql='SELECT * FROM accounts WHERE uid=:uid';
+				$stmtsub=$conn->prepare($sql);
+				$stmtsub->execute(array(
+					':uid' => $uid
+					));
+				$row=$stmtsub->fetch();
 				$username=$row['username'];
-				$subject=$row['subject'];
-				$rid=$row['rid'];
 				if($i%2 == 1) $color = 'lred';
 				else $color = 'lgreen';
 				echo "
@@ -36,7 +49,7 @@ if($stmt->rowCount()> 0)
 	}
 	else
 	{
-		echo "<h2>no students have requested you</h2>";
+		echo "<h2>you have not requested a lesson yet</h2>";
 	}
 ?>
 

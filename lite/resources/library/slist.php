@@ -2,29 +2,42 @@
 require_once(realpath(dirname(__FILE__) . "/../config.php"));
 if(isset($_SESSION['uid']))
 {
-	$aid=$_SESSION['uid'];
+	$uid=$_SESSION['uid'];
 }
 else
 {
-	$aid='no';
+	$uid='no';
 }
 
-$sql='SELECT * FROM requests WHERE aid=:aid ORDER BY rid DESC';
+$sql='SELECT * FROM requests WHERE aid=:uid ORDER BY rid DESC';
 $stmt=$conn->prepare($sql);
 $stmt->execute(array(
-	':aid' => $aid
+	':uid' => $uid
 	));
 if($stmt->rowCount()> 0)
 	{
-		echo "<h2>student requests</h2>";
+		echo "<h2>students requesting you</h2>";
 		//Get subject
 		$i = 1;
 		while($row=$stmt->fetch())
 			{	
 				$eid=$row['eid'];
-				$username=$row['username'];
-				$subject=$row['subject'];
+				$aid=$row['aid'];
 				$rid=$row['rid'];
+				$sql='SELECT * FROM accounts where uid=:aid';
+				$stmtu=$conn->prepare($sql);
+				$stmtu->execute(array(
+					':aid' => $aid
+					));
+				$rowu=$stmtu->fetch();
+				$username=$rowu['username'];
+				$sql='SELECT * FROM entrys where eid=:eid';
+				$stmtsu=$conn->prepare($sql);
+				$stmtsu->execute(array(
+					':eid' => $eid
+					));
+				$rowsu=$stmtsu->fetch();
+				$subject=$rowsu['subject'];
 				if($i%2 == 1) $color = 'lred';
 				else $color = 'lgreen';
 				echo "
@@ -36,7 +49,7 @@ if($stmt->rowCount()> 0)
 	}
 	else
 	{
-		echo "<h2>no students have requested you</h2>";
+		echo "<h2>no students have requested you yet</h2>";
 	}
 ?>
 

@@ -23,4 +23,5 @@ $stmt->execute(array(
 	':payment' => $payment,
 	':county' => $county,
 	':vis' => '1' ));
+header("location:$root/index.php?msg=4");	
 ?>

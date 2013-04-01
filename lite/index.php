@@ -9,19 +9,16 @@
     <script type="text/javascript" src='script/showDiv.js'></script>
 </head>
 <body>
+<div class='header'></div>
 <div class='container'>
+    <?php require_once('resources/templates/header.php'); ?>
     <?php require_once('resources/library/sidebar.php'); ?>
     <div class='block'></div>
     <?php require_once('more.php'); ?>
     <?php require_once('indexbody.php'); ?>  
 </div>
 <div style='clear:both;'></div>
-<div class='mainfooter'>
-	<div id='mainlink'>
-		<h2><a href='#'><span class='nav'>help</span><a/> {} <a href='#'><span class='nav'>tos : <?php if(isset($_SESSION['uid'])) { echo $_SESSION['uid']; } ?></span><a/></h2>
-	</div>
-	<div style='clear:both;'></div>
-</div>
+<?php require_once('resources/library/footer.php'); ?>
 </div>
 </body>
 </html>

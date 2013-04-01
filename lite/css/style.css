@@ -36,7 +36,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 a:link, a:visited, a:hover, a:active { text-decoration:none; color: #272727; }
 
 
-.block { height:100px; margin:0 auto; }
 .container { width:1100px; margin:0 auto; }
 .info {  width:650px; float:right;}
 .min { width:650px; float:right;}
@@ -44,42 +43,53 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color: #272727; }
 #mainlink { text-align:right; float:left; width:300px;}
 #mainfoot { text-align:left; float:right; width:1000px;;}
 #footer { width:250px; text-align:center; position:absolute; bottom:0; margin-top:20px; }
-.left { width:300px; float:left; text-align: center; }
-.right { width:300px; float:right; text-align:center;}
-.top { padding-top:50px;}
+.left { width:350px; float:left; text-align: center; }
+.right { width:350px; float:right; text-align:center;}
+.top { }
 .nav { padding-top:20px; text-align:center; }
 .sidecontainer { width:250px; text-align:center; margin-top:50px; margin-bottom:20px;}
-.sidebar { border-width:4px; border-right-style:solid; min-height:500px; width:250px; float:left; text-align:center; position:relative;}
+.sidebar { border-width:4px; border-right-style:solid; border-bottom-style:solid; min-height:500px; width:250px; float:left; text-align:center; position:relative;}
+.logomain { width:250px; height:100px; position:relative; border-width:4px; border-right-style:solid; }
+.logoback { width:200px; height: 100px;background-color:black; margin:0 auto;}
+.logo { width:200px; height:70px; position:absolute; bottom:0; text-align:center; background-color:black; margin:0 auto;}
 
+#lred, #lgreen { padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px;}
 #lred { display:inline-block; background-color:rgba(255,0,0,.15); }
+#lredset { display:inline-block; background-color:rgba(255,0,0,.15); width:750px;}
 #lgreen { display:inline-block;background-color:rgba(0,255,0,.15); }
 #left { text-align:left;}
 #uinfo { margin:0 auto; text-align:left; margin-top:10px; padding-top:5px; padding-left:5px; font-family:sans-serif; line-height:1.5em; width:200px; border:1px solid; border-color:grey;}
-#holder { width:650px; margin-top:50px; clear:both;}
+#holder { width:750px; margin-top:50px; clear:both;}
 #mid { text-align:center; margin:0 auto;}
 .form { display:none; margin-top:30px; }
 
 h1,h2,h3,h4 { font-family: helvetica; }
-h1 { font-size:3.5em; color:black; text-align:center;}
+h1 { font-size:3.5em; color:white; text-align:center;}
 h2 { font-size:1.2em; color:black; font-weight:bold; }
 h3 { font-size:1em; color:black; font-weight:thin; }
 h4 { font-size:1em; color:grey; font-weight:thin; }
 h5 {  font-family: sans-serif; font-size: 16px; color:grey;}
 
+li { text-align:center; padding-top:10px; padding-bottom:5px; list-style-type: disc; color: black; font-size:1.3em;}
+
+.header { background-color:black; height:40px; width:100%; margin:0 auto;}
+.lgreen { color:rgba(197,255,197,1); }
+.lred {color:rgba(255,211,211,1); }
 .dim, .sub { font-family: helvetica; }
 .nav { font-family:consolas; font-size:1em; }
-.dim { font-color:#3d3d3d; font-size:.9em; font-weight:thin;}
-.sub { font-color:black; font-size:1em; font-weight:thin; }
+.dim { font-color:#3d3d3d; font-size:0.9em; font-weight:thin;}
+.sub { font-color:black; font-size:1.3em; font-weight:thin; }
 .minus,.plus,.more, .edit { font-family:helvetica; font-size:1.3em; font-weight:bold;}
 .minus { color:red; }
 .plus { color:green; }
 .more { color:black; }
+#fb { display:inline-block; background-image: url('images/fb.png'); background-repeat: no-repeat; }
 .edit { color:orange; }
 
 input { padding-top:5px; padding-left:5px; font-family: sans-serif; font-size: 16px; line-height: 1.5em; width:200px; margin-top:5px; }
 input { margin-top:10px; }
 input[type=checkbox] { text-align:right;}
-button {color:white; width:142px; height:44px; margin-top:10px; font-size: 16px; font-family: sans-serif; font-weight:bold; margin-bottom:200px; background-color:#08c; border:none;}
+button {color:white; width:142px; height:44px; margin-top:10px; font-size: 16px; font-family: sans-serif; font-weight:bold; margin-bottom:50px; background-color:#08c; border:none;}
 textarea{ height:120px; padding-top:5px; padding-left:5px; font-family: sans-serif; font-size: 16px; line-height: 1.5em; width:200px; margin-top:5px; }
 .styled-select select {
    background: transparent;

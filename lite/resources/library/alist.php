@@ -1,18 +1,25 @@
 <?php
 require_once(realpath(dirname(__FILE__) . "/../config.php"));
-$sql='SELECT * FROM entrys ORDER BY eid DESC';
+$sql='SELECT * FROM entrys ORDER BY eid DESC LIMIT 0,10';
 $stmt=$conn->prepare($sql);
 $stmt->execute();
 if($stmt->rowCount()> 0)
 	{
-		echo "<h2>all listings</h2>";
+		echo "<h2>all listings <a href='unilist.php'>></a></h2>";
 		//Get subject
 		$i = 1;
 		while($row=$stmt->fetch())
 			{	
 				$eid=$row['eid'];
+				$uid=$row['uid'];
 				$subject=$row['subject'];
-				$username=$row['username'];
+				$sql='SELECT * FROM accounts WHERE uid=:uid';
+				$stmtu=$conn->prepare($sql);
+				$stmtu->execute(array(
+					':uid' => $uid
+					));
+				$rowu=$stmtu->fetch();
+				$username=$rowu['username'];
 				if($i%2 == 1) $color = 'lred';
 				else $color = 'lgreen';
 				echo "

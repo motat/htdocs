@@ -1,18 +1,13 @@
     <div class='sidebar'>
-        <div class='top'>
-            <a href='http://localhost/lite'><h1>ahhyes</h1></a>
-        </div>
         <div class='nav'>
             <?php if(isset($_SESSION['uid'])) { $uid=$_SESSION['uid'];?><a href="javascript:showonlyone('add');"><span class='nav'>Add</span></a>&nbsp;&nbsp;<a href="javascript:showonlyone('edit');"><span class='nav'>Edit</span></a>&nbsp;&nbsp;<a href="javascript:showonlyone('account');"><span class='nav'>Account</span></a><?php } else { ?><a href="javascript:showonlyone('register');"><span class='nav'>Register</span></a>&nbsp;&nbsp;<a href="javascript:showonlyone('login');"><span class='nav'>Login</span></a><?php } ?>
         </div>
         <div style='clear:both'>
         </div>
-        <div id='footer'>
-            <span class='sub'>copyright vadim 2013</span>
-        </div>
         <?php require_once('resources/library/quote.php'); ?>
 <!--REGISTER-->
         <div id='register' class='form'>
+            <h3>*clicking the register button confirms that you read the TOS</h3>
             <form action="resources/library/register.php" method="POST"> 
                 <input type="text" name="username" placeholder='Username'/>
                 <input type="text" name="email" placeholder='Email'>

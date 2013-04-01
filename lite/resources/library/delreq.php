@@ -7,5 +7,5 @@ $stmt=$conn->prepare($sql);
 $stmt->execute(array(
 	':rid' => $rid
 	));
-
+header("location:$root/index.php?msg=5");	
 ?>
