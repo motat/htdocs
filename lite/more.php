@@ -23,6 +23,23 @@ if(isset($_GET['eid']))
             </div>
         </div>";   
     }
+if(isset($_GET['uid']))
+    {
+    $uid=$_GET['uid'];
+    $sql='SELECT * FROM accounts WHERE uid=:uid';
+    $stmt=$conn->prepare($sql);
+    $stmt->execute(array(
+        ':uid' => $uid
+        ));
+    $row=$stmt->fetch();
+    $email=$row['email'];
+    echo "
+        <div class='min'>
+            <div id='holder'>
+                <h2>"; echo $email; echo "</h2>
+            </div>
+        </div>";   
+    }
 if(isset($_GET['msg']))
 {
     $msg=$_GET['msg'];

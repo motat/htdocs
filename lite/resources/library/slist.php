@@ -22,15 +22,16 @@ if($stmt->rowCount()> 0)
 		while($row=$stmt->fetch())
 			{	
 				$eid=$row['eid'];
-				$aid=$row['aid'];
+				$uid=$row['uid'];
 				$rid=$row['rid'];
-				$sql='SELECT * FROM accounts where uid=:aid';
+				$sql='SELECT * FROM accounts where uid=:uid';
 				$stmtu=$conn->prepare($sql);
 				$stmtu->execute(array(
-					':aid' => $aid
+					':uid' => $uid
 					));
 				$rowu=$stmtu->fetch();
 				$username=$rowu['username'];
+				$email=$rowu['email'];
 				$sql='SELECT * FROM entrys where eid=:eid';
 				$stmtsu=$conn->prepare($sql);
 				$stmtsu->execute(array(
@@ -42,7 +43,7 @@ if($stmt->rowCount()> 0)
 				else $color = 'lgreen';
 				echo "
 				<div id='"; echo $color; echo"'>
-					<span class='sub'>"; echo $subject; echo "</span> - <span class='dim'>"; echo $username; echo " <a href='resources/library/delreq.php?rid="; echo $rid; echo"'><span class='minus'>-</span></a><span class='more'> > </span></span><br/> 
+					<span class='sub'>"; echo $subject; echo "</span> - <span class='dim'>"; echo $username; echo " <a href='resources/library/delreq.php?rid="; echo $rid; echo"'><span class='minus'>-</span></a><a href='?uid="; echo $uid; echo "'><span class='more'> > </span></a?</span><br/> 
 				</div>";
 				$i++;
 			}

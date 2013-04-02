@@ -22,7 +22,7 @@ if($stmt->rowCount()> 0)
 		while($row=$stmt->fetch())
 			{	
 			$eid=$row['eid'];
-			$uid=$row['uid'];
+			$aid=$row['aid'];
 			$rid=$row['rid'];
 				$sql='SELECT * FROM entrys WHERE eid=:eid';
 				$stmtun=$conn->prepare($sql);
@@ -31,10 +31,10 @@ if($stmt->rowCount()> 0)
 					));
 				$row1=$stmtun->fetch();
 				$subject=$row1['subject'];
-				$sql='SELECT * FROM accounts WHERE uid=:uid';
+				$sql='SELECT * FROM accounts WHERE uid=:aid';
 				$stmtsub=$conn->prepare($sql);
 				$stmtsub->execute(array(
-					':uid' => $uid
+					':aid' => $aid
 					));
 				$row=$stmtsub->fetch();
 				$username=$row['username'];
