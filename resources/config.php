@@ -8,7 +8,7 @@
 */
 try {
 $username='root';
-$conn = new PDO('mysql:host=localhost;dbname=ahhha', $username);
+$conn = new PDO('mysql:host=localhost;dbname=lite', $username);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e){
     echo 'ERROR: ' . $e->getMessage();
@@ -21,7 +21,7 @@ if(!$conn)
 
 $config = array(  
     "urls" => array(  
-        "baseUrl" => "localhost"  
+        "baseUrl" => "localhost/lite"  
     ),  
     "paths" => array(  
         "resources" => "/path/to/resources",  

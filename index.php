@@ -1,98 +1,265 @@
 <?php session_start();?>
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<?php
-include 'resources/config.php';
-?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-     <link rel="icon" 
-      type="image/png" 
-      href="images/myicon.png">
-    <title><?php echo $webname;?></title>
-    <meta name="description" content="connect with professor or tutor for any lesson. you can list any trade or skill you want to teach">
-    <meta name="keywords" content="looking for class student any subject">
-    <meta name="robots" content="index,follow">
-    <script type="text/javascript" src="script/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="script/jquery.google_menu.js"></script>
+    <title>Lite V</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-    <script>
-        $('document').ready(function(){
-            $('.menu').fixedMenu();
-        });
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script language="javascript"> 
+		function toggle2(showHideDiv, switchTextDiv) {
+			var ele = document.getElementById(showHideDiv);
+			var text = document.getElementById(switchTextDiv);
+			if(ele.style.display == "block") {
+		    		ele.style.display = "none";
+		  	}
+			else {
+				ele.style.display = "block";
+			}
+		}
+		//MENU fade
+		$(document).ready(function() {
+		  $("#menu").hover(
+		    function(e) { 
+		      $("#navSide").fadeIn("slow");
+		    },
+		    function(e) {
+		      $("#navSide").fadeOut("slow");    
+		    }
+		  );
+		});
+		//QUOTE fade
+		$(document).ready(function() {
+		  $("#quoteHeader").hover(
+		    function(e) { 
+		      $("#quoteAuthor").fadeIn("slow");
+		    },
+		    function(e) {
+		      $("#quoteAuthor").fadeOut("slow");    
+		    }
+		  );
+		});
+	$(document).ready(function(){
+	 
+	        $(".login").hide();
+	        $(".showhide").show();
 
-        </script>
+	 
+	    $('.showhide').click(function(){
+	    $(".login").slideToggle();
+	    });
+	 
+	});
+	$(document).ready(function(){
+	 
+	        $(".login").hide();
+	        $(".shLogin").show();
+
+	 
+	    $('.shLogin').click(function(){
+	    $(".login").slideToggle();
+	    });
+	 
+	});
+	$(document).ready(function(){
+	 
+	        $(".register").hide();
+	        $(".shRegister").show();
+
+	 
+	    $('.shRegister').click(function(){
+	    $(".register").slideToggle();
+	    });
+	 
+	});
+
+	</script>
 </head>
 <body>
-<?php
-/*if(isset($_SESSION['id']))
-    {
-$uid=$_SESSION['id'];
-    
-$sql='SELECT * FROM accounts WHERE id=:uid';
-$stmt=$conn->prepare($sql);
-$stmt->execute(array(
-    ':uid' => $uid ));
-$row=$stmt->fetch();
-$firstname=$row['firstname'];
-$lastname=$row['lastname'];
-$email=$row['email'];
-$marks=$row['marks'];
-}*/
-?>
-<div class='container'> 
-
-    <!--if(isset($_GET['pageid']))
-        {
-        if($_GET['pageid']=="1")
-            {
-            echo "
-                <div id='pageid'> 
-                    <h1>You have been logged out!</h1> 
-                </div>";
-            }
-        if($_GET['pageid']=="2")
-            {
-                echo "
-                    <div id='pageid'> 
-                        <h1>You have logged in! Check out or submit a post at the <a href='selectcount.php'>listings page</a></h1> 
-                    </div>";
-            }
-        }     
-    -->
-    <?php require_once ("resources/templates/logo.php"); ?>
-    <?php require_once ("resources/templates/navbar.php"); ?>
-    <?php require_once ("resources/templates/quote.php"); ?>
-    <div class='small'>
-        <div class='pad'>
-            <h3>Currently, our service is focused on and supported towards The Southern California area.</h3>
-        </div>
-    </div>
-    <div class='huge'>
-        </br>
-        <h1><l1><strong>Greetings,</strong></l1></h1>
-        </br>
-        </br>
-        <div id='inlarge'>
-            <h2><white>Ahh Yes is a tool designed for any person to teach students any skill or lesson.</white></h2>
-            <br/>
-            <h2><white>Here are some examples of what you can do with Ahh Yes:</white></h2>
-            <br/>
-            <center><li><h3>teach a student how to bake a cake via webcam right in your kitchen</h3></li></center>
-            <center><li><h3>learn how to blow a glass vase</li></h3></center>
-            <center><li><h3>teach as a hobby, rather then a career</li></h3></center>
-            <center><li><h3>introduce yourself to a topic before making life changing career choices</li></h3></center>
-            <center><li><h3>learn how to take apart a computer</li></h3></center>
-            <center><li><h3>learn how to prepare a efficient irrigation system for your garden</li></h3></center>
-            <center><li><h3>learn how to take apart a computer</li></h3></center>
-            <center><li><h3>find out how to change your cars break pads</li></h3></center>
-            <center><li><h3>learn how to take apart a computer</li></h3></center>
-            <br/>
-            <br/>
-            <center><h2>There is no limit on the amount of things you can learn, other then your dedication and will to LEARN.</h2></center>
-        </div>
-    </div>
+<div class='header'>
+	<div class='container'>
+		<div id='c1'>
+			<div id='menu'>
+				<br/>
+				<h5>menu</h5>
+			</div>
+			<div id='navSide'>
+				<h4><a href='#' class='shRegister'>register</a> <a href='#' class='showhide'>login</a></h4>
+			</div>
+		</div>
+		<div id='c2'>
+			<a href='intro.php'><h1>Ah<span class='whiteLogo'>h</span><span class='redLogo'>y</span>es</h1></a>
+		</div>
+		<div id='c3'>
+			<br/>
+			<div id='quoteHeader'>
+				<h3>True knowledge exists in</h3>
+				<h3>knowing that you know</h3>
+				<h3>nothing.</h3>
+			</div>
+			<div id='quoteAuthor'>
+				<br/>
+				<h3>-Socrates</h3>
+			</div>
+		</div>
+	</div>
 </div>
-    <?php require_once ('resources/templates/footer.php'); ?>
+<div class='login'>
+	<div id='arrow'>
+			<a href='#' class='shLogin'><h1>^</h1></a>
+		</div>
+	<div style='clear:both;'></div>
+	<div id='entries'>
+		<div class='right'>
+			<form action="resources/library/login.php" method="POST">
+				<input name='username' placeholder='Username'>
+				<input name='password' placeholder='Password'>
+				<button type='Submit'>Submit</button>
+			</form>
+		</div>
+		<div class='left'>
+			<h2>Login.</h2>
+			<br/>
+			<h4>When you login, a wide variety of tools are available for you. Manage your lessons or classes, or browse for some topics that might interest you!</h4>
+		</div>
+		<div style='clear:both;'></div>
+	</div>
+</div>
+<div class='register'>
+	<div id='arrow'>
+			<a href='#' class='shRegister'><h1>^</h1></a>
+		</div>
+	<div style='clear:both;'></div>
+	<div id='entries'>
+		<div class='right'>
+			<form action="resources/library/register.php" method="POST">
+				<input name='username' placeholder='username'>
+				<input name='password' placeholder='password'>
+				<input name='email' placeholder='email'>
+				<button type='Submit'>Submit</button>
+			</form>
+		</div>
+		<div class='left'>
+			<h2>Register.</h2>
+			<br/>
+			<h4>Creating an account means that you are ready to teach, and to learn. Clicking the submit button means you read the TOS</h4>
+		</div>
+		<div style='clear:both;'></div>
+	</div>
+</div>
+	<?php require_once('resources/templates/entries_all.php'); ?>
+<div class='r3'>
+	<div id='entries'>
+		<h2>Your Lessons</h2>
+	</br>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div style='clear:both;'></div>
+	</div>
+</div>
+<div class='r2'>
+	<div id='entries'>
+		<h2>Everything</h2>
+	</br>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div style='clear:both;'></div>
+	</div>
+</div>
+<div class='r3'>
+	<div id='entries'>
+		<h2>Your Lessons</h2>
+	</br>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div id='entriesLeft'>
+			<h4>css web design for advanced web developers</h4>
+		</div>
+		<div id='entriesRight'>
+			<h4>motat</h4>
+		</div>
+		<div style='clear:both;'></div>
+	</div>
+</div>
+<div class='footerbg'>
+	<div class='footer'>
+		<div id='c1'>
+			<h5>stuff</h5>
+			<h3>tos</h3>
+			<h3>help</h3>
+		</div>
+		<div id='c2'>
+			<h5>media</h5>
+			<h3>facebook</h3>
+			<h3>twitter</h3>
+		</div>
+		<div id='c3'>
+			<h5>ahhyes.org</h5>
+			<h3>contact</h3>
+			<h3>about</h3>
+			<h3>partnering</h3>
+		</div>
+	</div>
+</div>
 </body>
 </html>
