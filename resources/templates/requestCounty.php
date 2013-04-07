@@ -1,21 +1,74 @@
 <div class='r2'>
-	<div class='container'>
-		<h2>Everything</h2>
-	</div>
-	<div id='entries'>
-		<div id='entriesLeft'>
-			<h4><a href="javascript:toggle2('entriesMore');" >css web design for advanced web developers</a></h4>
-			<div id='entriesMore'>
-				</br>
-				<h4>this class was designed for people who know the basics of css and html styling but are looking to learn more skilled techniques</h4>
-				</br>
-				<h4>I require $5.00/h</h4>
-				<h4>Orange County</h4>
-			</div>
-		</div>		
-		<div id='entriesRight'>
-			<h4>motat</h4>
+	<div class='footer'>
+		<h2>Select your county</h2>
+	</br>
+		<div id='c1'>
+			<h2>California</h2>
+			</br>
+			<a href='index.php?county=oc'><h4>orange county</h4></a>
+			<h4>los angeles</h4>
+			<h4>san diego</h4>
+			<h4>san fransisco</h4>
+			</br>
+			<h2>Arizona</h2>
+			</br>
+			<h4>orange county</h4>
+			<h4>los angeles</h4>
+			<h4>san diego</h4>
+			<h4>san fransisco</h4>
+			</br>
+			<h2>Nevada</h2>
+			</br>
+			<h4>orange county</h4>
+			<h4>los angeles</h4>
+			<h4>san diego</h4>
+			<h4>san fransisco</h4>
 		</div>
-		<div style='clear:both;'></div>
+		<div id='c2'>
+			<h2>California</h2>
+			</br>
+			<h4>orange county</h4>
+			<h4>los angeles</h4>
+			<h4>san diego</h4>
+			<h4>san fransisco</h4>
+			</br>
+			<h2>Arizona</h2>
+			</br>
+			<h4>orange county</h4>
+			<h4>los angeles</h4>
+			<h4>san diego</h4>
+			<h4>san fransisco</h4>
+			</br>
+			<h2>Nevada</h2>
+			</br>
+			<h4>orange county</h4>
+			<h4>los angeles</h4>
+			<h4>san diego</h4>
+			<h4>san fransisco</h4>
+		</div>
+		<div id='c3'>
+			<h2>California</h2>
+			</br>
+			<h4>orange county</h4>
+			<h4>los angeles</h4>
+			<h4>san diego</h4>
+			<h4>san fransisco</h4>
+			</br>
+			<h2>Arizona</h2>
+			</br>
+			<h4>orange county</h4>
+			<h4>los angeles</h4>
+			<h4>san diego</h4>
+			<h4>san fransisco</h4>
+			</br>
+			<h2>Nevada</h2>
+			</br>
+			<h4>orange county</h4>
+			<h4>los angeles</h4>
+			<h4>san diego</h4>
+			<h4>san fransisco</h4>
+				</br>
+		</div>
 	</div>
+		<div style='clear:both;'></div>
 </div>

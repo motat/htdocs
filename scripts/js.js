@@ -12,10 +12,10 @@ function toggle2(showHideDiv, switchTextDiv) {
 		$(document).ready(function() {
 			$("#menu").hover(
 			  	function(e) { 
-			      $("#navSide").stop().fadeIn("slow");
+			      $("#navSide").stop().fadeIn("fast");
 			    },
 			    function(e) {
-			      $("#navSide").stop().fadeOut("slow");    
+			      $("#navSide").stop().fadeOut("fast");    
 			    }
 			);
 		});
@@ -56,5 +56,19 @@ function toggle2(showHideDiv, switchTextDiv) {
 		    $(".shAdd").show();
 		    $('.shAdd').click(function(){
 		    $(".add").slideToggle();
+		    });
+		 });
+		$(document).ready(function(){
+		    $(".entriesPanel").hide();
+		    $(".shentriesPanel").show();
+		    $('.shentriesPanel').click(function(){
+		    $(".entriesPanel").slideToggle();
+		    });
+		});
+		$(document).ready(function(){
+		    $(".account").hide();
+		    $(".shAccount").show();
+		    $('.shAccount').click(function(){
+		    $(".account").slideToggle();
 		    });
 		});

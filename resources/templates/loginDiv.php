@@ -1,7 +1,9 @@
 <div class='login'>
-	<div id='arrow'>
-			<a href='#' class='shLogin'><h1>^</h1></a>
+	<div class='footer'>
+		<div id='arrow'>
+				<a href='#' class='shLogin'><h1>^</h1></a>
 		</div>
+	</div>
 	<div style='clear:both;'></div>
 	<div id='entries'>
 		<div class='right'>

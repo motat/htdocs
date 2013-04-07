@@ -18,6 +18,12 @@
 		} 
 	</script>
 </head>
+<?php
+if(isset($_SESSION['uid']))
+{
+	header("location:$root/index.php");
+}
+?>
 <body>
 <div class='introContainer'>
 	<div id='welcome'>

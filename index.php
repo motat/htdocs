@@ -8,21 +8,26 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="scripts/js.js"></script>
 </head>
+		<?php require_once('resources/library/countyCheck.php'); ?>
 <body>
-<div class='header'>
-	<div class='container'>
-		<?php require_once('resources/templates/navbar.php'); ?>
-		<?php require_once('resources/templates/logo.php'); ?>
-		<?php require_once('resources/templates/quote.php'); ?>
+<div class='main'>	
+	<div class='header'>
+		<div class='container'>
+			<div id='cholder'>
+			<?php require_once('resources/templates/navbar.php'); ?>
+			<?php require_once('resources/templates/logo.php'); ?>
+			<?php require_once('resources/templates/quote.php'); ?>
+			</div>
+		</div>
 	</div>
-</div>
+		<?php require_once('resources/templates/accountDiv.php'); ?>
+		<?php require_once('resources/templates/entriesPanel.php'); ?>
 		<?php require_once('resources/templates/loginDiv.php'); ?>
 		<?php require_once('resources/templates/registerDiv.php'); ?>
 		<?php require_once('resources/templates/addDiv.php'); ?>
 		<?php 
-			if(isset($_GET['county']))
+			if(isset($_SESSION['county']))
 			{
-				$county=$_GET['county']
 		?>
 				<?php require_once('resources/templates/entries_all.php'); ?>
 				<?php require_once('resources/templates/entriesSelf.php'); ?>
@@ -37,5 +42,6 @@
 		?>
 
 		<?php require_once('resources/templates/footer.php'); ?>
+</div>
 </body>
 </html>

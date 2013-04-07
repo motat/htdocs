@@ -47,17 +47,18 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 .header { padding-top:20px; height:130px; width:100%; background-color:#2e2e2e; margin:0 auto; }
 .introContainer { overflow:hidden; width:70%; margin:0 auto; margin-top:100px;}
 .left { padding-top:10px; padding-left:20px; width:45%; float:left; text-align:left; }
-.login, .register, .add { width:100%; background-color:#ffc787; margin:0 auto;}
+.login, .register, .add, .entriesPanel, .account { width:100%; background-color:#ffc787; margin:0 auto;}
+.main { background-color:#ffc787; }
 .nav { width:40%; background-color:#ffc787; text-align:center; margin:0 auto;}
 .r1 { width:100%; background-color:#ffc787; margin:0 auto;}
 .r2 { width:100%; background-color:#a24f47; }
 .r3 { width:100%; background-color:#c68b55; }
-.right { width:45%; float:right; text-align:right; }
+.right { width:45%; float:right; text-align:center; }
 #button img { vertical-align: middle; }
 /****************
  - IDs
 ****************/
-#arrow { height:50px; width:50px; float:left;   }
+#arrow { height:50px; width:65%; margin:0 auto; text-align:left; }
 #button { line-height:283px; text-align:center; width:283px; height:283px; margin:0 auto; margin-top:200px; margin-bottom:100px; background-image:url('images/button.png'); }
 #entries { position:relative; width:40%; margin:0 auto; padding-top:20px; height:auto;  padding-bottom:25px; text-align:left;}
 #entriesLeft {  width:75%;  float:left; text-align:left; }
@@ -66,7 +67,7 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 #entriesRight {  width:20%; text-align:left; float:right; }
 #logoHeader { width:20%; margin:0 auto; padding-top:20px;  text-align:center; }
 #loginIntro { text-align:center; padding-top:40px; padding-left:10px; width:390px; height:170px; background-color:#ffc787; float:right; }
-#navSide {display:none; width:50%; padding-top:5px; margin:0 auto;}
+#navSide { display:none; width:100%; padding-top:5px; margin:0 auto;}
 #navSide h4 { color:#7f7f7f;}
 #sideHeader { width:30%; padding-top:40px; float:left; text-align:right; padding-left:100px; }
 #quote { width:40%; margin:0 auto; height:auto; padding-top:25px; padding-bottom:25px; }
@@ -79,6 +80,7 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 #c1 { float:left; width:33%; height:100%;}
 #c2 { float:left; width:33%; height:100%;}
 #c3 { float:right; width:33%; height:100%; }
+#cholder { margin:0 auto; width:900px; }
 /****************
  - Text
 ****************/
