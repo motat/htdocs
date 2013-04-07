@@ -32,13 +32,21 @@
 	</div> 
 	<div stlye='clear:both;'></div>
 	<div id='button'>
-		<a href='index.php'><h1>Ah<span class='whiteLogo'>h</span><span class='redLogo'>y</span>es</h1></a>
+		<a href='index.php'><img style='margin-top:10px;' src='css/images/hy.png'></a>
 	</div>
 	<div id='welcome'>
-		<h2>Welcome</h2>
+		<h2>Knowledge</h2>
 		</br>
-		<h4>We at ahhyes.org would like to welcome you to our community</h4>
+		<h4>We believe that knowledge is a limitless currency, and we want to help you earn it.</h4>
 	</div>
+	<div id='loginIntro'>
+		<form action="resources/library/login.php" method="POST">
+			<input name='username' placeholder='Username'>
+			<input name='password' placeholder='Password'>
+		</br>
+			<button type='Submit'>Login</button>
+		</form>
+	</div> 
 </div>
 
 
