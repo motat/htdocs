@@ -4,7 +4,7 @@
 		</div>
 	<div id='entries'>
 		<div class='right'>
-            <button type='submit' class='btn'>Create</button>
+            <button type='submit' class='shCreate'>Create</button>
         	</br>
 			<button type='submit' class='btn'>Edit</button> 
 			</br>

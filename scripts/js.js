@@ -72,3 +72,16 @@ function toggle2(showHideDiv, switchTextDiv) {
 		    $(".account").slideToggle();
 		    });
 		});
+		$(document).ready(function(){
+		    $(".add").hide();
+		    $(".shCreate").show();
+		    $('.shCreate').click(function(){
+		    $(".add").slideToggle();
+		    });
+		});
+		$(document).ready(function(){
+		    $(".entriesPanel").hide();
+		    $('.shCreate').click(function(){
+		    $(".entriesPanel").slideToggle();
+		    });
+		});

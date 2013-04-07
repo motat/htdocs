@@ -1,22 +1,14 @@
 <div class='add'>
-	<div class='footer'>
-		<div id='arrow'>
-			<h1><a href='#' class='shAdd'>^</a></h1>
-		</div>
+	<div id='arrow'>
+		<h1><a href='#' class='shAdd'>^</a></h1>
 	</div>
 	<div id='entries'>
 		<div class='right'>
-			<form action="resources/library/register.php" method="POST">
+			<form action="resources/library/create.php" method="POST">
                 <input type="text" name="subject" placeholder='Subject'/>
                 <textarea  name="information" placeholder='More information..'></textarea>
                 <input type="text" name="payment" placeholder='Payment'/>
-                <div class="styled-select">
-                   <select name='county'>
-                      <option value='oc'>Orange County</option>
-                      <option value='la'>Los Angeles County</option>
-                   </select>
-                </div>
-                <button type='submit' class='btn'>Add Listing</button>  
+                <button type='submit' class='btn'>Add Lesson</button>  
 			</form>
 		</div>
 		<div class='left'>
