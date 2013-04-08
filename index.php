@@ -25,9 +25,10 @@
 			if(isset($_SESSION['county']))
 			{
 		?>
-				<?php require_once('resources/templates/entries.php'); ?>
 				<?php require_once('resources/templates/entriesSelf.php'); ?>
 				<?php require_once('resources/templates/entriesYourrequests.php'); ?>
+				<?php require_once('resources/templates/entriesStudreq.php'); ?>
+
 		<?php 
 			}
 			else

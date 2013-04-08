@@ -12,12 +12,11 @@ if($stmt->rowCount()> 0)
 	</div>
 	<div id='entries'>
 <?php
-				
-				for($i=1;$i<10;$i++)
-					{
-						$row=$stmt->fetch();
+	while($row=$stmt->fetch())
+	{
 				$uid=$row['uid'];
 				$information=$row['information'];
+				$payment=$row['payment'];
 				$subject=$row['subject'];
 				$sql='SELECT * FROM accounts WHERE uid=:uid';
 				$stmtu=$conn->prepare($sql);
@@ -28,12 +27,13 @@ if($stmt->rowCount()> 0)
 				$username=$rowu['username'];
 						echo "
 								<div id='entriesLeft'>
-									<div class='subject' style='cursor: pointer;' id=".$i." onclick='showdiv(this);'>
+									<div class='subject' style='cursor: pointer;'>
 										<h4>".$subject."</h4>
-									</div>
-									<div class='entriesMore' id=more".$i.">
-										<h6>".$information."</h6>
-										</br>
+										<div class='entriesMore' >
+											<h6>".$information."</h6>
+											</br>
+											<h6>".$payment."</h6>
+										</div>
 									</div>
 								</div>
 								</br>
@@ -42,9 +42,7 @@ if($stmt->rowCount()> 0)
 								</div>
 
 								<div style='clear:both;'></div>";
-					}
-
-			
+	}			
 ?>
 	</div>
 </div>

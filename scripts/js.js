@@ -8,10 +8,17 @@ function toggle2(showHideDiv, switchTextDiv) {
 				ele.style.display = "block";
 			}
 		}
-function showdiv(div) {
-    id = $(div).attr('id');
-    $("#more"+id).toggle();
-}
+
+$(document).ready(function(){
+    //select all elements with 'more' class and hide them
+    $('.entriesMore').hide();
+    
+    //perform this function when clicking any element with 'cont' class
+    $('.subject').click(function(){
+        //for this element ONLY, toggle the visibility of it's child 'entriesMore' class
+        $(this).find('.entriesMore').toggle();
+    });
+});
 
 		//MENU fade
 		$(document).ready(function() {
