@@ -1,41 +1,30 @@
 <?php
 require_once(realpath(dirname(__FILE__) . "/../config.php"));
-$username=$_POST['username'];
-$email=$_POST['email'];
-$salt=md5($email);
-$salt=substr($salt,0,22);
-$password=$_POST['password'];
-$password=sha1($password.$salt);
-if(filter_var($email, FILTER_VALIDATE_EMAIL))
-	{	
-	//Check if Email Exsists
-	$sql='SELECT * FROM accounts WHERE email=:email';
+session_start();
+if(isset($_SESSION['uid']))
+{
+	$uid=$_SESSION['uid'];
+	$sql='SELECT * FROM accounts where uid=:uid';
 	$stmt=$conn->prepare($sql);
 	$stmt->execute(array(
-		':email' => $email));
-	if($stmt->rowCount() > 0)
-		{
-			header("location:$root/index.php?createuser=no");
-		}
-		else
-		{
-			$sql='INSERT INTO accounts (username,email,password,salt,new) VALUES (:username,:email,:password,:salt,:new)';
-			$stmt=$conn->prepare($sql);
-			$stmt->execute(array(
-				':username' => $username,
-				':email' => $email,
-				':password' => $password,
-				':salt' => $salt,
-				':new' => '0' ));
-				header("location:$root/index.php?msg=3");
-		}
-	}
-	else
-	{
-		header("location:$root/index.php?createuser=invemail");
-	}
+		':uid' => $uid
+		));
+	$row=$stmt->fetch();
+	$email=$row['email'];
+	$salt=md5($email);
+	$salt=substr($salt,0,22);
+	$password=$_POST['password'];
+	$password=sha1($password.$salt);
+	$sql='UPDATE accounts SET password=:password, salt=:salt WHERE uid=:uid';
+	$stmt=$conn->prepare($sql);
+	$stmt->execute(array(
+		':password' => $password,
+		':salt' => $salt,
+		':uid' => $uid
+		));
+}
+    header("location:$baseurl/index.php?success=changepwd");
 
-	$query='UPDATE accounts SET email=:email WHERE id=:id';
 ?>
 
 

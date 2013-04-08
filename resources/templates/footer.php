@@ -13,7 +13,7 @@
 		<div id='c3'>
 			<h5>ahhyes.org</h5>
 			<h3>contact</h3>
-			<h3>about</h3>
+			<a href='about.php'><h3>about</h3></a>
 			<h3>partnering</h3>
 		</div>
 	</div>

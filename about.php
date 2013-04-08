@@ -20,24 +20,12 @@
 			</div>
 		</div>
 	</div>
-		<?php require_once('resources/templates/requireonce.php'); ?>
-		<?php 
-			if(isset($_SESSION['county']))
-			{
-		?>
-				<?php require_once('resources/templates/entries.php'); ?>
-				<?php require_once('resources/templates/entriesSelf.php'); ?>
-				<?php require_once('resources/templates/entriesYourrequests.php'); ?>
-		<?php 
-			}
-			else
-			{
-		?>
-				<?php require_once('resources/templates/requestCounty.php'); ?>
-		<?php
-			}
-		?>
-
+		<?php require_once('resources/templates/accountDiv.php'); ?>
+		<?php require_once('resources/templates/entriesPanel.php'); ?>
+		<?php require_once('resources/templates/loginDiv.php'); ?>
+		<?php require_once('resources/templates/registerDiv.php'); ?>
+		<?php require_once('resources/templates/addDiv.php'); ?>
+		<?php require_once('resources/templates/aboutDiv.php'); ?>
 		<?php require_once('resources/templates/footer.php'); ?>
 </div>
 </body>

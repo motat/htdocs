@@ -62,8 +62,9 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 #button { line-height:283px; text-align:center; width:283px; height:283px; margin:0 auto; margin-top:200px; margin-bottom:100px; background-image:url('images/button.png'); }
 #entries { position:relative; width:40%; margin:0 auto; padding-top:20px; height:auto;  padding-bottom:25px; text-align:left;}
 #entriesLeft {  width:75%;  float:left; text-align:left; }
-#entriesMore {  display:none; width:75%; margin:0 auto; }
-#entriesMore h4 { font-size:1.2em; }
+#entriesLeft h4 { font-size:2em; }
+.entriesMore {  display:none; width:75%; margin:0 auto; }
+.entriesMore h4 { font-size:1.2em; }
 #entriesRight {  width:20%; text-align:left; float:right; }
 #logoHeader { width:20%; margin:0 auto; padding-top:20px;  text-align:center; }
 #loginIntro { text-align:center; padding-top:40px; padding-left:10px; width:390px; height:170px; background-color:#ffc787; float:right; }
@@ -92,6 +93,7 @@ h2 { color:#2e2e2e; font-family:ww_ultrabold; font-weight:bold; font-size:2em; }
 h3 { color:#7f7f7f; font-family:wwo_ultrabold; font-size: 1.2em; }
 h4 { color:#2e2e2e; font-family:ww_ultrabold;  font-size:1.5em;}
 h5 { color:#575757; font-family:ww_ultrabold; font-size:2em; }
+h6 { color:#2e2e2e; font-family:ww_ultrabold;  font-size:1.5em;}
 
 /****************
  - Span

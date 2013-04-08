@@ -6,7 +6,7 @@
 		<div class='right'>
             <button type='submit' class='shCreate'>Create</button>
         	</br>
-			<button type='submit' class='btn'>Edit</button> 
+			<button type='submit' class='shEdit'>Edit</button> 
 			</br>
 			<button type='submit' class='btn'>Delete</button> 
 			</br>

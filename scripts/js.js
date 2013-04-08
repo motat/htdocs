@@ -8,6 +8,11 @@ function toggle2(showHideDiv, switchTextDiv) {
 				ele.style.display = "block";
 			}
 		}
+function showdiv(div) {
+    id = $(div).attr('id');
+    $("#more"+id).toggle();
+}
+
 		//MENU fade
 		$(document).ready(function() {
 			$("#menu").hover(
@@ -80,8 +85,23 @@ function toggle2(showHideDiv, switchTextDiv) {
 		    });
 		});
 		$(document).ready(function(){
+		    $(".edit").hide();
+		    $(".shEdit").show();
+		    $('.shEdit').click(function(){
+		    $(".edit").slideToggle();
+		    });
+		});
+		//User for inside the Manage a Lesson box. Clicking the function will
+		//close the Manage a Lesson box. Also. Penis.
+		$(document).ready(function(){
 		    $(".entriesPanel").hide();
 		    $('.shCreate').click(function(){
+		    $(".entriesPanel").slideToggle();
+		    });
+		});
+		$(document).ready(function(){
+		    $(".entriesPanel").hide();
+		    $('.shEdit').click(function(){
 		    $(".entriesPanel").slideToggle();
 		    });
 		});
