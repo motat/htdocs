@@ -35,10 +35,12 @@ if(isset($_SESSION['uid']))
 			<h2>True knowledge exists in</h2>
 			<h2>knowing that you know</h2>
 			<h2>nothing.</h2>
+		</br>
+			<h2>-socrates</h2>
 	</div> 
 	<div stlye='clear:both;'></div>
 	<div id='button'>
-		<a href='index.php'><img style='margin-top:10px;' src='css/images/hy.png'></a>
+		<a href='index.php'><h1>Ah<span class='whiteLogo'>h</span><span class='redLogo'>y</span>es</h1><h3>beta</h3></a>
 	</div>
 	<div id='welcome'>
 		<h2>Knowledge</h2>

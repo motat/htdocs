@@ -7,7 +7,7 @@
 		<div class='right'>
 			<form action="resources/library/login.php" method="POST">
 				<input name='username' placeholder='Username'>
-				<input name='password' placeholder='Password'>
+				<input name='password' type='password' placeholder='Password'>
 				<button type='Submit'>Submit</button>
 			</form>
 		</div>

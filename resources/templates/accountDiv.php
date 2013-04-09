@@ -25,7 +25,7 @@ else
 	<div id='entries'>
 		<div class='right'>
 			<form action="resources/library/changePassword.php" method="POST">
-                <input type="text" name="password" placeholder='New Password'/>
+                <input type="password" name="password" placeholder='New Password'/>
                 <button type='submit' class='btn'>Change Password</button>
             </form>
             <form action="resources/library/changeEmail.php" method="POST">

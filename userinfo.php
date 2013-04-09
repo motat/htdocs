@@ -26,7 +26,54 @@
 		<?php require_once('resources/templates/registerDiv.php'); ?>
 		<?php require_once('resources/templates/addDiv.php'); ?>
 		<?php require_once('resources/templates/userInfo.php'); ?>
-		<?php require_once('resources/templates/footer.php'); ?>
+<div class='r3'>
+	<div class='backdrop'>
+		<div class='container'>
+			<h2>Student Requests</h2>
+		</div>
+		<div id='entries'>
+			<div class='listcont'>
+				<div id='entriesLeft'>
+					<div class='subject' style='cursor: pointer;'>
+						<h2>Subject</h2>
+						<div class='entriesMore'>
+							<h6>Email</h6>
+							</br>
+							<a href='#'><h6>deny request</h6></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='entriesRight'>
+				<a href='#'><h4>Username</h4></a>
+			</div>
+			<div style='clear:both;'></div>	
+		</div>
+	</div>
 </div>
-</body>
-</html>
+<div class='halfbg'>
+	<div id='c5'>
+		<div id='entries'>
+			<div class='listcont'>
+				<div id='entriesLeft'>
+					<div class='subject' style='cursor: pointer;'>
+						<h2>Subject</h2>
+						<div class='entriesMore'>
+							<h6>Email</h6>
+							</br>
+							<a href='#'><h6>deny request</h6></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='entriesRight'>
+				<a href='#'><h4>Username</h4></a>
+			</div>
+			<div style='clear:both;'></div>	
+		</div>
+	</div>
+	<div style='clear:both;'></div>	
+</div>
+
+		<?php require_once('resources/templates/footer.php'); ?>
+

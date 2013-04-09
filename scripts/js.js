@@ -10,13 +10,15 @@ function toggle2(showHideDiv, switchTextDiv) {
 		}
 
 $(document).ready(function(){
-    //select all elements with 'more' class and hide them
     $('.entriesMore').hide();
-    
-    //perform this function when clicking any element with 'cont' class
     $('.subject').click(function(){
-        //for this element ONLY, toggle the visibility of it's child 'entriesMore' class
         $(this).find('.entriesMore').toggle();
+    });
+});
+$(document).ready(function(){
+    $('.hidden').hide();
+    $('#showhidden').click(function(){
+        $(this).find('.hidden').toggle();
     });
 });
 

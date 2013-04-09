@@ -1,9 +1,9 @@
-<div class='r3'>
-	<div class='backdrop'>
-	<div class='container'>
-		<h2>Your Lessons</h2>
-	</div>
-	<div id='entries'>
+<div class='halfbg'>
+	<div id='c6'>
+		<div class='container'>
+			<h2>Your Lessons</h2>
+		</div>
+		<div id='entries'>
 <?php
 if(isset($_SESSION['uid']))
 {
@@ -30,27 +30,30 @@ if(isset($_SESSION['uid']))
 		$rowu=$stmtu->fetch();
 		$username=$rowu['username'];
 			echo "
-				<div id='entriesLeft'>
-					<div class='subject' style='cursor: pointer;'>
-						<h4><a href='#'>+</a> ".$subject."</h4>
-						<div class='entriesMore'>
-							<h6>".$information."</h6>
-							</br>
-							<h6>".$payment."</h6>
-							</br>
-							<a href='resources/library/deleteLesson.php?eid=".$eid."'><h6>delete</h6></a>
-							</br>
+
+				<div class='listcont'>
+					<div id='entriesLeft'>
+						<div class='subject' style='cursor: pointer;'>
+							<h2>".$subject."</h2>
+							<div class='entriesMore'>
+								<h6>".$information."</h6>
+								</br>
+								<h6>".$payment."</h6>
+								</br>
+								<a href='resources/library/deleteLesson.php?eid=".$eid."'><h6>delete</h6></a>
+								</br>
+							</div>
 						</div>
 					</div>
+					<div id='entriesRight'>
+						<a href='userinfo.php?user=".$uid."'><h4>".$username."</h4></a>
+					</div>
+					<div style='clear:both;'></div>
 				</div>
-				</br>
-				<div id='entriesRight'>
-					<a href='userinfo.php?user=".$uid."'><h4>".$username."</h4></a>
-				</div>
-				<div style='clear:both;'></div>";
+			";
 		}	
 }
 ?>
-	</div>
+</div>
 </div>
 </div>

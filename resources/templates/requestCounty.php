@@ -5,11 +5,11 @@
 		<div id='c1'>
 			<h2>California</h2>
 			</br>
-			<a href='index.php?county=oc'><h4>orange county</h4></a>
+			<a href='index.php?county=oc'><h2>orange county</h2></a>
 			<h4>los angeles</h4>
 			<h4>san diego</h4>
 			<h4>san fransisco</h4>
-			</br>
+			<!--</br>
 			<h2>Arizona</h2>
 			</br>
 			<h4>orange county</h4>
@@ -67,7 +67,7 @@
 			<h4>los angeles</h4>
 			<h4>san diego</h4>
 			<h4>san fransisco</h4>
-				</br>
+				</br>-->
 		</div>
 	</div>
 		<div style='clear:both;'></div>

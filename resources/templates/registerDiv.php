@@ -7,7 +7,7 @@
 		<div class='right'>
 			<form action="resources/library/register.php" method="POST">
 				<input name='username' placeholder='username'>
-				<input name='password' placeholder='password'>
+				<input name='password' type='password' placeholder='password'>
 				<input name='email' placeholder='email'>
 				<button type='Submit'>Submit</button>
 			</form>

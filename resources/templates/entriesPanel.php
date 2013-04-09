@@ -6,10 +6,10 @@
 		<div class='right'>
             <button type='submit' class='shCreate'>Create</button>
         	</br>
-			<button type='submit' class='shEdit'>Edit</button> 
+			<!--<button type='submit' class='shEdit'>Edit</button> 
 			</br>
 			<button type='submit' class='btn'>Delete</button> 
-			</br>
+			</br>-->
 		</div>
 		<div class='left'>
 			<h2>Manage a lesson.</h2>
