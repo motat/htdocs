@@ -40,7 +40,7 @@ if(isset($_SESSION['uid']))
 								</br>
 								<h6>".$payment."</h6>
 								</br>
-								<a href='resources/library/deleteLesson.php?eid=".$eid."'><h6>delete</h6></a>
+								<a href='resources/library/deleteLesson.php?eid=".$eid."'><span class='h7'>delete</span></a>
 								</br>
 							</div>
 						</div>

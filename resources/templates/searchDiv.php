@@ -1,5 +1,5 @@
-<div class='r3'>
-	<div class='backdrop'>
+<div class='halfbg'>
+	<div id='c6'>
 		<div id='entries'>
 			<div class='right'>
 				<form action="search.php?go" method="POST">
@@ -13,4 +13,3 @@
 			<div style='clear:both;'></div>
 		</div>
 	</div>
-</div>

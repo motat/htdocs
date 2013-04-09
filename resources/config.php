@@ -32,7 +32,7 @@ $config = array(
     )  
 );
 //Will be in Every pages Title
-$webname = 'Ahhyes website for people to find a tutor or trainer for any skill or subject';
+$webname = 'Ahhyes';
 //Root
 $root = 'http://localhost';
 /* 

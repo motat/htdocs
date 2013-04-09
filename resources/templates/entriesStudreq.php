@@ -46,7 +46,7 @@ $stmt->execute(array(
 							<div class='entriesMore'>
 								<h6>".$email."</h6>
 								</br>
-								<a href='resources/library/cancelRequest.php?rid=".$rid."'><h6>deny request</h6></a>
+								<a href='resources/library/cancelRequest.php?rid=".$rid."'><span class='h7'>deny request</span></a>
 							</div>
 						</div>
 					</div>

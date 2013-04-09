@@ -9,11 +9,10 @@ $stmt->execute(array(
 if($stmt->rowCount()> 0)
 	{
 ?>
-<div class='r2'>
-	<div class='backdrop'>
+<div class='halfbg'>
+<div id='c5'>
 	<div class='container'>
 		<h2>Everything - <?php echo $county; ?></h2>
-	</div>
 	<div id='entries'>
 <?php
 	while($row=$stmt->fetch())
@@ -43,7 +42,7 @@ if($stmt->rowCount()> 0)
 											if(isset($_SESSION['uid']))
 											{
 												echo"
-												<a href='resources/library/requestLesson.php?eid=".$eid."'><h6>request lesson</h6></a>
+												<a href='resources/library/requestLesson.php?eid=".$eid."'><span class='h7'>request lesson</span></a>
 												";
 											}
 											echo"

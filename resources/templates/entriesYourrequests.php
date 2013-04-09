@@ -47,7 +47,7 @@ if(isset($_SESSION['uid']))
 								</br>
 								<h6>".$payment."</h6>
 								</br>
-								<a href='resources/library/cancelRequest.php?rid=".$rid."'><h6>cancel request</h6></a>
+								<a href='resources/library/cancelRequest.php?rid=".$rid."'><span class='h7'>cancel request</span></a>
 							</div>
 						</div>
 					</div>
