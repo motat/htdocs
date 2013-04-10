@@ -17,13 +17,8 @@ include 'resources/config.php';
 		<?php require_once('resources/library/countyCheck.php'); ?>
 <body>
 <?php include_once("resources/templates/googleAna.php"); ?>
-<div class='header'>
-	<div class='container'>
-		<div id='cholder'>
 		<?php require_once('resources/templates/header.php'); ?>
-		</div>
-	</div>
-</div>
+
 		<?php require_once('resources/templates/requireonce.php'); ?>
 		<?php 
 			if(isset($_SESSION['county']))

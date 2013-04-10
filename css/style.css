@@ -45,15 +45,14 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 /****************
  - Classes
 ****************/
-.halfbg { margin:0 auto; background-color:#F7E4BE;}
+.container { margin:0 auto; }
 .listcont { margin-top:5px; }
 .backdrop { border-color:#2e2e2e; border-width:4px; border-right-style:solid; border-left-style:solid; margin:0 auto; width:60%; }
-.footerbg { border-color:#2e2e2e; border-width:4px; border-right-style:solid; border-left-style:solid;  width:60%; height:200px; background-color:#413E4A; margin:0 auto; }
+.footerbg { border-color:#2e2e2e; border-width:4px; border-right-style:solid; border-left-style:solid;  width:60%; height:200px; background-color:#413E4A; margin:0 auto;  }
 .footer { width:100%; height:auto; margin:0 auto; }
 .footer h1 { font-size:100px; line-height:40px; }
-.container{ padding-top:20px; width:90%; height:100%; margin:0 auto; }
 .footer h5 { padding-top:50px; }
-.header { padding-top:20px; height:130px; width:100%; background-color:#413E4A; margin:0 auto; }
+.header {  height:130px; width:100%; background-color:#413E4A; margin:0 auto; padding:40px 20px 0 20px;}
 .introContainer { overflow:hidden; width:70%; margin:0 auto; margin-top:100px;}
 .left { padding-top:10px; padding-left:20px; width:45%; float:left; text-align:left; }
 .login, .register, .add, .entriesPanel, .account, .edit { border-color:#2e2e2e; border-width:4px; border-right-style:solid; border-left-style:solid; background-color:#ffc787; margin:0 auto;width:60%; display:none; }
@@ -64,6 +63,7 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 .r2 { width:100%; background-color:#a24f47; }
 .r3 { width:100%;  }
 .right { width:35%; float:right; text-align:center; }
+.paddedbox { padding:25px;}
 #button img { vertical-align: middle; }
 /****************
  - IDs
@@ -84,17 +84,17 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 #quote { width:40%; margin:0 auto; height:auto; padding-top:25px; padding-bottom:25px; }
 #quoteIntro { text-align:center; padding-top:40px; padding-left:10px; width:390px; height:170px; background-color:#9e544e; float:right;}
 #quoteText { width:40%; float:left; text-align:center;}
-#quoteAuthor { width:40%; margin:0 auto; text-align:right; display:none;}
 #welcome { padding-top:20px; padding-left:20px; width:390px; height:170px; background-color:#9e544e; float:left;}
 #welcome h4 { padding-left:20px; }
+.c0 { margin:0 auto; width:60%;}
 #c1, #c2, #c3 { margin: 0 auto; text-align:center; }
 #c1 { float:left; width:33%; height:100%;}
 #c2 { float:left; width:33%; height:100%;}
-#c3 { float:right; width:33%; height:100%; }
+#c3 { float:right; width:33%; height:100%;}
 #c4, #c5, #c6 { margin: 0 auto; border-color: #2e2e2e; border-width:4px; border-right-style:solid; border-left-style:solid; width:60%; height:100%; }
 #c4 { background-color:#ffc787; }
-#c5 { background-color:#B38184;  }
-#c6 { background-color:#73626E; }
+#c5 { background-color:#B38184; }
+#c6 { background-color:#413E4A; }
 #cholder { margin:0 auto; width:900px; }
 /****************
  - Text
@@ -103,17 +103,18 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 @font-face { font-family: ww_ultrabold; src: url('fonts/Walkway_UltraBold.ttf');}
 @font-face { font-family: wwo_ultrabold; src: url('fonts/Walkway_Oblique_UltraBold.ttf');}
 h1 { color:#F0B49E; font-family:ww_bold; font-size:5em; }
-h2 { color:#2e2e2e; font-family:ww_ultrabold; font-weight:bold; font-size:2em; }
-h3 { color:#7f7f7f; font-family:wwo_ultrabold; font-size: 1.2em; }
-h4 { color:#2e2e2e; font-family:ww_ultrabold;  font-size:1.5em;}
+h2 { color:#929292; font-family:ww_ultrabold; font-weight:bold; font-size:2em; }
+h3 { color:black; font-family:ww_ultrabold; font-size: 2.1em; }
+h4 { color:#0b0b0b; font-family:ww_bold;  font-size:1.4em;}
 h5 { color:#575757; font-family:ww_ultrabold; font-size:2em; }
 h6 { color:#2e2e2e; font-family:ww_ultrabold;  font-size:1.5em;}
 .h7 { color:#232323; font-family:ww_ultrabold; font-size:1.7em; font-style:italic;}
-p { font-size:1.5em; color:#2e2e2e; font-family:ww_ultrabold; font-weight:bold; }
-
+p { padding-left:25px; padding-right:15px;}
 /****************
  - Span
 ****************/
+.small { color:#929292; font-size: 1.2em; font-family:wwo_ultrabold; }
+.mediumlite { color:#929292; font-family:wwo_ultrabold; font-size:1.2em; }
 .whiteLogo { color:white; }
 .redLogo { color:#B38184; }
 .showhide { display:none;  }
