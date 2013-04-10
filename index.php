@@ -20,9 +20,7 @@ include 'resources/config.php';
 <div class='header'>
 	<div class='container'>
 		<div id='cholder'>
-		<?php require_once('resources/templates/navbar.php'); ?>
-		<?php require_once('resources/templates/logo.php'); ?>
-		<?php require_once('resources/templates/quote.php'); ?>
+		<?php require_once('resources/templates/header.php'); ?>
 		</div>
 	</div>
 </div>

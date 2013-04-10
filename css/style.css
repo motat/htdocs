@@ -39,21 +39,21 @@ ol,ul {	list-style: none; }
 blockquote, q {	quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; border-spacing: 0; }
-body { background-color: #f2f6ff; }
+body { background-color: #F7E4BE; }
 a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 
 /****************
  - Classes
 ****************/
-.halfbg { margin:0 auto; background-color:#e8f0ff;}
+.halfbg { margin:0 auto; background-color:#F7E4BE;}
 .listcont { margin-top:5px; }
 .backdrop { border-color:#2e2e2e; border-width:4px; border-right-style:solid; border-left-style:solid; margin:0 auto; width:60%; }
-.footerbg { border-color:#2e2e2e; border-width:4px; border-right-style:solid; border-left-style:solid;  width:60%; height:200px; background-color:#2e2e2e; margin:0 auto; }
+.footerbg { border-color:#2e2e2e; border-width:4px; border-right-style:solid; border-left-style:solid;  width:60%; height:200px; background-color:#413E4A; margin:0 auto; }
 .footer { width:100%; height:auto; margin:0 auto; }
 .footer h1 { font-size:100px; line-height:40px; }
 .container{ padding-top:20px; width:90%; height:100%; margin:0 auto; }
 .footer h5 { padding-top:50px; }
-.header { padding-top:20px; height:130px; width:100%; background-color:#2e2e2e; margin:0 auto; }
+.header { padding-top:20px; height:130px; width:100%; background-color:#413E4A; margin:0 auto; }
 .introContainer { overflow:hidden; width:70%; margin:0 auto; margin-top:100px;}
 .left { padding-top:10px; padding-left:20px; width:45%; float:left; text-align:left; }
 .login, .register, .add, .entriesPanel, .account, .edit { border-color:#2e2e2e; border-width:4px; border-right-style:solid; border-left-style:solid; background-color:#ffc787; margin:0 auto;width:60%; display:none; }
@@ -93,8 +93,8 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 #c3 { float:right; width:33%; height:100%; }
 #c4, #c5, #c6 { margin: 0 auto; border-color: #2e2e2e; border-width:4px; border-right-style:solid; border-left-style:solid; width:60%; height:100%; }
 #c4 { background-color:#ffc787; }
-#c5 { background-color:#ebc2be;  }
-#c6 { background-color:#e0a6a1; }
+#c5 { background-color:#B38184;  }
+#c6 { background-color:#73626E; }
 #cholder { margin:0 auto; width:900px; }
 /****************
  - Text
@@ -102,20 +102,20 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 @font-face { font-family: ww_bold; src: url('fonts/Walkway_Bold.ttf');}
 @font-face { font-family: ww_ultrabold; src: url('fonts/Walkway_UltraBold.ttf');}
 @font-face { font-family: wwo_ultrabold; src: url('fonts/Walkway_Oblique_UltraBold.ttf');}
-h1 { color:#575757; font-family:ww_bold; font-size:5em; }
+h1 { color:#F0B49E; font-family:ww_bold; font-size:5em; }
 h2 { color:#2e2e2e; font-family:ww_ultrabold; font-weight:bold; font-size:2em; }
 h3 { color:#7f7f7f; font-family:wwo_ultrabold; font-size: 1.2em; }
 h4 { color:#2e2e2e; font-family:ww_ultrabold;  font-size:1.5em;}
 h5 { color:#575757; font-family:ww_ultrabold; font-size:2em; }
 h6 { color:#2e2e2e; font-family:ww_ultrabold;  font-size:1.5em;}
 .h7 { color:#232323; font-family:ww_ultrabold; font-size:1.7em; font-style:italic;}
-
+p { font-size:1.5em; color:#2e2e2e; font-family:ww_ultrabold; font-weight:bold; }
 
 /****************
  - Span
 ****************/
 .whiteLogo { color:white; }
-.redLogo { color:#77a4ff; }
+.redLogo { color:#B38184; }
 .showhide { display:none;  }
 
 /****************
