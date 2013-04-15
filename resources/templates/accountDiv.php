@@ -23,25 +23,30 @@ else
 		<div id='arrow'>
 			<h1><a href='#' class='shAccount'>^</a></h1>
 		</div>
-		<div id='entries'>
-			<div class='right'>
-				<form action="resources/library/changePassword.php" method="POST">
-	                <input type="password" name="password" placeholder='New Password'/>
-	                <button type='submit' class='btn'>Change Password</button>
-	            </form>
-	            <form action="resources/library/changeEmail.php" method="POST">
-	                <input type="text" name="email" placeholder='New Email'/>
-	                <button type='submit' class='btn'>Change Emai</button> 
-				</form>
+		<div class='paddedbox'>
+			<div class='pleft'>
+				<div class='right'>
+					<form action="resources/library/changePassword.php" method="POST">
+		                <input type="password" name="password" placeholder='New Password'/>
+		                </br>
+		                <button type='submit' class='btn'>Change Password</button>
+		            </form>
+		            <form action="resources/library/changeEmail.php" method="POST">
+		                <input type="text" name="email" placeholder='New Email'/>
+		                </br>
+		                <button type='submit' class='btn'>Change Emai</button> 
+
+					</form>
+				</div>
+				<div class='left'>
+					<h2>Account.</h2>
+					<br/>
+					<h4><?php echo $username; ?></h4>
+					<h4><?php echo $email; ?></h4>
+					<h4>100%</h4>
+				</div>
+				<div style='clear:both;'></div>
 			</div>
-			<div class='left'>
-				<h2>Account.</h2>
-				<br/>
-				<h4><?php echo $username; ?></h4>
-				<h4><?php echo $email; ?></h4>
-				<h4>100%</h4>
-			</div>
-			<div style='clear:both;'></div>
 		</div>
 	</div>
 </div>

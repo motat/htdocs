@@ -17,17 +17,10 @@ include 'resources/config.php';
 		<?php require_once('resources/library/countyCheck.php'); ?>
 <body>
 <?php include_once("resources/templates/googleAna.php"); ?>
-<div class='main'>	
-	<div class='header'>
-		<div class='container'>
-			<div id='cholder'>
-			<?php require_once('resources/templates/navbar.php'); ?>
-			<?php require_once('resources/templates/logo.php'); ?>
-			<?php require_once('resources/templates/quote.php'); ?>
-			</div>
-		</div>
-	</div>
+		<?php include_once("resources/templates/googleAna.php"); ?>
+		<?php require_once('resources/templates/header.php'); ?>
 		<?php require_once('resources/templates/requireonce.php'); ?>
+		
 		<?php require_once('resources/templates/howDiv.php'); ?>
 		<?php require_once('resources/templates/footer.php'); ?>
 

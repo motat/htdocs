@@ -15,18 +15,11 @@ include 'resources/config.php';
     <script src="scripts/js.js"></script>
 </head>
 <body>
-<?php include_once("resources/templates/googleAna.php"); ?>
-<div class='main'>	
-	<div class='header'>
-		<div class='container'>
-			<div id='cholder'>
-			<?php require_once('resources/templates/navbar.php'); ?>
-			<?php require_once('resources/templates/logo.php'); ?>
-			<?php require_once('resources/templates/quote.php'); ?>
-			</div>
-		</div>
-	</div>
+		<?php include_once("resources/templates/googleAna.php"); ?>
+		<?php require_once('resources/templates/header.php'); ?>
 		<?php require_once('resources/templates/requireonce.php'); ?>
+				<?php require_once('resources/templates/entriesPanel.php'); ?>
+
 		<?php 
 			if(isset($_SESSION['county']))
 			{

@@ -1,9 +1,9 @@
-<div class='halfbg'>
-	<div id='c6'>
-		<div class='container'>
-			<h2>Student Requests</h2>
-		</div>
-		<div id='entries'>
+<div class='container'>
+	<div id='c4'>
+		<div class='paddedbox'>
+			<h3>Student Reuqests</h3>
+			<div class='c0'>
+			<div class='paddedbox'>
 <?php
 require_once(realpath(dirname(__FILE__) . "/../config.php"));
 if(isset($_SESSION['uid']))
@@ -39,7 +39,6 @@ $stmt->execute(array(
 			$username=$rowsub['username'];
 			$email=$rowsub['email'];
 				echo "
-				<div class='listcont'>
 					<div id='entriesLeft'>
 						<div class='subject' style='cursor: pointer;'>
 							<h2>".$subject."</h2>
@@ -50,7 +49,6 @@ $stmt->execute(array(
 							</div>
 						</div>
 					</div>
-				</div>
 					<div id='entriesRight'>
 						<a href='userinfo.php?user=".$uid."'><h4>".$username."</h4></a>
 					</div>
@@ -59,7 +57,7 @@ $stmt->execute(array(
 			}	
 
 			
-?>
-</div>
-</div>
+?>			</div>
+		</div>
+	</div>
 </div>

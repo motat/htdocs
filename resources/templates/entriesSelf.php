@@ -1,9 +1,9 @@
-<div class='halfbg'>
-	<div id='c6'>
-		<div class='container'>
-			<h2>Your Lessons</h2>
-		</div>
-		<div id='entries'>
+<div class='container'>
+	<div id='c4'>
+		<div class='paddedbox'>
+			<h3>Your Lessons</h3>
+			<div class='c0'>
+				<div class='paddedbox'>
 <?php
 if(isset($_SESSION['uid']))
 {
@@ -31,7 +31,6 @@ if(isset($_SESSION['uid']))
 		$username=$rowu['username'];
 			echo "
 
-				<div class='listcont'>
 					<div id='entriesLeft'>
 						<div class='subject' style='cursor: pointer;'>
 							<h2>".$subject."</h2>
@@ -49,11 +48,12 @@ if(isset($_SESSION['uid']))
 						<a href='userinfo.php?user=".$uid."'><h4>".$username."</h4></a>
 					</div>
 					<div style='clear:both;'></div>
-				</div>
 			";
 		}	
 }
-?>
-</div>
-</div>
+?>			</div>
+		</div>
+		<div class='botborder'>
+		</div>
+	</div>
 </div>

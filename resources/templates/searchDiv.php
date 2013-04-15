@@ -4,8 +4,11 @@
 			<h3>Search</h3>
 			<form action="search.php?go" method="POST">
 		       <input type="text" name="search" placeholder='Lesson Name'/>
+		   </br>
 				<input  type='submit' name='submit' class='btn' value='Search'>			
 			</form>
+		</div>
+				<div class='botborder'>
 		</div>
 	</div>
 </div>
