@@ -2,7 +2,7 @@
 	<div class='c0'>
 		<div id='c1'>
 			<div class='paddedbox'>
-				<span class='small'>
+				<span class='smalllite'>
 					<?php if(!isset($_SESSION['uid']))
 					{ 
 					?>
@@ -12,8 +12,8 @@
 					#	MENU
 					##########-->
 					<a href='#' class='shRegister'>register</a>
-					<a href='#' class='showhide'>login</a>
-					<a href='index.php'>browse</a>
+					<a href='#' class='showhide'>| login</a>
+					<a href='index.php'>| browse</a>
 					<?php 
 					} 
 					else 

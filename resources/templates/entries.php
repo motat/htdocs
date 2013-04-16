@@ -16,7 +16,7 @@ if($stmt->rowCount()> 0)
 <div class='container'>
 	<div id='c4'>
 		<div class='paddedbox'>
-			<h3>Everything - <?php echo $county; ?></h3>
+			<h3>Everything - <?php echo $county; ?> - <a href='resources/library/logout.php'><span class='small'>change county</span></a></h3>
 			<div class='paddedbox'>
 <?php
 while($row=$stmt->fetch())
@@ -46,7 +46,9 @@ while($row=$stmt->fetch())
 						if(isset($_SESSION['uid']))
 						{
 							echo"
-								<a href='resources/library/requestLesson.php?eid=".$eid."'><span class='h7'>request lesson</span></a>
+								<div class='button'>
+									<a href='resources/library/requestLesson.php?eid=".$eid."'><span class='medium'>request lesson</span></a>
+								</div>
 								";
 						}
 				echo"
@@ -61,14 +63,20 @@ while($row=$stmt->fetch())
 	}			
 ?>
 
+
 		</div>
 	</div>
 </div>
-
 <?php
 }
 else
 {
-	echo "<h2>no listings</h2>";
+	echo "<div class='container'>
+			<div id='c4'>
+				<div class='paddedbox'>
+					<h3>Unfortunately, this county does not have any listings submitted for it, you could be the first to create a lesson for your county by clicking the 'manage lessons' link above. You can also change your county by clicking <a href='resources/library/logout.php'><span class='medium'>here</span></a></h3>
+				</div>
+			</div>
+		</div> ";
 }
 ?>

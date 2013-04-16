@@ -46,6 +46,7 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
  - Classes
 ****************/
 
+.button { margin-left:28px; color:black; width:142px; height:44px; margin-top:10px; font-size: 16px; font-family: sans-serif; font-weight:bold; border-color:#3D9FA1; border-size:1px; border-style:solid; background-color:#E4DFB8;}
 .entriesMore { width:75%; margin:0 auto; display:none; }
 .c0 { margin:0 auto; width:70%;}
 .container { margin:0 auto; }
@@ -63,7 +64,7 @@ a:link, a:visited, a:hover, a:active { text-decoration:none; color:inherit; }
 .r2 { width:100%; background-color:#a24f47; }
 .r3 { width:100%;  }*/
 .botborder { padding-top:40px; border:2px; width:60%; border-color: #3D9FA1; border-bottom-style:dashed; margin:0 auto;}
-.right { width:35%; float:right; text-align:left; }
+.right { width:35%; float:right; text-align:center; }
 .paddedbox { padding:25px;}
 .pleft { padding-left:100px; }
 #button img { vertical-align: middle; }
@@ -109,7 +110,8 @@ p { font-family:ww_bold; padding-left:15%; padding-right:15%;}
 /****************
  - Span
 ****************/
-.small { color:white; font-size: 1.2em; font-family:ww_ultrabold; }
+.small { color:black; font-size: .8em; font-family:ww_ultrabold; }
+.smalllite { color:white; font-size: 1.2em; font-family:ww_ultrabold; }
 .medium { color:black; font-size: 1.5em; font-family:ww_ultrabold; }
 .mediumlite { color:#929292; font-family:ww_ultrabold; font-size:1.5em; }
 .largelite { color:#929292; font-family:ww_ultrabold; font-size:2em; }
@@ -124,8 +126,8 @@ p { font-family:ww_bold; padding-left:15%; padding-right:15%;}
 input { padding-top:5px; padding-left:5px; font-size: 22px; line-height: 1.5em; width:200px; margin-top:5px; background-color:#3D9FA1; font-family:ww_ultrabold; color:black;}
 input { margin-top:10px; }
 input[type=checkbox] { text-align:right;}
-input[type=text] { border:0; }
-button, input[type=submit] {margin-left:28px; color:black; width:142px; height:44px; margin-top:10px; font-size: 16px; font-family: sans-serif; font-weight:bold; border-color:#3D9FA1; border-size:1px; border-style:solid; background-color:#E4DFB8;}
+input[type=text],input[type=password] { border:0; }
+button, input[type=submit] {margin-left:10px; color:black; width:142px; height:44px; margin-top:10px; font-size: 16px; font-family: sans-serif; font-weight:bold; border-color:#3D9FA1; border-size:1px; border-style:solid; background-color:#E4DFB8;}
 textarea{ height:120px;  padding-top:5px; padding-left:5px; font-size: 22px; line-height: 1.5em; width:200px; margin-top:5px; background-color:#a24f47; font-family:ww_ultrabold; border:0; color:black; }
 select {-webkit-appearance: none; padding-top:5px; padding-left:5px; font-size: 22px; line-height: 1.5em; width:200px; margin-top:5px; background-color:#a24f47; font-family:ww_ultrabold; border:0; color:black;}
 

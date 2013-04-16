@@ -1,7 +1,7 @@
 <div class='container'>
 	<div id='c4'>
 		<div class='paddedbox'>
-			<h3>Student Reuqests</h3>
+			<h3>Student Requests</h3>
 			<div class='c0'>
 			<div class='paddedbox'>
 <?php

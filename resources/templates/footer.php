@@ -3,19 +3,23 @@
 		<div class='paddedbox'>
 				<div id='c1'>
 					<h3>info</h3>
-					<h4>tos</h4>
-					<h4>help</h4>
+					<span class='mediumlite'>tos</span>
+					</br>
+					<span class='mediumlite'>help</span>
 				</div>
 				<div id='c2'>
 					<h3>media</h3>
-					<a href='http://www.facebook.com/ahhyesorg'><h4>facebook</h4></a>
-					<h4>twitter</h4>
+					<a href='http://www.facebook.com/ahhyesorg'><span class='medium'>facebook</span></a>
+					</br>
+					<span class='mediumlite'>twitter</span>
 				</div>
 				<div id='c3'>	
 					<h3>ahhyes.org</h3>
-					<h4>contact</h4>
-					<a href='about.php'><h4>about</h4></a>
-					<a href='how.php'><h4>how it works</h4></a>
+					<span class='mediumlite'>contact</span>
+					</br>
+					<a href='about.php'><span class='medium'>about</span></a>
+					</br>
+					<a href='how.php'><span class='medium'>how it works</span></a>
 				</div>
 				<div style='clear:both;'></style>
 		<div>

@@ -16,7 +16,12 @@
 			<div class='left'>
 				<h2>Register.</h2>
 				<br/>
-				<h4>Creating an account means that you are ready to teach, and to learn. Clicking the submit button means you read the TOS</h4>
+				<p>
+					<span class='medium'>Creating an account means that you are ready to teach, and to learn.
+					</br>
+					</br>
+					Registering an account verifys that you have read the tos</span>
+				</p>
 			</div>
 			<div style='clear:both;'></div>
 		</div>
