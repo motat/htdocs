@@ -18,26 +18,25 @@ include 'resources/config.php';
 	<div class='block'></div>
 	<?php require_once('resources/templates/logo.php'); ?>
 	<div class='space'></div>
-	<div id='l1' style='width:32%;'>
-		<div class='heading'>
-			<h3>Members<span class='small'> <a href='add.php?page=1'>+ add</a></span></h3>
-		</div>
+	<div id='l1' style='width:65%;'>
 		<div class='padbox'>
-			<span class='medium'>
-				john (programmer)
-			</br>
-				vadim (graphic design)
-			</br>
-				bob (everything imaginable)
-			</span>
+			<center>
+				<span class='smallmed'>the profile of </span><span class='mediumlarge'>Vadim Pishchenko</span>
+				</br>
+				<span class='smallmed'>a </span><span class='mediumlarge'>Programmer</span>
+				</br>
+				<span class='smallmed'>whos worked on </span><span class='mediumlarge'>3 Projects</span>
+			</center>
 		</div>
 	</div>
-	<div id='r1' style='width:65%;'>
-		<h2>
-			ahhyes is a project  designed to link
-			instructors and people who want to learn,
-			together.
-		</h2>
+	<div id='r1' style='width:32%;'>
+		<span class='medium'>
+			My dream is to create 
+			technology that streamlines and 
+			makes any process more
+			efficient. Wasting time is not
+			and option.
+		</span>
 	</div>
 	<div class='clear'></div>
 	<div class='space'></div>
