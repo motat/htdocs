@@ -26,7 +26,7 @@ include 'resources/config.php';
 			<h3><i>Add a Member</i></h3>
 		</div>
 		<div class='padbox'>
-			<h3>Currently, no members are requesting access to your project.</h3>
+			<h3><?php require_once ('resources/templates/displayMembers.php'); ?></h3>
 		</div>
 		<?php } ?>
 		<?php if ($_GET['page'] == 2){ ?>

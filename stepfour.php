@@ -51,7 +51,7 @@ include 'resources/config.php';
 		You are finished! <span class='small'>The next page you will be taken to will be your team home page. It won't be populated, but adding members and getting started on working on your project will be easy!</span>
 	</h2>
 	<div class='block'></div>
-	<h1><center><a href='index.php'>I'm Ready!</a></center></h1>
+	<h1><center><a href='teampage.php'>I'm Ready!</a></center></h1>
 	<div class='block'></div>
 </div>
 	
