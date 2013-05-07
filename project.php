@@ -13,7 +13,6 @@ include 'resources/config.php';
     <script src="scripts/js.js"></script>
 </head>
 <body>
-<?php echo $_SESSION['uid']; ?>
 <div class='block'></div>
 <div class='block'></div>
 <div class='block'></div>
@@ -38,7 +37,7 @@ include 'resources/config.php';
 	</div>
 	<div class='clear'></div>
 	<div id='buttonholder'>
-		<div id='buttonred'>
+		<div id='buttongreen'>
 			<center><h4>3</h4></center>
 		</div>
 		<div id='buttontext'>
@@ -49,20 +48,12 @@ include 'resources/config.php';
 </div>
 <div class='contmini'>
 	<h2>
-		Finishing up! <span class='small'>Please provide
-		some general information about your
-		team. You will be able to change this
-		information whenever you choose</span>
+		Please select the project you wish to work on
 	</h2>
 	<div class='block'></div>
-	<form action='resources/library/regProj.php' method='POST'>
-		<input class='none' name='projectname' value="<?php echo $_GET['projectname']; ?>"></input>
-		<input type='text' name='members' placeholder='Amount of members'></input>
-		<input type='text' name='information' placeholder='Shortly describe your project'></input>
-		<input type='text' name='goals' placeholder='Your projects goal'></input>
-	</br>
-		<button>Next</button>
-	</form>
+	<h1><center><a href='index.php'>Pick your Project</a></center></h1>
+	<div class='block'></div>
+	<?php require_once ('resources/library/projectPick.php'); ?>
 </div>
 	
 </body>

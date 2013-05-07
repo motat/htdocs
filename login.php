@@ -13,12 +13,6 @@ include 'resources/config.php';
     <script src="scripts/js.js"></script>
 </head>
 <body>
-<?php
-if(!isset($_SESSION['uid']))
-{
-	header("location:$root/splash.php");
-}
-?>
 <div class='contmini'>
 	<?php require_once('resources/templates/navbar.php'); ?>
 	<div class='block'></div>
@@ -28,17 +22,34 @@ if(!isset($_SESSION['uid']))
 	<div class='block'></div>
 	<div id='body'>
 		<div class='heading'>
-			<h3><i>Hello</i></h3>
+			<h3><i>Login</i></h3>
 		</div>
 		<div class='padbox'>
-			<center>
-				<h2><a href='stepthree.php?projectname=Your Project Name'>Create</a></h2>
-				<h2><a href='project.php'>Work</a></h2>
-				<h2><a href='public.php'>Browse</a></h2>
-			</center>
+			<form action='resources/library/login.php' method='post'>
+				<input type='text' name='email' placeholder='Email'></input>
+				<input type='password' name='password' placeholder='Password'></input>
+			</br>
+				<button>Login</button>
+			</form>
+		</div>
+	</div>
+	<div class='block'></div>
+	<div id='body'>
+		<div class='heading'>
+			<h3><i>Register</i></h3>
+		</div>
+		<div class='padbox'>
+			<form action='resources/library/regAccount.php' method='post'>
+				<input type='text' name='username' placeholder='Username'></input>
+				<input type='text' name='email' placeholder='Email'></input>
+				<input type='password' name='password' placeholder='Password'></input>
+			</br>
+				<button>Create</button>
+			</form>
 		</div>
 	</div>
 </div>
+
 	
 </body>
 </html>

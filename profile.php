@@ -30,62 +30,53 @@ include 'resources/config.php';
 		</div>
 	</div>
 	<div id='r1' style='width:32%;'>
-		<span class='medium'>
+		<span class='medium'><center>
 			My dream is to create 
 			technology that streamlines and 
 			makes any process more
 			efficient. Wasting time is not
 			and option.
-		</span>
+		</center></span>
 	</div>
 	<div class='clear'></div>
 	<div class='space'></div>
-	<div id='body'>
+	<div id='l1' style='width:48%;'>
 		<div class='heading'>
-			<h3>Objectives<span class='small'> <a href='add.php?page=2'>+ add</a></span></h3>
+			<h3>Current Projects</h3>
 		</div>
 		<div class='padbox'>
-			<div class='square'>
-				<div class='padbox'>
-					<center><h5>Vadim</h5></center>
-				</br>
-					<div class='lines'></div>
-					<span class='mediummid'>Finish the design of the
-website splash page</span>
-					</br>
-					</br>
-					<div class='info'>
-						<div class='padbox'>
-							<span class='smallmed'>color scheme should be 
-								something warm, also try
-								and make sure the header
-								color is the write color
-							</span>
-						</div>
-					</div>
-					<div class='clear'></div>
-					<div class='lines'></div>
-					<span class='medium'>design splash page</span>
-					<div class='lines'></div>
-					<span class='medium'>figure out color scheme</span>
-				</div>
-			</div>
-			<div class='square'>
-				<div class='padbox'>
-					<h5>Vadim</h5>
-					<span class='medium'>| finish the website layout</span>
-				</div>
+			<span class='purple'>ahhyes</span>
+			<div class='padbox'>
+				<span class='medium'>
+					a service to provide a platform for students
+					to find a teacher for any subject.
+				</span>
 			</div>
 		</div>
-		<div class='clear'></div>
 	</div>
-	<div class='space'></div>
-	<div id='body'>
+	<div id='r1' style='width:48%;'>
 		<div class='heading'>
-			<h3>Notes<span class='small'> <a href='add.php?page=3'>+ add</a></span></h3>
+			<h3>Recent Works</h3>
 		</div>
-		asd
+		<div class='padbox'>
+			<span class='purple'>honeybrescue</span>
+			<div class='padbox'>
+				<span class='medium'>
+					a website for a free honeybeerescue and harvest service
+				</span>
+			</div>
+		</div>
+		<div class='padbox'>
+			<span class='purple'>Julias Home Bakery</span>
+			<div class='padbox'>
+				<span class='medium'>
+					a bakery for authentic, and delicious russian pastries, cakes, and other tasty sweets.
+				</span>
+			</div>
+		</div>
 	</div>
+	<div class='clear'></div>
+	<div class='space'></div>
 </div>
 <div id='l2'>
 	<h4>ahhyes.org</h4>

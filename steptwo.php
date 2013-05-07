@@ -14,6 +14,7 @@ include 'resources/config.php';
 </head>
 <body>
 <div class='block'></div>
+<body>
 <div class='block'></div>
 <div class='block'></div>
 <div class='block'></div>
@@ -49,13 +50,15 @@ include 'resources/config.php';
 <div class='contmini'>
 	<h2>
 		Before creating a project, you first need to create an account
-		so that you could better manage a project and team. <span class='small'>Your email
+		to better manage your team. <span class='small'>Your email
 		will only be used to login to the website.</span>
 	</h2>
 	<div class='block'></div>
-	<form>
-		<input type='text' placeholder='Email'></input>
-		<input type='text' placeholder='Password'></input>
+	<form action='resources/library/regAccount.php' method='POST'>
+		<input class='none' name='projectname' value="<?php echo $_GET['projectname']; ?>"></input>
+		<input type='text' name='username' placeholder='Username'></input>
+		<input type='text' name='email' placeholder='Email'></input>
+		<input type='password' name='password' placeholder='Password'></input>
 	</br>
 		<button>Next</button>
 	</form>

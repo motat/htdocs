@@ -8,7 +8,7 @@
 */
 try {
 $username='root';
-$conn = new PDO('mysql:host=localhost;dbname=lite', $username);
+$conn = new PDO('mysql:host=localhost;dbname=tc', $username);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e){
     echo 'ERROR: ' . $e->getMessage();
@@ -21,7 +21,7 @@ if(!$conn)
 
 $config = array(  
     "urls" => array(  
-        "baseUrl" => "localhost/lite"  
+        "baseUrl" => "localhost"  
     ),  
     "paths" => array(  
         "resources" => "/path/to/resources",  
@@ -32,7 +32,7 @@ $config = array(
     )  
 );
 //Will be in Every pages Title
-$webname = 'Ahhyes';
+$webname = 'TC';
 //Root
 $root = 'http://localhost';
 /* 
@@ -42,7 +42,7 @@ $root = 'http://localhost';
 */  
 /* 
     Creating constants for heavily used paths makes things a lot easier. 
-    ex. require_once(LIBRARY_PATH . "Paginator.php") 
+    ex. require_once(LIBRARY_PATH . "Paginator.phsp") 
 */  
 defined("LIBRARY_PATH")  
     or define("LIBRARY_PATH", realpath(dirname(__FILE__) . '/library'));  

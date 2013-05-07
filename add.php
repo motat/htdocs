@@ -59,6 +59,24 @@ include 'resources/config.php';
 			</form>
 		</div>
 		<?php } ?>
+		<?php if ($_GET['page'] == 4){ ?>
+		<div class='heading'>
+			<h3>Apply to Project</h3>
+		</div>
+		<div class='padbox'>
+			<h3>You are applying to this project. When an admin sees your request he can decline or accept you. Please fill out the role you would like to fill for the team.</h3>
+			<div class='block'></div>
+			<form action='resources/library/requestProj.php' method='post'>
+				<center>
+					<input type='text' name='pid' value='<?php echo $_GET['pid']; ?>'></input>
+					<input type='text' name='role' placeholder='Your role'></input>
+				</center>
+			</br>
+				<button>Apply</button>
+			</form>
+		</div>
+		<?php } ?>
+
 	</div>
 </div>
 	

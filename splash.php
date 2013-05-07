@@ -12,7 +12,7 @@ include 'resources/config.php';
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="scripts/js.js"></script>
 </head>
-<body>
+
 <div class='block'></div>
 <div class='block'></div>
 <div class='block'></div>
@@ -24,11 +24,12 @@ include 'resources/config.php';
 	</h2>
 	<div class='block'></div>
 	<span class='large'><center>Create Your Project</center><span>
-	<form>
+	<div class='block'></div>
+	<form action='steptwo.php' method='GET'>
 		<div class='holder'>
-			<center><input type='text' placeholder='Your project name..'></input></center>
+			<center><input type='text' name='projectname' placeholder='Your project name..'></input></center>
 			<button>Start!</button>
-			<span class='warn'>or login here.</span>
+			<span class='warn'>or <a href='login.php'>login/register here</a>.</span>
 		</div>
 	</form>
 </div>
